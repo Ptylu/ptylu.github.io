@@ -5,20 +5,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <title>Registry</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Registry 2 test</title>
 
+  <!-- Bootstrap core JavaScript
+  ==================================================
   <script>
   $(document).ready(function(){
     $('#content').load("./../../assets/header.html");
   });
+</script>
+-->
+<script>
+$(document).ready(function(){
+  $('#content').load("/assets/header.html");
+});
 </script>
 
 
 <script>
 
 var myList = null;
-$.getJSON('./../../data/data-page/data-configuration/registry-key.json')
+$.getJSON('/data/data-page/data-configuration/registry-key.json')
 .done(function (data) {
 myList = data;
 });
@@ -76,7 +84,7 @@ myList = data;
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <link rel="stylesheet" href="./../../assets/dist/css/bootstrap.min.css" >
-  <script src="./../../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
