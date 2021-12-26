@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Registry Key</title>
+
+  <script type='text/javascript'>
+
+  $(document).ready(function(){
+    $('#assetHead').load("/assets/header.html");
+  });
+
+  // Load Json
+  var json = (function () {
+    var json = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-page/data-configuration/registry-key.json',
+      'dataType': "json",
+      'success': function (data) {
+        myList = data;
+      }
+    });
+    return myList;
+  })();
+
+  // Add Json loased in table
+  function buildHtmlTable(selector) {
+    var columns = addAllColumnHeaders(myList, selector);
+
+    for (var i = 0; i < myList.length; i++) {
+      var row$ = $('<tr/>');
+      for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+        var cellValue = myList[i][columns[colIndex]];
+        if (cellValue == null) cellValue = "";
+        row$.append($('<td/>').html(cellValue));
+      }
+      $(selector).append(row$);
+    }
+  }
+
+  // Adds a header row to the table and returns the set of columns.
+  // Need to do union of keys from all records as some records may not contain
+  // all records.
+  function addAllColumnHeaders(myList, selector) {
+    var columnSet = [];
+    var headerTr$ = $('<tr/>');
+
+    for (var i = 0; i < myList.length; i++) {
+      var rowHash = myList[i];
+      for (var key in rowHash) {
+        if ($.inArray(key, columnSet) == -1) {
+          columnSet.push(key);
+          headerTr$.append($('<th/>').html(key));
+        }
+      }
+    }
+    $(selector).append(headerTr$);
+
+    return columnSet;
+  }
+</script>
+
+</head>
+
+<body  onLoad="buildHtmlTable('#RegistryKeyTable')">
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <h1>Configuration Audit Registry</h1>
+    <p> In 2 parts: Allow Registry audit in the group policy (gpedit.msc) and setup of SACL for each registry <p>
+      <h2>Part 1: Audit configuration in group policy</h2>
+      <p> Open gpedit.msc, activate Audit Registry in:
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+          <ol class="breadcrumb">
+            <code>
+            <li class="breadcrumb-item">Local Computer Policy</li>
+            <li class="breadcrumb-item">Windows Settings</li>
+            <li class="breadcrumb-item">Security Settings</li>
+            <li class="breadcrumb-item">Advanced Audit Policy Configuration</li>
+            <li class="breadcrumb-item">System Audit policies - Local Group Policy Object</li>
+            <li class="breadcrumb-item">Object Access</li>
+            <li class="breadcrumb-item active" aria-current="page">Audit Registry</li>
+          </code>
+          </ol>
+        </nav>
+         and check <code>susccess</code> and <code>failure</code>.
+           <img src="/data/data-page/data-configuration/image/configuration-audit-registry.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           </p>
+          <h2>Part 2: SACL</h2>
+          <p> Afer the Audit configuration, open regedit, right click on the registry key you want a monitoring, go to
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+              <ol class="breadcrumb">
+                <code>
+                <li class="breadcrumb-item">Permission</li>
+                <li class="breadcrumb-item">Advanced</li>
+                <li class="breadcrumb-item active" aria-current="page">Select a principal</li>
+              </code>
+              </ol>
+            </nav>
+            add <code>Everyone</code> and check <code>Query value, Set value, Delete</code>
+           <img src="/data/data-page/data-configuration/image/configuration-audit-registry-SACL.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           Below all important registry key to monitore
+          <table id="RegistryKeyTable" border="1" class="table" > </table>
+        </p>
+        </div>
+
+        <!-- Begin page content -->
+
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+        <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+      </body>
+      </html>
