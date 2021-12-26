@@ -6,37 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <title>Registry 7 test</title>
+  <title>Registry Key</title>
 
-  <!-- Bootstrap core JavaScript
-  ==================================================
-  <script>
-  $(document).ready(function(){
-  $('#content').load("./../../assets/header.html");
-});
-</script>
--->
-<script>
+<script type='text/javascript'>
 
 $(document).ready(function(){
   $('#content').load("/assets/header.html");
 });
-</script>
 
+  // Load Json
+var json = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-page/data-configuration/registry-key.json',
+        'dataType': "json",
+        'success': function (data) {
+            myList = data;
+        }
+    });
+    return myList;
+})();
 
-<script>
-
-
-// code here
-
-var myList;
-$.getJSON('/data/data-page/data-configuration/registry-key.json')
-.done(function (data) {
-  myList = data;
-});
-
-
-// Builds the HTML Table out of myList.
+// Add Json loased in table
 function buildHtmlTable(selector) {
   var columns = addAllColumnHeaders(myList, selector);
 
@@ -71,9 +64,8 @@ function addAllColumnHeaders(myList, selector) {
 
   return columnSet;
 }
-
-
 </script>
+
 </head>
 
 <body onLoad="buildHtmlTable('#excelDataTable')">
