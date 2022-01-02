@@ -1,0 +1,5 @@
+[
+      { "Detection": "detection-volume-shadows-copy.html", "EventID": "4688", "Detection Pattern": "vssadmin delete shadows", "Comment": "N/A", "Modification": "02/01/2022"},
+      { "Detection": "detection-autre.html", "EventID": "5857", "Detection Pattern": "AUTRE", "Comment": "N/A", "Modification": "N/A"},
+      { "Detection": "detection-volume-shadows-copy.html", "EventID": "5857", "Detection Pattern": "MSVSS__PROVIDER", "Comment": "N/A", "Modification": "02/01/2022"}
+]

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Detection Volume Shadow Copy</title>
+
+  <script type='text/javascript'>
+  //Recuperer page actuelle pour afficher ensuite que les detections liees a cette page
+  var pathfile = window.location.pathname.split("/").pop();
+  $(document).ready(function(){
+    $('#assetHead').load("/assets/header.html");
+  });
+
+  // Load Json
+  var json = (function () {
+    var json = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-page/data-detection/list-detection-pattern.json',
+      'dataType': "json",
+      'success': function (data) {
+        myList = data;
+      }
+    });
+    return myList;
+  })();
+
+  // Add Json loased in table
+  function buildHtmlTable(selector) {
+    var columns = addAllColumnHeaders(myList, selector);
+    for (var i = 0; i < myList.length; i++) {
+
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==pathfile)
+      if(myList[i][columns[0]]==pathfile){
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+          var cellValue = myList[i][columns[colIndex]];
+          if (cellValue == null) cellValue = "";
+          row$.append($('<td/>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+    // Suppirmer la premiere colonne correspondante au path (header et valeurs)
+    $("#RegistryKeyTable th:first-child").remove()
+    $("#RegistryKeyTable td:first-child").remove()
+  }
+
+  // Adds a header row to the table and returns the set of columns.
+  // Need to do union of keys from all records as some records may not contain
+  // all records.
+  function addAllColumnHeaders(myList, selector) {
+    var columnSet = [];
+    var headerTr$ = $('<tr/>');
+
+    for (var i = 0; i < myList.length; i++) {
+      var rowHash = myList[i];
+      for (var key in rowHash) {
+        if ($.inArray(key, columnSet) == -1) {
+          columnSet.push(key);
+          headerTr$.append($('<th/>').html(key));
+        }
+      }
+    }
+    $(selector).append(headerTr$);
+
+    return columnSet;
+  }
+</script>
+
+</head>
+
+<body  onLoad="buildHtmlTable('#RegistryKeyTable')">
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <table id="RegistryKeyTable" border="1" class="table" > </table>
+  </div>
+
+  <!-- Begin page content -->
+
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
