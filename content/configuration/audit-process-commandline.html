@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>New Process with Commandline Auditing</title>
+
+  <script type='text/javascript'>
+
+  $(document).ready(function(){
+    $('#assetHead').load("/assets/header.html");
+  });
+
+</script>
+</head>
+
+<body>
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <h1>Configuration Process Commandline Auditing</h1>
+    <p> In 2 parts: Allow New Process auditing (EventID 4688) in the group policy (gpedit.msc) and setup the CommandLine auditing (deactivated by default because can contains cleartext password) also in the group policy (gpedit.msc)<p>
+      <h2>Part 1: Audit New process in group policy</h2>
+      <p> Open gpedit.msc, activate Audit Process Creation in:
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+          <ol class="breadcrumb">
+            <code>
+            <li class="breadcrumb-item">Local Computer Policy</li>
+            <li class="breadcrumb-item">Computer Comfiguration</li>
+            <li class="breadcrumb-item">Windows Settings</li>
+            <li class="breadcrumb-item">Security Settings</li>
+            <li class="breadcrumb-item">Advanced Audit Policy Configuration</li>
+            <li class="breadcrumb-item">System Audit Policies - Local Group Policy Object</li>
+            <li class="breadcrumb-item">Detailed Tracking</li>
+            <li class="breadcrumb-item active" aria-current="page">Audit Process Creation</li>
+          </code>
+          </ol>
+        </nav>
+         and check <code>susccess</code> and <code>failure</code>
+           <img src="/data/data-page/data-configuration/image/configuration-audit-process-1.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           At this moment, Windows will log all new Process Creation but the most important information is still missing. To activate the CommandLine in the log, please refer to the part 2.
+ <img src="/data/data-page/data-configuration/image/process-auditing-without-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           </p>
+          <h2>Part 2: Include Commandline</h2>
+          <p> Afer activation of 4688 EventID, activate the Commandline auditing in the group policy (gpedit.msc)
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
+              <ol class="breadcrumb">
+                <code>
+                  <li class="breadcrumb-item">Local Computer Policy</li>
+                  <li class="breadcrumb-item">Computer Comfiguration</li>
+                  <li class="breadcrumb-item">Administrative Template</li>
+                  <li class="breadcrumb-item">System</li>
+                  <li class="breadcrumb-item">Audit Process Creation</li>
+                  <li class="breadcrumb-item active" aria-current="page">Include command line in process creaton event</li>
+              </code>
+              </ol>
+            </nav>
+            add check value <code>Enabled</code>
+           <img src="/data/data-page/data-configuration/image/configuration-audit-process-commandline-2.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           After the modification you can see the Commandline present in the 4688 EventID
+           <img src="/data/data-page/data-configuration/image/process-auditing-with-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+        </p>
+        </div>
+
+        <!-- Begin page content -->
+
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+        <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+      </body>
+      </html>
