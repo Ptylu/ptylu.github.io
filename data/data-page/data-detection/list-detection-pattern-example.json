@@ -1,0 +1,4 @@
+[
+      { "Detection": "detection-volume-shadows-copy.html", "Malware Name": "4688", "Malware Hash": "vssadmin delete shadows", "Example": "{\"UserData\":{\"Operation_StartedOperational\":{\"ProviderName\":\"MSVSS__PROVIDER\",\"Code\":\"0x0\",\"HostProcess\":\"wmiprvse.exe\",\"ProcessID\":\"7004\",\"ProviderPath\":\"%systemroot%\\system32\\wbem\\vsswmi.dll\"}}}", "Comment": "N/A", "Content Update": "02/01/2022"},
+      { "Detection": "....html", "Malware Name": "...", "Malware Hash": "...", "Example": "...", "Comment": "...", "Content Update": "..."},
+]
