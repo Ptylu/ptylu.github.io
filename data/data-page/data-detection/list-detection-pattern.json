@@ -1,5 +1,6 @@
 [
       { "Detection": "detection-1-volume-shadows-copy.html", "Detection ID": "DET-1-001", "EventID": "4688", "Detection Pattern": "vssadmin delete shadows", "Comment": "N/A", "Content Update": "02/01/2022"},
       { "Detection": "detection-1-volume-shadows-copy.html", "Detection ID": "DET-1-002", "EventID": "5857", "Detection Pattern": "MSVSS__PROVIDER", "Comment": "N/A", "Content Update": "02/01/2022"},
-      { "Detection": "detection-1-volume-shadows-copy.html", "Detection ID": "DET-1-003", "EventID": "4688", "Detection Pattern": "wmic shadowcopy delete", "Comment": "N/A", "Content Update": "02/01/2022"}
+      { "Detection": "detection-1-volume-shadows-copy.html", "Detection ID": "DET-1-003", "EventID": "4688", "Detection Pattern": "wmic shadowcopy delete", "Comment": "N/A", "Content Update": "02/01/2022"},
+      { "Detection": "detection-1-volume-shadows-copy.html", "Detection ID": "DET-1-004", "EventID": "4688", "Detection Pattern": "wbadmin delete catalog", "Comment": "N/A", "Content Update": "02/01/2022"}
 ]
