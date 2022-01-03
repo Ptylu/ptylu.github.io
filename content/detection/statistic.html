@@ -1,0 +1,230 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Detection Volume Shadow Copy</title>
+
+  <script type='text/javascript'>
+    //Recuperer page actuelle pour afficher ensuite que les detections liees a cette page
+    //var pathfile = window.location.pathname.split("/").pop();
+
+    // Recuperation parameteur DET-
+  var htmlParameter = window.location.href.split("=").pop();
+
+  $(document).ready(function(){
+    $('#assetHead').load("/assets/header.html");
+    $('#h1Title').text(htmlParameter);
+  });
+
+  // Load Json
+  var jsonListDetection = (function () {
+    var jsonListDetection = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-page/data-detection/list-detection.json',
+      'dataType': "json",
+      'success': function (data) {
+        myListjsonListDetection = data;
+      }
+    });
+    return myListjsonListDetection;
+  })();
+
+  console.log(myListjsonListDetection)
+
+  // Load Json
+  var json = (function () {
+    var json = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-page/data-detection/list-detection-pattern.json',
+      'dataType': "json",
+      'success': function (data) {
+        myList = data;
+      }
+    });
+    return myList;
+  })();
+
+  var dataPoints = [];
+
+  // Add Json loased in table
+  function buildHtmlTableDetection(selector) {
+    var columns = addAllColumnHeaders(myList, selector);
+    for (var i = 0; i < myList.length; i++) {
+
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+      if(myList[i][columns[0]]==htmlParameter){
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+          var cellValue = myList[i][columns[colIndex]];
+          if (cellValue == null) cellValue = "";
+          row$.append($('<td/>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+    // Suppirmer la premiere colonne correspondante au path (header et valeurs)
+    $("#DetectionTable th:first-child").remove()
+    $("#DetectionTable td:first-child").remove()
+  }
+
+
+  // Load Json
+  var jsonMalwareExample = (function () {
+    var jsonMalwareExample = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-page/data-detection/list-detection-pattern-example.json',
+      'dataType': "json",
+      'success': function (data) {
+        myListMalwareExample = data ;
+      }
+    });
+    return myListMalwareExample;
+  })();
+  // Add Json loased in table
+  function buildHtmlTableMalwareExample(selector) {
+    var columnsMalwareExample = addAllColumnHeaders(myListMalwareExample, selector);
+    for (var i = 0; i < myListMalwareExample.length; i++) {
+
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+      if(myListMalwareExample[i][columnsMalwareExample[0]]==htmlParameter){
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columnsMalwareExample.length; colIndex++) {
+          var cellValue = myListMalwareExample[i][columnsMalwareExample[colIndex]];
+          if (cellValue == null) cellValue = "";
+          console.log(myListMalwareExample[i][columnsMalwareExample[1]])
+          //dataPoints.push({ x: myListMalwareExample[i][columnsMalwareExample[1]].y), y: Number(myListMalwareExample[i][columnsMalwareExample[1]].label) });
+          row$.append($('<td/>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+    // Suppirmer la premiere colonne correspondante au path (header et valeurs)
+    $("#MalwareExampleTable th:first-child").remove()
+    $("#MalwareExampleTable td:first-child").remove()
+  }
+
+  // Adds a header row to the table and returns the set of columns.
+  // Need to do union of keys from all records as some records may not contain
+  // all records.
+  function addAllColumnHeaders(myList, selector) {
+    var columnSet = [];
+    var headerTr$ = $('<tr/>');
+
+    for (var i = 0; i < myList.length; i++) {
+      var rowHash = myList[i];
+      for (var key in rowHash) {
+        if ($.inArray(key, columnSet) == -1) {
+          columnSet.push(key);
+          headerTr$.append($('<th/>').html(key));
+        }
+      }
+    }
+    $(selector).append(headerTr$);
+
+    return columnSet;
+  }
+
+  function buildHtmlTableMalwareExample(selector) {
+    var columnsMalwareExample = addAllColumnHeaders(myListMalwareExample, selector);
+    for (var i = 0; i < myListMalwareExample.length; i++) {
+
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+      if(myListMalwareExample[i][columnsMalwareExample[0]]==htmlParameter){
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columnsMalwareExample.length; colIndex++) {
+          var cellValue = myListMalwareExample[i][columnsMalwareExample[colIndex]];
+          if (cellValue == null) cellValue = "";
+          row$.append($('<td/>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+    // Suppirmer la premiere colonne correspondante au path (header et valeurs)
+    $("#MalwareExampleTable th:first-child").remove()
+    $("#MalwareExampleTable td:first-child").remove()
+  }
+
+  // Creation camembert pour statistique des patternes attaques dans les labs
+  function buildChart(selector) {
+
+    const countsDetectionID = {};
+
+    //Recuperer toutes les attaques pour les regrouper en fonction de la detection ID (Va avoir un object simple qui va falloir transforner en Json Array)
+    myListMalwareExample.forEach(r => {
+      if(r["Detection-ID"]==htmlParameter){
+        countsDetectionID[r["Sub-Detection-ID"]] = (countsDetectionID[r["Sub-Detection-ID"]] || 0) + 1;
+      };
+    });
+
+    // Transfornation de l'object simple en json Array pour qu'il soit compris par le chart
+    jsonObjCountsDetectionID = [];
+    $.each(countsDetectionID, function(key, value) {
+      console.log(key+ ':' + value);
+      item = {}
+      item ["label"] = key;
+      item ["y"] = value;
+      jsonObjCountsDetectionID.push(item);
+    });
+
+    var options = {
+      title: {
+        text: "Number of patterns detected in lab according to the Detection-ID"
+      },
+      data: [{
+        type: "pie",
+        startAngle: 45,
+        showInLegend: "true",
+        legendText: "{label}",
+        indexLabel: "{label} ({y})",
+        yValueFormatString:"#,##0.#"%"",
+        dataPoints: jsonObjCountsDetectionID
+      }]
+    };
+    $("#chartDetection").CanvasJSChart(options);
+  }
+</script>
+
+</head>
+
+<body  onLoad="buildHtmlTableDetection('#DetectionTable');buildHtmlTableMalwareExample('#MalwareExampleTable');buildChart('#chartContainer')">
+  <div id="assetHead"></div>
+
+<div id="content" class="container-fluid">
+    <h1 id="h1Title"></h1>
+</div>
+  <div id="content" class="container-fluid">
+
+    <h2>List of Detection patterns</h2>
+    <table id="DetectionTable" border="1" class="table" > </table>
+  </div>
+<br>
+  <div id="chartDetection" style="height: 370px; width: 100%;"></div>
+  <br>
+  <div id="content" class="container-fluid">
+    <h2>Example of malicious patterns found during lab</h2>
+    <table id="MalwareExampleTable" border="1" class="table" > </table>
+  </div>
+
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>

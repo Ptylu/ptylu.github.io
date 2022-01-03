@@ -1,5 +1,5 @@
 [
-      { "Detection Type": "Inhibit System Recovery", "Mitre Attack ID": "T1490", "Comment": "N/A", "Link": "1-volume-shadows-copy" },
-      { "Detection Type": "Indicator Removal on Host: File Deletion", "Mitre Attack ID": "T1070.004", "Comment": "N/A", "Link": "2-file-deletion-indicator-removal-on-host" },
-      { "Detection Type": "...", "Comment": "N/A", "Link": "N/A" }
+      { "Detection Name": "Inhibit System Recovery", "Mitre Attack ID": "T1490", "Comment": "N/A", "Detection-ID": "DET-1" },
+      { "Detection Name": "Indicator Removal on Host: File Deletion", "Mitre Attack ID": "T1070.004", "Comment": "N/A", "Detection-ID": "DET-2" },
+      { "Detection Name": "...", "Comment": "N/A", "Detection-ID": "N/A" }
 ]
