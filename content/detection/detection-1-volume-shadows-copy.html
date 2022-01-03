@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,7 +32,7 @@
   })();
 
   // Add Json loased in table
-  function buildHtmlTable(selector) {
+  function buildHtmlTableDetection(selector) {
     var columns = addAllColumnHeaders(myList, selector);
     for (var i = 0; i < myList.length; i++) {
 
@@ -47,8 +48,44 @@
       }
     }
     // Suppirmer la premiere colonne correspondante au path (header et valeurs)
-    $("#RegistryKeyTable th:first-child").remove()
-    $("#RegistryKeyTable td:first-child").remove()
+    $("#DetectionTable th:first-child").remove()
+    $("#DetectionTable td:first-child").remove()
+  }
+
+
+  // Load Json
+  var jsonMalwareExample = (function () {
+    var jsonMalwareExample = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-page/data-detection/list-detection-pattern-example.json',
+      'dataType': "json",
+      'success': function (data) {
+        myListMalwareExample = data ;
+      }
+    });
+    return myListMalwareExample;
+  })();
+  // Add Json loased in table
+  function buildHtmlTableMalwareExample(selector) {
+    var columnsMalwareExample = addAllColumnHeaders(myListMalwareExample, selector);
+    for (var i = 0; i < myListMalwareExample.length; i++) {
+
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==pathfile)
+      if(myListMalwareExample[i][columnsMalwareExample[0]]==pathfile){
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columnsMalwareExample.length; colIndex++) {
+          var cellValue = myListMalwareExample[i][columnsMalwareExample[colIndex]];
+          if (cellValue == null) cellValue = "";
+          row$.append($('<td/>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+    // Suppirmer la premiere colonne correspondante au path (header et valeurs)
+    $("#MalwareExampleTable th:first-child").remove()
+    $("#MalwareExampleTable td:first-child").remove()
   }
 
   // Adds a header row to the table and returns the set of columns.
@@ -75,11 +112,15 @@
 
 </head>
 
-<body  onLoad="buildHtmlTable('#RegistryKeyTable')">
+<body  onLoad="buildHtmlTableDetection('#DetectionTable');buildHtmlTableMalwareExample('#MalwareExampleTable')">
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
-    <table id="RegistryKeyTable" border="1" class="table" > </table>
+    <table id="DetectionTable" border="1" class="table" > </table>
+  </div>
+
+  <div id="content" class="container-fluid">
+    <table id="MalwareExampleTable" border="1" class="table" > </table>
   </div>
 
   <!-- Begin page content -->
