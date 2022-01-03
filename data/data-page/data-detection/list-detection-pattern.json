@@ -1,12 +1,12 @@
 [
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-001", "EventID": "4688", "Detection Pattern": "vssadmin delete shadows", "Comment": "N/A", "Content Update": "02/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-002", "EventID": "5857", "Detection Pattern": "MSVSS__PROVIDER", "Comment": "N/A", "Content Update": "02/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-003", "EventID": "4688", "Detection Pattern": "wmic shadowcopy delete", "Comment": "N/A", "Content Update": "02/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-004", "EventID": "4688", "Detection Pattern": "wbadmin delete catalog", "Comment": "N/A", "Content Update": "02/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-005", "EventID": "4688", "Detection Pattern": "vssadmin resize shadowstorage", "Comment": "N/A", "Content Update": "03/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-006", "EventID": "5858", "Detection Pattern": "SELECT * FROM Win32_ShadowCopy", "Comment": "Possible error from DET-1-002", "Content Update": "03/01/2022"},
-      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-001", "EventID": "4688", "Detection Pattern": "choice & Del", "Comment": "Used by executable to delete itself", "Content Update": "03/01/2022"},
-      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-002", "EventID": "4688", "Detection Pattern": "fsutil setZeroData offset=0", "Comment": "Fsutil setZeroData will zero fill (avoid forensic) the executable", "Content Update": "03/01/2022"},
-      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-003", "EventID": "4688", "Detection Pattern": "del", "Comment": "Can be used alone or right after DET-2-002. Can be used with /f force and /q quiet mode", "Content Update": "03/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-007", "EventID": "4688", "Detection Pattern": "bcdedit /set {default} recoveryenabled no", "Comment": "N/A", "Content Update": "03/01/2022"}
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-001", "EventID": "4688", "Detection Pattern": "vssadmin delete shadows", "Comment": "N/A", "Content Updated": "02/01/2022"},
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-002", "EventID": "5857", "Detection Pattern": "MSVSS__PROVIDER", "Comment": "N/A", "Content Updated": "02/01/2022"},
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-003", "EventID": "4688", "Detection Pattern": "wmic shadowcopy delete", "Comment": "N/A", "Content Updated": "02/01/2022"},
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-004", "EventID": "4688", "Detection Pattern": "wbadmin delete catalog", "Comment": "N/A", "Content Updated": "02/01/2022"},
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-005", "EventID": "4688", "Detection Pattern": "vssadmin resize shadowstorage", "Comment": "N/A", "Content Updated": "03/01/2022"},
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-006", "EventID": "5858", "Detection Pattern": "SELECT * FROM Win32_ShadowCopy", "Comment": "Possible error from DET-1-002", "Content Updated": "03/01/2022"},
+      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-001", "EventID": "4688", "Detection Pattern": "choice & Del", "Comment": "Used by executable to delete itself", "Content Updated": "03/01/2022"},
+      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-002", "EventID": "4688", "Detection Pattern": "fsutil setZeroData offset=0", "Comment": "Fsutil setZeroData will zero fill (avoid forensic) the executable", "Content Updated": "03/01/2022"},
+      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-003", "EventID": "4688", "Detection Pattern": "del", "Comment": "Can be used alone or right after DET-2-002. Can be used with /f force and /q quiet mode", "Content Updated": "03/01/2022"},
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-007", "EventID": "4688", "Detection Pattern": "bcdedit /set {default} recoveryenabled no", "Comment": "N/A", "Content Updated": "03/01/2022"}
 ]
