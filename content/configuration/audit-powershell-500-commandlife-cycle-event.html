@@ -23,7 +23,8 @@
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
-    <h1>Configuration</h1>
+    <h1>EventID 500</h1>
+    <h2>Configuration</h2>
     <p>This Event logs Powershell commands launched with powershell interface or script. There are  at leat 2 methods for the powershell eventlog 500 activation</p>
     <div class="row">
       <div class="col-sm-6 container-fluid">
@@ -33,7 +34,7 @@
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
-              <p>Create file <code>C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\profile.ps1</code> and add <code>$LogCommandLifeCycleEvent=$true</code>. Needs a reboot to be effective</p>
+              <p>Create file <code>C:\Windows\System32\WindowsPowerShell\v1.0\profile.ps1</code> and add <code>$LogCommandLifeCycleEvent=$true</code>. Needs a reboot to be effective</p>
               <p>This configuration <mark>stays</mark> after reboot and is effective on all users.</p>
             </blockquote>
           </div>
@@ -54,8 +55,21 @@
       </div>
     </div>
     <br>
-    <div class="alert alert-danger" role="alert"><b>Attention</b> The second method can be used by non-admin user to avoid Powershell logging during its current session.</div>
-    <img src="/data/data-page/data-configuration/image/powershell-500-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+    <div class="alert alert-danger" role="alert"><b>Attention</b> The second method can be used by non-admin user to avoid Powershell logging during its current session even when the 1st method is already configured.</div>
+    <h2>Example</h2>
+    <figure class="figure container-fluid">
+      <img src="/data/data-page/data-configuration/image/powershell-500-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center">Log from Powershell CLI</figcaption>
+    </figure>
+    <figure class="figure container-fluid">
+      <img src="/data/data-page/data-configuration/image/powershell-500-script-getinstance.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center">Log from Powershell Script (1/2)</figcaption>
+    </figure>
+    <figure class="figure container-fluid">
+      <img src="/data/data-page/data-configuration/image/powershell-500-script-setobject.png.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center">Log from Powershell Script (2/2)</figcaption>
+    </figure>
+
   </div>
 
   <!-- Bootstrap core JavaScript
