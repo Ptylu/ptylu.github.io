@@ -75,6 +75,13 @@
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
           var cellValue = myList[i][columns[colIndex]];
           if (cellValue == null) cellValue = "";
+          if (colIndex==2){
+            if (cellValue=="a") {
+              cellValue = '<span class="badge rounded-pill bg-info">admin-right</span>';
+            }else if (cellValue=="u") {
+              cellValue = '<span class="badge rounded-pill bg-danger">user-right</span>';
+            }
+          }
           row$.append($('<td/>').html(cellValue));
         }
         $(selector).append(row$);
@@ -203,14 +210,14 @@
   <div id="content" class="container-fluid">
 
     <h3>List of Detection Pattern</h3>
-    <table id="DetectionTable" border="1" class="table table-bordered" > </table>
+    <table id="DetectionTable" border="1" class="table table-bordered shadow-3" > </table>
   </div>
 <br>
   <div id="chartDetection" style="height: 370px; width: 100%;"></div>
   <br>
   <div id="content" class="container-fluid">
     <h3>Example of malicious patterns found during lab</h3>
-    <table id="MalwareExampleTable" border="1" class="table" > </table>
+    <table id="MalwareExampleTable" border="1" class="table table-bordered shadow-3" > </table>
   </div>
 
 
