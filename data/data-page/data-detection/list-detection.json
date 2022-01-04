@@ -1,5 +1,5 @@
 [
       { "Detection-ID": "DET-1", "Detection Name": "Inhibit System Recovery", "Mitre Attack ID": "T1490", "Comment": "N/A" },
       { "Detection-ID": "DET-2", "Detection Name": "Indicator Removal on Host: File Deletion", "Mitre Attack ID": "T1070.004", "Comment": "N/A" },
-      { "Detection-ID": "N/A", "Detection Name": "...", "Comment": "N/A" }
+      { "Detection-ID": "DET-3", "Detection Name": "Software Discovery: Security Software Discovery", "Comment": "N/A" }
 ]

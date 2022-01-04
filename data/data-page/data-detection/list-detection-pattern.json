@@ -8,5 +8,6 @@
       { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-001", "EventID": "4688", "Detection Pattern": "choice & Del", "Comment": "Used by executable to delete itself", "Content Updated": "03/01/2022"},
       { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-002", "EventID": "4688", "Detection Pattern": "fsutil setZeroData offset=0", "Comment": "Fsutil setZeroData will zero fill (avoid forensic) the executable", "Content Updated": "03/01/2022"},
       { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-003", "EventID": "4688", "Detection Pattern": "del", "Comment": "Can be used alone or right after DET-2-002. Can be used with /f force and /q quiet mode", "Content Updated": "03/01/2022"},
-      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-007", "EventID": "4688", "Detection Pattern": "bcdedit /set {default} recoveryenabled no", "Comment": "N/A", "Content Updated": "03/01/2022"}
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-007", "EventID": "4688", "Detection Pattern": "bcdedit /set {default} recoveryenabled no", "Comment": "N/A", "Content Updated": "03/01/2022"},
+      { "Detection-ID": "DET-3", "Sub-Detection-ID": "DET-3-001", "EventID": "4688,4104", "Detection Pattern": "Get-MpPreference", "Comment": "N/A", "Content Updated": "04/01/2022"}
 ]

@@ -1,0 +1,6 @@
+[
+      { "File Name": "Security.evtx", "EventLog": "4688", "Comment": "Process Creation" },
+      { "File Name": "Microsoft-Windows-PowerShell-Operational.evtx", "EventLog": "4104", "Comment": "Suspicious Powershell launched" },
+      { "File Name": "Microsoft-Windows-PowerShell-Operational.evtx", "EventLog": "40962", "Comment": "PowerShell console is ready for user input" },
+      { "File Name": "Windows PowerShell.evtx", "EventLog": "500", "Comment": "Log Command launched with Powershell, can generate 5-6 logs for 1 command" }
+]
