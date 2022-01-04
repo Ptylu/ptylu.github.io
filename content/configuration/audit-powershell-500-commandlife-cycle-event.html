@@ -25,7 +25,7 @@
   <div id="content" class="container-fluid">
     <h1>EventID 500</h1>
     <h2>Configuration</h2>
-    <p>This Event logs Powershell commands launched with powershell interface or script. There are  at leat 2 methods for the powershell eventlog 500 activation</p>
+    <p>This Event logs Powershell commands launched with powershell interface or script. There are  at leat 2 methods for the powershell eventlog 500 activation.</p>
     <div class="row">
       <div class="col-sm-6 container-fluid">
         <div class="card border">
@@ -34,7 +34,7 @@
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
-              <p>Create file <code>C:\Windows\System32\WindowsPowerShell\v1.0\profile.ps1</code> and add <code>$LogCommandLifeCycleEvent=$true</code>. Needs a reboot to be effective</p>
+              <p>Create file <code>C:\Windows\System32\WindowsPowerShell\v1.0\{profile.ps1 | Microsoft.PowerShell_profile.ps1}</code> and add <code>$LogCommandLifeCycleEvent=$true</code>. Needs a reboot to be effective.</p>
               <p>This configuration <mark>stays</mark> after reboot and is effective on all users.</p>
             </blockquote>
           </div>
@@ -70,7 +70,10 @@
       <figcaption class="figure-caption  text-center">Log from Powershell Script (2/2)</figcaption>
     </figure>
     <h2>Links</h2>
-<a>https://docs.microsoft.com/en-us/powershell/scripting/samples/selecting-parts-of-objects--select-object-?view=powershell-7.2</a>
+    <ul>
+<li>https://docs.microsoft.com/en-us/powershell/scripting/samples/selecting-parts-of-objects--select-object-?view=powershell-7.2</li>
+<li>https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2</li>
+</ul>
   </div>
 
   <!-- Bootstrap core JavaScript
