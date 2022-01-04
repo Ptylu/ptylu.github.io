@@ -36,5 +36,6 @@
       { "Detection-ID": "DET-8", "Sub-Detection-ID": "DET-8-001", "Name": "Ransomware Ryuk", "Action detected in the lab": "time", "Comment": "N/A", "Sha256": "N/A"},
       { "Detection-ID": "DET-9", "Sub-Detection-ID": "DET-9-001", "Name": "Coinminer", "Action detected in the lab": "attrib +h svshost.exe", "Comment": "N/A", "Sha256": "N/A"},
       { "Detection-ID": "DET-9", "Sub-Detection-ID": "DET-9-001", "Name": "Coinminer", "Action detected in the lab": "attrib +h XMRig CPU mine.exe", "Comment": "N/A", "Sha256": "N/A"},
-      { "Detection-ID": "DET-9", "Sub-Detection-ID": "DET-9-001", "Name": "Coinminer", "Action detected in the lab": "attrib +h config.json", "Comment": "N/A", "Sha256": "N/A"}
+      { "Detection-ID": "DET-9", "Sub-Detection-ID": "DET-9-001", "Name": "Coinminer", "Action detected in the lab": "attrib +h config.json", "Comment": "N/A", "Sha256": "N/A"},
+            { "Detection-ID": "DET-10", "Sub-Detection-ID": "DET-10-001", "Name": "Coinminer", "Action detected in the lab": "net accounts", "Comment": "N/A", "Sha256": "N/A"}
 ]

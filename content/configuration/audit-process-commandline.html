@@ -21,8 +21,10 @@
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
-    <h1>Configuration Process Commandline Auditing</h1>
-    <p> In 2 parts: Allow New Process auditing (EventID 4688) in the group policy (gpedit.msc) and setup the CommandLine auditing (deactivated by default because can contains cleartext password) also in the group policy (gpedit.msc)<p>
+    <h1>EventID 4688</h1>
+    <h2>Configuration</h2>
+    <p> In 2 parts: Allow New Process auditing (EventID 4688) in the group policy (gpedit.msc) and setup the Command line process auditing also in the group policy (gpedit.msc)<p>
+      <p class="note note-danger"><strong>Note:</strong> The Command line process auditing is disabled by default because it can contain clairtext passwords.</p>
       <h2>Part 1: Audit New process in group policy</h2>
       <p> Open gpedit.msc, activate Audit Process Creation in:
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"
@@ -63,6 +65,10 @@
            After the modification you can see the Commandline present in the 4688 EventID
            <img src="/data/data-page/data-configuration/image/process-auditing-with-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
         </p>
+        <h2>Link</h2>
+        <ul>
+          <li>https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing</li>
+        </ul>
         </div>
 
         <!-- Begin page content -->

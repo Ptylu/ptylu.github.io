@@ -16,5 +16,6 @@
       { "Detection-ID": "DET-7", "Sub-Detection-ID": "DET-7-001", "Privilege": "u", "EventID": "4688", "Detection Pattern": "ver", "Comment": "N/A", "Content Updated": "04/01/2022"},
       { "Detection-ID": "DET-7", "Sub-Detection-ID": "DET-7-002", "Privilege": "u", "EventID": "4688,500,4104", "Detection Pattern": "systeminfo", "Comment": "N/A", "Content Updated": "04/01/2022"},
       { "Detection-ID": "DET-8", "Sub-Detection-ID": "DET-8-001", "Privilege": "u", "EventID": "4688", "Detection Pattern": "time", "Comment": "N/A", "Content Updated": "04/01/2022"},
-      { "Detection-ID": "DET-9", "Sub-Detection-ID": "DET-9-001", "Privilege": "u", "EventID": "4688,500", "Detection Pattern": "attrib +h", "Comment": "Hide file, user can view file if Hidden items checkbox is checked", "Content Updated": "04/01/2022"}
+      { "Detection-ID": "DET-9", "Sub-Detection-ID": "DET-9-001", "Privilege": "u", "EventID": "4688,500", "Detection Pattern": "attrib +h", "Comment": "Hide file, user can view file if Hidden items checkbox is checked", "Content Updated": "04/01/2022"},
+            { "Detection-ID": "DET-10", "Sub-Detection-ID": "DET-10-001", "Privilege": "u", "EventID": "4688,500", "Detection Pattern": "net accounts", "Comment": "N/A", "Content Updated": "04/01/2022"}
     ]
