@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <title>Audit powershell Commandlife</title>
+
+  <script type='text/javascript'>
+
+    $(document).ready(function(){
+      $('#assetHead').load("/assets/header.html");
+    });
+
+  </script>
+
+</head>
+
+<body style="background-color:#FCFAFA;">
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <h1>Configuration</h1>
+    <p>This Event logs Powershell commands launched with powershell interface or script. There are  at leat 2 methods for the powershell eventlog 500 activation</p>
+    <div class="row">
+      <div class="col-sm-6 container-fluid">
+        <div class="card border">
+          <div class="card-header">
+            1st method <span class="badge rounded-pill bg-info">admin-right</span>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>Create file <code>C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\profile.ps1</code> and add <code>$LogCommandLifeCycleEvent=$true</code>. Needs a reboot to be effective</p>
+              <p>This configuration <mark>stays</mark> after reboot and is effective on all users.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 container-fluid">
+        <div class="card border">
+          <div class="card-header">
+            2nd method <span class="badge rounded-pill bg-danger">user-right</span>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>Open powershell and launch this command <code>$LogCommandLifeCycleEvent=$true</code>. Doesn't need a reboot to be effective</p>
+              <p>This configuration <mark>disappears</mark> after reboot and is effective only on user that launched command.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="alert alert-danger" role="alert"><b>Attention</b> The second method can be used by non-admin user to avoid Powershell logging during its current session.</div>
+    <img src="/data/data-page/data-configuration/image/powershell-500-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
