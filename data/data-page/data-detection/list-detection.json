@@ -9,5 +9,8 @@
 
       { "Detection-ID": "DET-8", "Detection Name": "System Time Discovery", "Mitre Attack ID": "T1124", "Comment": "N/A" },
       { "Detection-ID": "DET-9", "Detection Name": "Hide Artifacts: Hidden Files and Directories", "Mitre Attack ID": "T1564.001", "Comment": "N/A" },
-      { "Detection-ID": "DET-10", "Detection Name": "Password Policy Discovery", "Mitre Attack ID": "T1201", "Comment": "N/A" }
+      { "Detection-ID": "DET-10", "Detection Name": "Password Policy Discovery", "Mitre Attack ID": "T1201", "Comment": "N/A" },
+      { "Detection-ID": "DET-11", "Detection Name": "Network Share Creation", "Mitre Attack ID": "N/A", "Comment": "Share Creation" },
+      { "Detection-ID": "DET-12", "Detection Name": "Account Manipulation", "Mitre Attack ID": "T1098", "Comment": "Password modification" },
+      { "Detection-ID": "DET-13", "Detection Name": "File and Directory Permissions Modification: Windows File and Directory Permissions Modification", "Mitre Attack ID": "T1222.001", "Comment": "N/A" }
 ]
