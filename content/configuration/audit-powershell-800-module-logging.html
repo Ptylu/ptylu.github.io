@@ -23,9 +23,9 @@
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
-    <h1>EventID 500</h1>
+    <h1>EventID 800</h1>
     <h2>Configuration</h2>
-    <p>This Event logs Powershell commands launched with powershell interface or script. There are at least 2 methods for the powershell eventlog 500 activation.</p>
+    <p>This Event logs Powershell's Module launched with powershell CLI or Powershell script. There are  at least 2 methods for the powershell eventlog 800 activation.</p>
     <div class="row">
       <div class="col-sm-6 container-fluid">
         <div class="card border">
@@ -34,8 +34,8 @@
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
-              <p>Create file <code>C:\Windows\System32\WindowsPowerShell\v1.0\{profile.ps1 | Microsoft.PowerShell_profile.ps1}</code> and add <code>$LogCommandLifeCycleEvent=$true</code>. Needs a reboot to be effective.</p>
-              <p>This configuration <mark>stays</mark> after reboot and is effective on all users.</p>
+              <p>Open <code>Computer Configuration/Administrative Templates/Windows Components/Windows PowerShell/</code><code class="breadcrumb-item active">Turn on Module Logging</code>. Check <code>Enabled</code> and add <code>*</code> in <code>Module Name</code> . Needs a reboot to be effective.</p>
+              <p>This configuration <mark>stays</mark> after reboot and is effective on all users. (gpupdate /force didn't work on my side)</p>
             </blockquote>
           </div>
         </div>
@@ -47,7 +47,7 @@
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
-              <p>Open powershell and launch this command <code>$LogCommandLifeCycleEvent=$true</code>. Doesn't need a reboot to be effective</p>
+              <p>Open powershell and launch this command <code>Get-Module | ForEach {$_.LogPipelineExecutionDetails=$True}</code>. Doesn't need a reboot to be effective.</p>
               <p>This configuration <mark>disappears</mark> after reboot and is effective only on user that launched command.</p>
             </blockquote>
           </div>
@@ -55,24 +55,25 @@
       </div>
     </div>
     <br>
-    <p class="note note-danger"><strong>Note:</strong> The second method can be used by non-admin user to avoid Powershell logging during its current session even when the 1st method is already configured.</p>
+    <p class="note note-danger"><strong>Note:</strong> The second method can be used by non-admin user to avoid Powershell module logging during its current session even when the 1st method is already configured.</p>
     <h2>Example</h2>
     <figure class="figure container-fluid">
-      <img src="/data/data-page/data-configuration/image/powershell-500-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
-      <figcaption class="figure-caption  text-center">Log from Powershell CLI</figcaption>
+      <img src="/data/data-page/data-configuration/image/powershell-800-script.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center">Log from Powershell Script</figcaption>
     </figure>
     <figure class="figure container-fluid">
-      <img src="/data/data-page/data-configuration/image/powershell-500-script-getinstance.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
-      <figcaption class="figure-caption  text-center">Log from Powershell Script (1/2)</figcaption>
+      <img src="/data/data-page/data-configuration/image/powershell-800-cmd-ping.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center">Powershell launched from CMD (1/2)</figcaption>
     </figure>
     <figure class="figure container-fluid">
-      <img src="/data/data-page/data-configuration/image/powershell-500-script-setobject.png.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
-      <figcaption class="figure-caption  text-center">Log from Powershell Script (2/2)</figcaption>
+      <img src="/data/data-page/data-configuration/image/powershell-800-cmd-module.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center">Powershell launched from CMD (2/2)</figcaption>
     </figure>
     <h2>Link</h2>
     <ul>
-      <li>https://docs.microsoft.com/en-us/powershell/scripting/samples/selecting-parts-of-objects--select-object-?view=powershell-7.2</li>
-      <li>https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.2</li>
+      <li>https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_eventlogs?view=powershell-5.1</li>
+      <li>https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_group_policy_settings?view=powershell-7.2</li>
+      <li>https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-7.2</li>
     </ul>
   </div>
 
