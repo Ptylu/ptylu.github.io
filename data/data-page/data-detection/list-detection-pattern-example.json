@@ -52,6 +52,18 @@
       { "Detection-ID": "DET-14", "Sub-Detection-ID": "DET-1-004", "Name": "Ransomware TimeTime", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\lsass.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Roaming\\svchost.exe\"}", "Sha256": "C535611E8A4ED6950F580B1007923727BA79EA7CAC1A3CF7C77525CBF6B68126", "Comment": "N/A"},
       { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Ransomware TimeTime", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\c535611e8a4ed6950f580b1007923727ba79ea7cac1a3cf7c77525cbf6b68126.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\c535611e8a4ed6950f580b1007923727ba79ea7cac1a3cf7c77525cbf6b68126.exe.log\"}", "Sha256": "C535611E8A4ED6950F580B1007923727BA79EA7CAC1A3CF7C77525CBF6B68126", "Comment": "N/A"},
       { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Ransomware TimeTime", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\lsass.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\lsass.exe.log\"}", "Sha256": "C535611E8A4ED6950F580B1007923727BA79EA7CAC1A3CF7C77525CBF6B68126", "Comment": "N/A"},
-      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Ransomware TimeTime", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Roaming\\svchost.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\svchost.exe.log\"}", "Sha256": "C535611E8A4ED6950F580B1007923727BA79EA7CAC1A3CF7C77525CBF6B68126", "Comment": "N/A"}
+      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Ransomware TimeTime", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Roaming\\svchost.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\svchost.exe.log\"}", "Sha256": "C535611E8A4ED6950F580B1007923727BA79EA7CAC1A3CF7C77525CBF6B68126", "Comment": "N/A"},
 
+
+
+
+
+
+
+
+      { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\BOOTNXT\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
+      { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\Boot\\bootuwf.dll\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
+      { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\Boot\\bootvhd.dll\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
+      { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\Boot\\memtest.exe\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
+      { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\Boot\\bg-BG\\bootmgr.exe.mui\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"}
 ]

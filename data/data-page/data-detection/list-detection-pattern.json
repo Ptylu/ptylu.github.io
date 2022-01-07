@@ -23,5 +23,13 @@
       { "Detection-ID": "DET-13", "Sub-Detection-ID": "DET-13-001", "Privilege": "a", "EventID": "4688,500", "Detection Pattern": "takeown", "Comment": "N/A", "Updated": "05/01/2022", "Verif Log": "Y"},
       { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-008", "Privilege": "", "EventID": "4688", "Detection Pattern": "bcdedit /set {default} bootstatuspolicy ignoreallfailures", "Comment": "N/A", "Updated": "07/01/2022", "Verif Log": ""},
       { "Detection-ID": "DET-14", "Sub-Detection-ID": "DET-14-001", "Privilege": "", "EventID": "11,4688", "Detection Pattern": "C:\\Users\\Lucas\\AppData\\Local\\lsass.exe", "Comment": "In folder User\\AppData\\Local. Can be detected by Sysmon EventID 11 or other ID for process launched containing the malicious file", "Updated": "07/01/2022", "Verif Log": ""},
-      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Privilege": "", "EventID": "11", "Detection Pattern": "UsageLogs", "Comment": "Malicious process used .NET ", "Updated": "07/01/2022", "Verif Log": ""}
+      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Privilege": "", "EventID": "11", "Detection Pattern": "UsageLogs", "Comment": "Malicious process used .NET ", "Updated": "07/01/2022", "Verif Log": ""},
+
+
+
+
+
+
+
+            { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Privilege": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022", "Verif Log": ""}
     ]
