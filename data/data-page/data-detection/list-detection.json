@@ -14,8 +14,10 @@
       { "Detection-ID": "DET-12", "Detection Name": "Account Manipulation", "Mitre Attack ID": "T1098", "Comment": "Password modification" },
       { "Detection-ID": "DET-13", "Detection Name": "File and Directory Permissions Modification: Windows File and Directory Permissions Modification", "Mitre Attack ID": "T1222.001", "Comment": "N/A" },
       { "Detection-ID": "DET-14", "Detection Name": "Masquerading: Match Legitimate Name or Location", "Mitre Attack ID": "T1036.005", "Comment": "N/A" },
-      { "Detection-ID": "DET-15", "Detection Name": "Command and Scripting Interpreter", "Mitre Attack ID": "T1059", "Comment": "UsageLogs File Creation " },
-
+      { "Detection-ID": "DET-15", "Detection Name": "Command and Scripting Interpreter", "Mitre Attack ID": "T1059", "Comment": "UsageLogs File Creation" },
+      { "Detection-ID": "DET-16", "Detection Name": "Malicious Executable Creation", "Mitre Attack ID": "T1059", "Comment": "Malicious Executable Creation" },
+      { "Detection-ID": "DET-17", "Detection Name": "Scheduled Task/Job: Scheduled Task", "Mitre Attack ID": "T1053.005", "Comment": "" },
+      { "Detection-ID": "DET-18", "Detection Name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder", "Mitre Attack ID": "T1547.001", "Comment": "" },
 
 
       { "Detection-ID": "DET-XXX", "Detection Name": "Possible malicious pattern", "Mitre Attack ID": "N/A", "Comment": "Possible malicious pattern" }

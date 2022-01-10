@@ -24,8 +24,10 @@
       { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-008", "Privilege": "", "EventID": "4688", "Detection Pattern": "bcdedit /set {default} bootstatuspolicy ignoreallfailures", "Comment": "N/A", "Updated": "07/01/2022", "Verif Log": ""},
       { "Detection-ID": "DET-14", "Sub-Detection-ID": "DET-14-001", "Privilege": "", "EventID": "11,4688", "Detection Pattern": "C:\\Users\\Lucas\\AppData\\Local\\lsass.exe", "Comment": "In folder User\\AppData\\Local. Can be detected by Sysmon EventID 11 or other ID for process launched containing the malicious file", "Updated": "07/01/2022", "Verif Log": ""},
       { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Privilege": "", "EventID": "11", "Detection Pattern": "UsageLogs", "Comment": "Malicious process used .NET ", "Updated": "07/01/2022", "Verif Log": ""},
-
-
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-001", "Privilege": "", "EventID": "11", "Detection Pattern": "N/A", "Comment": "Malicious Executable Creation", "Updated": "10/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-17", "Sub-Detection-ID": "DET-17-001", "Privilege": "", "EventID": "4688", "Detection Pattern": "schtasks.exe /Create", "Comment": "", "Updated": "10/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-17", "Sub-Detection-ID": "DET-17-001", "Privilege": "", "EventID": "11", "Detection Pattern": "C:\\Windows\\System32\\Tasks\\", "Comment": "Folder that save all scheduled tasks", "Updated": "10/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-18", "Sub-Detection-ID": "DET-18-001", "Privilege": "", "EventID": "13", "Detection Pattern": "\\CurrentVersion\\Run\\", "Comment": "", "Updated": "10/01/2022", "Verif Log": ""},
 
 
 
