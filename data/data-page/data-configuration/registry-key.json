@@ -3,5 +3,7 @@
       { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", "Comment": "N/A" },
       { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders", "Comment": "N/A" },
       { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework", "Comment": ".NET CLR UsageLogs" },
-      { "Registry Key": "Computer\\HKEY_CURENT_USER\\SOFTWARE\\Microsoft\\.NETFramework", "Comment": ".NET CLR UsageLogs" }
+      { "Registry Key": "Computer\\HKEY_CURENT_USER\\SOFTWARE\\Microsoft\\.NETFramework", "Comment": ".NET CLR UsageLogs" },
+      { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\RemovableStorageDivices", "Comment": "Monitore Deny_All deletion or set to 0. User or attacker can modify this key to allow USB access" },
+      { "Registry Key": "Computer\\HKEY_CURENT_USER\\SOFTWARE\\Policies\\Microsoft\\Windows\\RemovableStorageDivices", "Comment": "Monitore Deny_All deletion or set to 0. User or attacker can modify this key to allow USB access" }
 ]

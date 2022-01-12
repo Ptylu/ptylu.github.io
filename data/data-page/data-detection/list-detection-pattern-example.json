@@ -60,6 +60,22 @@
       { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "RAT Nanocore", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\AAA_malware\\326f992e7f7899519e4f46bfca7ca0e1da3483eb5e48c5ca03be1b3fb3adcbc8.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v2.0_32\\UsageLogs\\326f992e7f7899519e4f46bfca7ca0e1da3483eb5e48c5ca03be1b3fb3adcbc8.exe.log\"}", "Sha256": "326F992E7F7899519E4F46BFCA7CA0E1DA3483EB5E48C5CA03BE1B3FB3ADCBC8", "Comment": "N/A"},
       { "Detection-ID": "DET-18", "Sub-Detection-ID": "DET-18-001", "Name": "RAT Nanocore", "Action": "{\"@Name\":\"TargetObject\",\"#text\":\"HKU\\S-1-5-21-3461203602-4096304019-2269080069-1003\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\ARP Service\"},{\"@Name\":\"Details\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Roaming\\747F3D96-68A7-43F1-8CBE-E8D6DADD0358\\ARP Service\\arpsv.exe\"}", "Sha256": "326F992E7F7899519E4F46BFCA7CA0E1DA3483EB5E48C5CA03BE1B3FB3ADCBC8", "Comment": "N/A"},
 
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-001", "Name": "RAT Nanocore", "Action": "{\"@Name\":\"DestinationIp\",\"#text\":\"8.8.4.4\"}", "Sha256": "326F992E7F7899519E4F46BFCA7CA0E1DA3483EB5E48C5CA03BE1B3FB3ADCBC8", "Comment": "N/A"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-001", "Name": "RAT Nanocore", "Action": "{\"@Name\":\"DestinationIp\",\"#text\":\"8.8.8.8\"}", "Sha256": "326F992E7F7899519E4F46BFCA7CA0E1DA3483EB5E48C5CA03BE1B3FB3ADCBC8", "Comment": "N/A"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "RAT Nanocore", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"sylviaoslh01.ddns.net\"}", "Sha256": "326F992E7F7899519E4F46BFCA7CA0E1DA3483EB5E48C5CA03BE1B3FB3ADCBC8", "Comment": "N/A"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "Adware", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"d17kz3i6hbr7d3.cloudfront.net\"}", "Sha256": "C3E83B560DB63700A60C5D4D8CD562FBC1A0F8BD4B6098A27B3F1CA8338C3D09", "Comment": "N/A"},
+
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-002", "Name": "Adware", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\is-107TH.tmp\\c3e83b560db63700a60c5d4d8cd562fbc1a0f8bd4b6098a27b3f1ca8338c3d09.tmp\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\is-7OFFC.tmp\\zbShieldUtils.dll\"}", "Sha256": "C3E83B560DB63700A60C5D4D8CD562FBC1A0F8BD4B6098A27B3F1CA8338C3D09", "Comment": "N/A"},
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-002", "Name": "Adware", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\is-107TH.tmp\\c3e83b560db63700a60c5d4d8cd562fbc1a0f8bd4b6098a27b3f1ca8338c3d09.tmp\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\is-7OFFC.tmp\\botva2.dll\"}", "Sha256": "C3E83B560DB63700A60C5D4D8CD562FBC1A0F8BD4B6098A27B3F1CA8338C3D09", "Comment": "N/A"},
+
+      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Agent Tesla", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\ee0897b6d0ddb5d801f680eb0c4d1822f1ca76b14efbc5f9cbfa8bfea235855e.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\ee0897b6d0ddb5d801f680eb0c4d1822f1ca76b14efbc5f9cbfa8bfea235855e.exe.log\"}", "Sha256":"EE0897B6D0DDB5D801F680EB0C4D1822F1CA76B14EFBC5F9CBFA8BFEA235855E", "Comment": "N/A"},
+
+
+
+
+
+
+
 
 
       { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\BOOTNXT\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
