@@ -31,7 +31,12 @@
       { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-001", "Privilege": "", "EventID": "3", "Detection Pattern": "N/A", "Comment": "Ping Query", "Updated": "12/01/2022", "Verif Log": ""},
       { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Privilege": "", "EventID": "22", "Detection Pattern": "N/A", "Comment": "DNS Query", "Updated": "12/01/2022", "Verif Log": ""},
       { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-002", "Privilege": "", "EventID": "11", "Detection Pattern": ".dll", "Comment": "Malicious .dll Creation", "Updated": "12/01/2022", "Verif Log": ""},
-
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-003", "Privilege": "", "EventID": "11", "Detection Pattern": ".bat", "Comment": "Malicious .bat Creation", "Updated": "13/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-20", "Sub-Detection-ID": "DET-20-001", "Privilege": "", "EventID": "4688,4657,13", "Detection Pattern": "\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" HideFileExt", "Comment": "Hide File Extension (/d 1)", "Updated": "13/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-20", "Sub-Detection-ID": "DET-20-002", "Privilege": "", "EventID": "4688,4657,13", "Detection Pattern": "\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" Hidden", "Comment": "Don't Show Hidden Files (/d 2)", "Updated": "13/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-20", "Sub-Detection-ID": "DET-20-003", "Privilege": "", "EventID": "4688,4657,13", "Detection Pattern": "\"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" EnableLUA", "Comment": "Disable UAC (/d 1)", "Updated": "13/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-004", "Privilege": "", "EventID": "11", "Detection Pattern": ".vbs", "Comment": "Malicious .vbs Creation", "Updated": "13/01/2022", "Verif Log": ""},
+      { "Detection-ID": "DET-21", "Sub-Detection-ID": "DET-21-001", "Privilege": "", "EventID": "4688,1", "Detection Pattern": "cscript vbs", "Comment": "", "Updated": "13/01/2022", "Verif Log": ""},
 
 
             { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Privilege": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022", "Verif Log": ""}
