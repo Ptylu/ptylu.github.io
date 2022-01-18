@@ -83,6 +83,12 @@
       { "Detection-ID": "DET-20", "Sub-Detection-ID": "DET-20-003", "Name": "Ransomware VirLock", "Action": "reg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System /v EnableLUA /d 0 /t REG_DWORD /f", "Sha256": "1898F2CAE1E3824CB0F7FD5368171A33ABA179E63501E480B4DA9EA05EBF0423", "Comment": "N/A"},
       { "Detection-ID": "DET-21", "Sub-Detection-ID": "DET-21-001", "Name": "Ransomware VirLock", "Action": "cscript  C:\\Users\\Lucas\\AppData\\Local\\Temp/file.vbs", "Sha256": "1898F2CAE1E3824CB0F7FD5368171A33ABA179E63501E480B4DA9EA05EBF0423", "Comment": "N/A"},
 
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "Mercurial", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"ip4.seeip.org\"}", "Sha256": "926763CC31C239EDC78B3EF4AA3B3CC64FBE7209D907F9D1CDAA4B560662ADFC", "Comment": "N/A"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "Mercurial", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"ip-api.com\"}", "Sha256": "926763CC31C239EDC78B3EF4AA3B3CC64FBE7209D907F9D1CDAA4B560662ADFC", "Comment": "N/A"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "Mercurial", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"discord.com\"}", "Sha256": "926763CC31C239EDC78B3EF4AA3B3CC64FBE7209D907F9D1CDAA4B560662ADFC", "Comment": "N/A"},
+
+
+
 
 
       { "Detection-ID": "DET-18", "Sub-Detection-ID": "DET-18-001", "Name": "Ransomware VirLock", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\1898f2cae1e3824cb0f7fd5368171a33aba179e63501e480b4da9ea05ebf0423.exe\"},{\"@Name\":\"TargetObject\",\"#text\":\"HKU\\S-1-5-21-3461203602-4096304019-2269080069-1003\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\LgkUcMko.exe\"},{\"@Name\":\"Details\",\"#text\":\"C:\\Users\\Lucas\\XYAQkQoY\\LgkUcMko.exe\"}", "Sha256": "1898F2CAE1E3824CB0F7FD5368171A33ABA179E63501E480B4DA9EA05EBF0423", "Comment": "N/A"},
