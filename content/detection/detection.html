@@ -38,7 +38,7 @@
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
           var cellValue = myList[i][columns[colIndex]];
           if (cellValue == null) cellValue = "";
-          if (colIndex==0) cellValue = '<a href="/content/detection/statistic.html?detection='+cellValue+'">'+cellValue+'</a>';
+          if (colIndex==0) cellValue = '<a href="/content/detection/statistic.html?detection='+cellValue+'" target="_blank">'+cellValue+'</a>';
           row$.append($('<td>').html(cellValue));
         }
         $(selector).append(row$);
