@@ -94,6 +94,37 @@
       { "Detection-ID": "DET-18", "Sub-Detection-ID": "DET-18-001", "Name": "Ransomware VirLock", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\1898f2cae1e3824cb0f7fd5368171a33aba179e63501e480b4da9ea05ebf0423.exe\"},{\"@Name\":\"TargetObject\",\"#text\":\"HKU\\S-1-5-21-3461203602-4096304019-2269080069-1003\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\LgkUcMko.exe\"},{\"@Name\":\"Details\",\"#text\":\"C:\\Users\\Lucas\\XYAQkQoY\\LgkUcMko.exe\"}", "Sha256": "1898F2CAE1E3824CB0F7FD5368171A33ABA179E63501E480B4DA9EA05EBF0423", "Comment": "N/A"},
 
 
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-001", "Name": "RAT Async", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\cc6ecb1abf601cdb52778e27f966fc67d4912af696f9649413ecc19ffbad9f24.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Roaming\\PELkrxSaHx.exe\"}", "Sha256": "CC6ECB1ABF601CDB52778E27F966FC67D4912AF696F9649413ECC19FFBAD9F24", "Comment": "N/A"},
+      { "Detection-ID": "DET-17", "Sub-Detection-ID": "DET-17-001", "Name": "RAT Async", "Action": "{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Windows\\System32\\Tasks\\Updates\\PELkrxSaHx\"}", "Sha256": "CC6ECB1ABF601CDB52778E27F966FC67D4912AF696F9649413ECC19FFBAD9F24", "Comment": "N/A"},
+      { "Detection-ID": "DET-17", "Sub-Detection-ID": "DET-17-001", "Name": "RAT Async", "Action": "{\"@Name\":\"CommandLine\",\"#text\":\"\"C:\\Windows\\System32\\schtasks.exe\" /Create /TN \"Updates\\PELkrxSaHx\" /XML \"C:\\Users\\Lucas\\AppData\\Local\\Temp\\tmp40C3.tmp\"\"}", "Sha256": "CC6ECB1ABF601CDB52778E27F966FC67D4912AF696F9649413ECC19FFBAD9F24", "Comment": "N/A"},
+      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "RAT Async", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\cc6ecb1abf601cdb52778e27f966fc67d4912af696f9649413ecc19ffbad9f24.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\cc6ecb1abf601cdb52778e27f966fc67d4912af696f9649413ecc19ffbad9f24.exe.log\"}", "Sha256": "CC6ECB1ABF601CDB52778E27F966FC67D4912AF696F9649413ECC19FFBAD9F24", "Comment": "N/A"},
+
+      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Azurult", "Action": "{{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\e752bd103a473a433040a6522226aac9cecf8b5a8e6ab59fe386d63a5566b63c.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v2.0_32\\UsageLogs\\e752bd103a473a433040a6522226aac9cecf8b5a8e6ab59fe386d63a5566b63c.exe.log\"}", "Sha256": "E752BD103A473A433040A6522226AAC9CECF8B5A8E6AB59FE386D63A5566B63C", "Comment": "N/A"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "Azurult", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"swi01.xyz\"},{\"@Name\":\"QueryStatus\",\"#text\":\"9852\"},{\"@Name\":\"QueryResults\",\"#text\":\"-\"},{\"@Name\":\"Image\",\"#text\":\"C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\vbc.exe\"}", "Sha256": "E752BD103A473A433040A6522226AAC9CECF8B5A8E6AB59FE386D63A5566B63C", "Comment": "N/A"},
+
+
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "BazarLoader", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"discord.com\"},{\"@Name\":\"QueryStatus\",\"#text\":\"9852\"},{\"@Name\":\"QueryResults\",\"#text\":\"-\"},{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\c0308e66398561f2918c1cbf67e596d4d5de3de7cbf91b49b98afaed7efb30fb.exe\"}", "Sha256": "C0308E66398561F2918C1CBF67E596D4D5DE3DE7CBF91B49B98AFAED7EFB30FB", "Comment": "N/A"},
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-002", "Name": "BazarLoader", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\c0308e66398561f2918c1cbf67e596d4d5de3de7cbf91b49b98afaed7efb30fb.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\_MEI20642\\VCRUNTIME140.dll\"}", "Sha256": "C0308E66398561F2918C1CBF67E596D4D5DE3DE7CBF91B49B98AFAED7EFB30FB", "Comment": "N/A"},
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-002", "Name": "BazarLoader", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\c0308e66398561f2918c1cbf67e596d4d5de3de7cbf91b49b98afaed7efb30fb.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\_MEI20642\\_pytransform.dll\"}", "Sha256": "C0308E66398561F2918C1CBF67E596D4D5DE3DE7CBF91B49B98AFAED7EFB30FB", "Comment": "N/A"},
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-002", "Name": "BazarLoader", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\c0308e66398561f2918c1cbf67e596d4d5de3de7cbf91b49b98afaed7efb30fb.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\_MEI20642\\python36.dll\"}", "Sha256": "C0308E66398561F2918C1CBF67E596D4D5DE3DE7CBF91B49B98AFAED7EFB30FB", "Comment": "N/A"},
+
+      { "Detection-ID": "DET-2", "Sub-Detection-ID": "DET-2-003", "Name": "CryptBot", "Action": "C:\\Windows\\SysWOW64\\cmd.exe \"C:\\Windows\\system32\\cmd.exe\" /c rd /s /q C:\\Users\\Lucas\\AppData\\Local\\Temp\\ohibbujAbv &amp; timeout 4 &amp; del /f /q \"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\314259cc43c8619b5f8e1ec548b34b64d6b8084342cdd6d8a970718c2d791da8.exe\"", "Comment": "N/A", "Sha256": "314259CC43C8619B5F8E1EC548B34B64D6B8084342CDD6D8A970718C2D791DA8"},
+
+      { "Detection-ID": "DET-1", "Sub-Detection-ID": "DET-1-001", "Name": "Ransomware Rook", "Action": "\"C:\\Windows\\System32\\cmd.exe\" /c vssadmin.exe delete shadows /all /quiet", "Comment": "N/A", "Sha256": "C2D46D256B8F9490C9599EEA11ECEF19FDE7D4FDD2DEA93604CEE3CEA8E172AC"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
