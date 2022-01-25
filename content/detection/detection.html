@@ -45,6 +45,37 @@
       }
     }
 
+
+    // Load Json
+    var jsonAlias = (function () {
+      var jsonAlias = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-page/data-detection/model.json',
+        'dataType': "json",
+        'success': function (data) {
+          myListModel = data;
+        }
+      });
+      return myListModel;
+    })();
+
+    // Add Json loased in table
+    function buildHtmlTableModel(selector) {
+      var columnsModel = addAllColumnHeaders(myListModel, selector);
+
+      for (var i = 0; i < myListModel.length; i++) {
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columnsModel.length; colIndex++) {
+          var cellValue = myListModel[i][columnsModel[colIndex]];
+          if (cellValue == null) cellValue = "";
+          row$.append($('<td>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+
     // Adds a header row to the table and returns the set of columns.
     // Need to do union of keys from all records as some records may not contain
     // all records.
@@ -66,17 +97,24 @@
       return columnSet;
     }
 
+
+
+
+
   </script>
 
 </head>
 
-<body onLoad="buildHtmlTable('#DetectionTable')">
+<body onLoad="buildHtmlTable('#DetectionTable');buildHtmlTableModel('#ModelTable')">
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
     <h1>Detection List</h1>
-    <h2>Table</h2>
+    <h2>Table Detection</h2>
     <table id="DetectionTable" border="1" class="table table-bordered shadow-3"> </table>
+
+<h2>Table Model [if commandline in new process] (final value)</h2>
+    <table id="ModelTable" border="1" class="table table-bordered shadow-3"> </table>
 
   </div>
 

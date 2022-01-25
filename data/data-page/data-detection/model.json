@@ -1,0 +1,5 @@
+[
+  { "Model-ID": "MOD-1-001", "EventID": "4688,1,500,(4657,13)", "Pattern": "reg add /d", "Exemple": "reg add \"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\" /v SafeDllSearchMode /d 0", "Comment": "N/A"},
+  { "Model-ID": "MOD-1-002", "EventID": "500,800,4103,[4688,1],(4657,13)", "Pattern": "Set-ItemProperty -value", "Exemple": "Set-ItemProperty -Path \"HKLM:\\System\\CurrentControlSet\\Control\\Session Manager\" -Name SafeDllSearchMode -Value 0", "Comment": "N/A"},
+  { "Model-ID": "MOD-1-003", "EventID": "500,800,4103,[4688,1],(4657,13)", "Pattern": "New-ItemProperty -value", "Exemple": "New-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\" -Name \"SafeDllSearchMode\" -Value 1  -PropertyType \"DWORD\"", "Comment": "Need -Force parameter to update existing key"}
+]
