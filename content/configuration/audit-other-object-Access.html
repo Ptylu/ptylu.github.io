@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <title>Audit Other Object Access</title>
+
+  <script type='text/javascript'>
+
+    $(document).ready(function(){
+      $('#assetHead').load("/assets/header.html");
+    });
+
+  </script>
+
+</head>
+
+<body>
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <h1>EventID 4698-4702</h1>
+    <h2>Configuration</h2>
+    <p>Important logs: Scheduled Task Creation (4698), Scheduled Task Update (4702).</p>
+    <div class="row">
+      <div class="col-sm-12 container-fluid">
+        <div class="card border">
+          <div class="card-header">
+            1st method <span class="badge rounded-pill bg-info">admin-right</span>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p>Launch edit group policy (gpedit.msc), open <code>Computer Configuration/Windows Settings/Security Settings/Advanced Audit Policy Configuration/Object Access/</code><code class="breadcrumb-item active">Audit Other Object Access Events</code>. Check <code>Enabled</code> and check <code>success</code> and <code>failure</code> . No needs a reboot to be effective.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <img src="/data/data-page/data-configuration/image/configuration-audit-other-object.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+
+    <h2>Example</h2>
+    <figure class="figure container-fluid">
+      <img src="/data/data-page/data-configuration/image/scheduled-task-4698.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center"><b>4698</b> Scheduled Task Creation</figcaption>
+    </figure>
+    <figure class="figure container-fluid">
+      <img src="/data/data-page/data-configuration/image/scheduled-task-4702.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+      <figcaption class="figure-caption  text-center"><b>4702</b> Scheduled Task Update (will be logged even if it's the same command launched for the Scheduled Task Creation)</figcaption>
+    </figure>
+
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

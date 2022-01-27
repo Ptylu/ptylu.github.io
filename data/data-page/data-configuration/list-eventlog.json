@@ -3,5 +3,7 @@
       { "File Name": "Microsoft-Windows-PowerShell-Operational.evtx", "EventID": "4104", "Comment": "Suspicious Powershell launched" },
       { "File Name": "Microsoft-Windows-PowerShell-Operational.evtx", "EventID": "40962", "Comment": "PowerShell console is ready for user input" },
       { "File Name": "Windows PowerShell.evtx", "EventID": "500", "Comment": "Log Command launched with Powershell, can generate 5-6 logs for 1 command" },
-      { "File Name": "Windows PowerShell.evtx", "EventID": "800", "Comment": "Log Powershell Module launched, can generate 5-6 logs for 1 command" }
+      { "File Name": "Windows PowerShell.evtx", "EventID": "800", "Comment": "Log Powershell Module launched, can generate 5-6 logs for 1 command" },
+      { "File Name": "Security.evtx", "EventID": "4698", "Comment": "Scheduled Task Creation" },
+      { "File Name": "Security.evtx", "EventID": "4702", "Comment": "Scheduled Task Modification" }
 ]
