@@ -117,8 +117,10 @@
 
 
 
-
-
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "ArkeiStealer", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"wooe.link\"}", "Sha256": "813980CA5305EF5034E98B52596FDDF3594108F4156F2057CB3D23B2B89E0EE2", "Comment": "N/A"},
+      { "Detection-ID": "DET-3", "Sub-Detection-ID": "DET-3-002", "Name": "ArkeiStealer", "Action": "SELECT * FROM __InstanceOperationEvent WHERE TargetInstance ISA 'AntiVirusProduct' OR TargetInstance ISA 'FirewallProduct' OR TargetInstance ISA 'AntiSpywareProduct'", "Sha256": "813980CA5305EF5034E98B52596FDDF3594108F4156F2057CB3D23B2B89E0EE2", "Comment": "N/A"},
+      { "Detection-ID": "DET-15", "Sub-Detection-ID": "DET-15-001", "Name": "Loki", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\7b4a5e40c0d2a550f9abf4e676b30c69d07d9f95fabcd6275a4aa4594071026f.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Microsoft\\CLR_v4.0_32\\UsageLogs\\7b4a5e40c0d2a550f9abf4e676b30c69d07d9f95fabcd6275a4aa4594071026f.exe.log\"}", "Sha256":"7B4A5E40C0D2A550F9ABF4E676B30C69D07D9F95FABCD6275A4AA4594071026F", "Comment": "N/A"},
+      { "Detection-ID": "DET-4", "Sub-Detection-ID": "DET-4-002", "Name": "Loki", "Action": "powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\7b4a5e40c0d2a550f9abf4e676b30c69d07d9f95fabcd6275a4aa4594071026f.exe", "Sha256": "7B4A5E40C0D2A550F9ABF4E676B30C69D07D9F95FABCD6275A4AA4594071026F", "Comment": "N/A"},
 
 
 
