@@ -123,6 +123,9 @@
       { "Detection-ID": "DET-4", "Sub-Detection-ID": "DET-4-002", "Name": "Loki", "Action": "powershell.exe Add-MpPreference -ExclusionPath C:\\Users\\Lucas\\Downloads\\MALWARE_SAMPLE\\7b4a5e40c0d2a550f9abf4e676b30c69d07d9f95fabcd6275a4aa4594071026f.exe", "Sha256": "7B4A5E40C0D2A550F9ABF4E676B30C69D07D9F95FABCD6275A4AA4594071026F", "Comment": "N/A"},
 
 
+      { "Detection-ID": "DET-22", "Sub-Detection-ID": "DET-22-001", "Name": "WhisperGate", "Action": "powershell.exe -enc UwB0AGEAcgB0AC0AUwBsAGUAZQBwACAALQBzACAAMQAwAA==", "Comment": "S.t.a.r.t.-.S.l.e.e.p. .-.s. .1.0.", "Sha256": "DCBBAE5A1C61DBBBB7DCD6DC5DD1EB1169F5329958D38B58C3FD9384081C9B78"},
+      { "Detection-ID": "DET-16", "Sub-Detection-ID": "DET-16-005", "Name": "WhisperGate", "Action": "{\"@Name\":\"Image\",\"#text\":\"C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\"},{\"@Name\":\"TargetFilename\",\"#text\":\"C:\\Users\\Lucas\\AppData\\Local\\Temp\\__PSScriptPolicyTest_nlro23f3.ynx.ps1\"}", "Comment": "", "Sha256": "DCBBAE5A1C61DBBBB7DCD6DC5DD1EB1169F5329958D38B58C3FD9384081C9B78"},
+      { "Detection-ID": "DET-19", "Sub-Detection-ID": "DET-19-002", "Name": "WhisperGate", "Action": "{\"@Name\":\"QueryName\",\"#text\":\"cdn.discordapp.com\"},{\"@Name\":\"QueryStatus\",\"#text\":\"9852\"},{\"@Name\":\"QueryResults\",\"#text\":\"-\"},{\"@Name\":\"Image\",\"#text\":\"C:\\Users\\Lucas\\Downloads\\dcbbae5a1c61dbbbb7dcd6dc5dd1eb1169f5329958d38b58c3fd9384081c9b78.exe\"}", "Sha256": "DCBBAE5A1C61DBBBB7DCD6DC5DD1EB1169F5329958D38B58C3FD9384081C9B78", "Comment": "N/A"},
 
 
 
