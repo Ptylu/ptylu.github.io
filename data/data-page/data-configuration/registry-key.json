@@ -35,6 +35,7 @@
       { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows", "Comment": "AppInit_DLLs", "Mitre Attack ID": "T1547.001", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""},
       { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\W32Time\\TimeProviders\\", "Comment": "", "Mitre Attack ID": "T1547.003", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""},
       { "Registry Key": "Computer\\HKEY_CURRENT_USER\\Software\\Microsoft\\Office test\\Special\\Perf", "Comment": "", "Mitre Attack ID": "T1137.002", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""},
-      { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Office test\\Special\\Perf", "Comment": "", "Mitre Attack ID": "T1137.002", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""}
-
+      { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Office test\\Special\\Perf", "Comment": "", "Mitre Attack ID": "T1137.002", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""},
+      { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion\\ImageFileExecutionOptions\\sethc.exe", "Comment": "", "Mitre Attack ID": "T1546.008", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""},
+      { "Registry Key": "Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion\\ImageFileExecutionOptions\\utilman.exe", "Comment": "", "Mitre Attack ID": "T1546.008", "Attack Command": "", "Date added": "26/02/2022", "Date verified": ""}
 ]
