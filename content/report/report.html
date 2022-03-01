@@ -1,0 +1,225 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Report</title>
+
+  <script type='text/javascript'>
+    //Recuperer page actuelle pour afficher ensuite que les detections liees a cette page
+    //var pathfile = window.location.pathname.split("/").pop();
+
+    // Recuperation parameteur DET-
+    var htmlParameter = window.location.href.split("=").pop();
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Load Json List Report
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Load Json list-detection
+    var resultJsonListDetection = (function () {
+      var resultJsonListDetection = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-page/data-report/list-report.json',
+        'dataType': "json",
+        'success': function (data) {
+          myListjsonListDetection = data;
+        }
+      });
+
+      for (var i = 0; i < myListjsonListDetection.length; i++) {
+        //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+        if(myListjsonListDetection[i]["Report-ID"]==htmlParameter){
+          return myListjsonListDetection[i];
+        }
+      }
+
+    })();
+
+    $(document).ready(function(){
+      $('#assetHead').load("/assets/header.html");
+      $('#text-list-detection-title').text(htmlParameter+" : "+resultJsonListDetection["Technique"]);
+      $('#text-list-detection-mitre').text("Mitre ID"+" : "+resultJsonListDetection["Mitre Attack ID"]);
+      $('#text-list-report-detection-id').text("Detection ID"+" : "+resultJsonListDetection["Detection-ID"]);
+      $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
+    });
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Load Json List of Detection Pattern
+    //////////////////////////////////////////////////////////////////////////////////////////
+    var json = (function () {
+      var json = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-page/data-detection/list-detection-pattern.json',
+        'dataType': "json",
+        'success': function (data) {
+          myList = data;
+        }
+      });
+      return myList;
+    })();
+
+    var dataPoints = [];
+
+    // Add Json loased in table
+    function buildHtmlTableDetection(selector) {
+      var columns = addAllColumnHeaders(myList, selector);
+      for (var i = 0; i < myList.length; i++) {
+
+        //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+        if(myList[i][columns[0]]==resultJsonListDetection["Detection-ID"]){
+          var row$ = $('<tr/>');
+          for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+            var cellValue = myList[i][columns[colIndex]];
+            if (cellValue == null) cellValue = "";
+            if (colIndex==2){
+              if (cellValue=="a") {
+                cellValue = '<span class="badge rounded-pill bg-info">admin-right</span>';
+              }else if (cellValue=="u") {
+                cellValue = '<span class="badge rounded-pill bg-danger">user-right</span>';
+              }else if (cellValue=="d") {
+                cellValue = '<span class="badge rounded-pill bg-secondary">depends on the directory/file</span>';
+              }
+            }
+            row$.append($('<td/>').html(cellValue));
+          }
+          $(selector).append(row$);
+        }
+      }
+      // Suppirmer la premiere colonne correspondante au DET-
+      //$("#DetectionTable th:first-child").remove()
+      //$("#DetectionTable td:first-child").remove()
+      //Autre moyen de supprimer avec le chiffre (commence a 1)
+      $("#DetectionTable th:nth-child(1)").remove()
+      $("#DetectionTable td:nth-child(1)").remove()
+
+      // Suppression multiple colonnes
+      //$("#DetectionTable th:nth-child(1), th:nth-child(3)").remove()
+      //$("#DetectionTable td:nth-child(1), td:nth-child(3)").remove()
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Load Json List of Attack
+    //////////////////////////////////////////////////////////////////////////////////////////
+    var jsonAttack = (function () {
+      var json = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-page/data-attack/list-attack.json',
+        'dataType': "json",
+        'success': function (data) {
+          myListAttack = data;
+        }
+      });
+      return myListAttack;
+    })();
+
+    var dataPoints = [];
+
+    // Add Json loased in table
+    function buildHtmlTableAttack(selector) {
+      var columns = addAllColumnHeaders(myListAttack, selector);
+      for (var i = 0; i < jsonAttack.length; i++) {
+
+        //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+        if(myListAttack[i][columns[0]]==resultJsonListDetection["Attack-ID"]){
+          var row$ = $('<tr/>');
+          for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+            var cellValue = myListAttack[i][columns[colIndex]];
+            if (cellValue == null) cellValue = "";
+            row$.append($('<td/>').html(cellValue));
+          }
+          $(selector).append(row$);
+        }
+      }
+      // Suppirmer la premiere colonne correspondante au DET-
+      //$("#DetectionTable th:first-child").remove()
+      //$("#DetectionTable td:first-child").remove()
+      //Autre moyen de supprimer avec le chiffre (commence a 1)
+      $("#AttackTable th:nth-child(1)").remove()
+      $("#AttackTable td:nth-child(1)").remove()
+
+      // Suppression multiple colonnes
+      //$("#DetectionTable th:nth-child(1), th:nth-child(3)").remove()
+      //$("#DetectionTable td:nth-child(1), td:nth-child(3)").remove()
+    }
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Collumn for all table
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Adds a header row to the table and returns the set of columns.
+    // Need to do union of keys from all records as some records may not contain
+    // all records.
+    function addAllColumnHeaders(myList, selector) {
+      var columnSet = [];
+      var headerTr$ = $('<tr/>');
+
+      for (var i = 0; i < myList.length; i++) {
+        var rowHash = myList[i];
+        for (var key in rowHash) {
+          if ($.inArray(key, columnSet) == -1) {
+            columnSet.push(key);
+            headerTr$.append($('<th/>').html(key));
+          }
+        }
+      }
+      $(selector).append(headerTr$);
+
+      return columnSet;
+    }
+
+  </script>
+
+</head>
+
+<body onLoad="buildHtmlTableDetection('#DetectionTable');buildHtmlTableAttack('#AttackTable')">
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <h2 id="text-list-detection-title"></h2>
+    <p id="text-list-detection-mitre"></p>
+    <p id="text-list-report-detection-id"></p>
+  </div>
+  <div id="content" class="container-fluid">
+
+    <h3>List of Detection Pattern</h3>
+    <table id="DetectionTable" border="1" class="table table-bordered shadow-3" > </table>
+  </div>
+
+  <div id="content" class="container-fluid">
+
+    <h3>List of Attack</h3>
+    <table id="AttackTable" border="1" class="table table-bordered shadow-3" > </table>
+  </div>
+
+
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>

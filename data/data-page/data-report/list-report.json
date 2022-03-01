@@ -1,0 +1,5 @@
+[
+      { "Report-ID": "REP-1", "Detection-ID": "DET-1", "Mitre Attack ID": "T1490", "Technique": "Inhibit System Recovery", "Mitre CAR ID": "CAR-2021-01-009", "Comment": "N/A", "Attack-ID": "ATT-1" },
+      { "Report-ID": "REP-2", "Detection-ID": "N/A", "Mitre Attack ID": "T1546.008", "Technique": "Event Triggered Execution: Accessibility Features", "Mitre CAR ID": "N/A", "Comment": "N/A", "Attack-ID": "N/A"  }
+
+]
