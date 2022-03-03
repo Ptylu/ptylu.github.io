@@ -43,10 +43,11 @@
 
     $(document).ready(function(){
       $('#assetHead').load("/assets/header.html");
-      $('#text-list-detection-title').text(htmlParameter+" : "+resultJsonListDetection["Technique"]);
-      $('#text-list-detection-mitre').text("Mitre ID"+" : "+resultJsonListDetection["Mitre Attack ID"]);
-      $('#text-list-report-detection-id').text("Detection ID"+" : "+resultJsonListDetection["Detection-ID"]);
+      $('#text-list-detection-title').text(htmlParameter+": "+resultJsonListDetection["Technique"]);
+      $('#text-list-detection-mitre').text("Mitre ID: "+resultJsonListDetection["Mitre Attack ID"]);
+      $('#text-list-report-detection-id').text("Detection ID: "+resultJsonListDetection["Detection-ID"]);
       $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
+      $('#text-list-report-mitre-car').text("Mitre CAR: " + resultJsonListDetection["Mitre CAR ID"]);
     });
 
 
@@ -191,6 +192,7 @@
     <h2 id="text-list-detection-title"></h2>
     <p id="text-list-detection-mitre"></p>
     <p id="text-list-report-detection-id"></p>
+    <p id="text-list-report-mitre-car"></p>
   </div>
   <div id="content" class="container-fluid">
 

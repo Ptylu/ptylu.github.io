@@ -22,6 +22,7 @@
       { "Detection-ID": "DET-20", "Detection Name": "Modify Registry", "Mitre Attack ID": "T1112", "Comment": "N/A" },
       { "Detection-ID": "DET-21", "Detection Name": "Command and Scripting Interpreter: Visual Basic", "Mitre Attack ID": "T1059.005", "Comment": "N/A" },
       { "Detection-ID": "DET-22", "Detection Name": "Deobfuscate Decode Files or Information", "Mitre Attack ID": "T1140", "Comment": "N/A" },
+      { "Detection-ID": "DET-23", "Detection Name": "Hijack Execution Flow: DLL Search Order Hijacking", "Mitre Attack ID": "T1574.001", "Comment": "N/A" },
 
 
       { "Detection-ID": "DET-XXX", "Detection Name": "Possible malicious pattern", "Mitre Attack ID": "N/A", "Comment": "Possible malicious pattern" }

@@ -76,6 +76,44 @@
       }
     }
 
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    // Load Json List Report
+    //////////////////////////////////////////////////////////////////////////////////////////
+    var jsonDetectionReport = (function () {
+      var jsonDetectionReport = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-page/data-report/list-report.json',
+        'dataType': "json",
+        'success': function (data) {
+          myListReport = data;
+        }
+      });
+      return myListReport;
+    })();
+
+    // Add Json loased in table
+    function buildHtmlTableModel2(selector) {
+      var columns = addAllColumnHeaders(myListReport, selector);
+
+      for (var i = 0; i < myListReport.length; i++) {
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+          var cellValue = myListReport[i][columns[colIndex]];
+          if (cellValue == null) cellValue = "";
+          if (colIndex==0){
+             cellValue = '<a href="/content/detection/statistic.html?detection=DET-'+cellValue+'" target="_blank">'+"DET-"+cellValue+'</a>';
+           }
+          row$.append($('<td>').html(cellValue));
+        }
+        $(selector).append(row$);
+        $("#DetectionTable2 th:nth-child(6)").remove()
+        $("#DetectionTable2 td:nth-child(6)").remove()
+      }
+    }
+
     // Adds a header row to the table and returns the set of columns.
     // Need to do union of keys from all records as some records may not contain
     // all records.
@@ -88,7 +126,13 @@
         for (var key in rowHash) {
           if ($.inArray(key, columnSet) == -1) {
             columnSet.push(key);
-            headerTr$.append($('<th/>').html(key));
+            
+            if(key=="Report-ID"){
+              headerTr$.append($('<th/>').html("Detection-ID"));
+            }else{
+              headerTr$.append($('<th/>').html(key));
+            }
+
           }
         }
       }
@@ -105,13 +149,14 @@
 
 </head>
 
-<body onLoad="buildHtmlTable('#DetectionTable');buildHtmlTableModel('#ModelTable')">
+<body onLoad="buildHtmlTable('#DetectionTable');buildHtmlTableModel('#ModelTable');buildHtmlTableModel2('#DetectionTable2')">
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
     <h1>Detection List</h1>
     <h2>Table Detection</h2>
     <table id="DetectionTable" border="1" class="table table-bordered shadow-3"> </table>
+    <table id="DetectionTable2" border="1" class="table table-bordered shadow-3"> </table>
 
 <h2>Table Model [if commandline in new process] (final value)</h2>
     <table id="ModelTable" border="1" class="table table-bordered shadow-3"> </table>
