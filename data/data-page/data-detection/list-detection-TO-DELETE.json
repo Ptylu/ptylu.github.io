@@ -6,7 +6,6 @@
       { "Detection-ID": "DET-5", "Detection Name": "Domain Trust Discovery", "Mitre Attack ID": "T1482", "Comment": "N/A" },
       { "Detection-ID": "DET-6", "Detection Name": "Permission Groups Discovery: Domain Groups", "Mitre Attack ID": "T1069.002", "Comment": "N/A" },
       { "Detection-ID": "DET-7", "Detection Name": "System Information Discovery", "Mitre Attack ID": "T1426", "Comment": "N/A" },
-
       { "Detection-ID": "DET-8", "Detection Name": "System Time Discovery", "Mitre Attack ID": "T1124", "Comment": "N/A" },
       { "Detection-ID": "DET-9", "Detection Name": "Hide Artifacts: Hidden Files and Directories", "Mitre Attack ID": "T1564.001", "Comment": "N/A" },
       { "Detection-ID": "DET-10", "Detection Name": "Password Policy Discovery", "Mitre Attack ID": "T1201", "Comment": "N/A" },
@@ -25,5 +24,5 @@
       { "Detection-ID": "DET-23", "Detection Name": "Hijack Execution Flow: DLL Search Order Hijacking", "Mitre Attack ID": "T1574.001", "Comment": "N/A" },
 
 
-      { "Detection-ID": "DET-XXX", "Detection Name": "Possible malicious pattern", "Mitre Attack ID": "N/A", "Comment": "Possible malicious pattern" }
+      { "Detection-ID": "DET-X", "Detection Name": "Possible malicious pattern", "Mitre Attack ID": "N/A", "Comment": "Possible malicious pattern" }
 ]

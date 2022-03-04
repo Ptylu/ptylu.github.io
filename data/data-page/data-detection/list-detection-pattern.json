@@ -43,5 +43,5 @@
       { "Detection-ID": "DET-22", "Sub-Detection-ID": "DET-22-001", "Privilege": "u", "EventID": "4688,1,400,403,600,800,", "Detection Pattern": "powershell (-e OR -ec OR -encodecommand OR -encoded OR -enc OR -en OR -encod OR -enco OR -encodedco OR -encodedc OR -en^c OR FromBase64String)", "Comment": "", "Updated": "20/02/2022", "Verif Log": ""},
 
 
-      { "Detection-ID": "DET-XXX", "Sub-Detection-ID": "DET-XXX-001", "Privilege": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022", "Verif Log": ""}
+      { "Detection-ID": "DET-X", "Sub-Detection-ID": "DET-X-001", "Privilege": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022", "Verif Log": ""}
     ]

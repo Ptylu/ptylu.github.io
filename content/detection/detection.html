@@ -14,6 +14,7 @@
       $('#assetHead').load("/assets/header.html");
     });
 
+/*
     // Load Json
     var json = (function () {
       var json = null;
@@ -44,7 +45,7 @@
         $(selector).append(row$);
       }
     }
-
+*/
 
     // Load Json
     var jsonAlias = (function () {
@@ -109,6 +110,7 @@
           row$.append($('<td>').html(cellValue));
         }
         $(selector).append(row$);
+        // Remove Attack ID
         $("#DetectionTable2 th:nth-child(6)").remove()
         $("#DetectionTable2 td:nth-child(6)").remove()
       }
@@ -126,7 +128,7 @@
         for (var key in rowHash) {
           if ($.inArray(key, columnSet) == -1) {
             columnSet.push(key);
-            
+
             if(key=="Report-ID"){
               headerTr$.append($('<th/>').html("Detection-ID"));
             }else{
@@ -149,13 +151,12 @@
 
 </head>
 
-<body onLoad="buildHtmlTable('#DetectionTable');buildHtmlTableModel('#ModelTable');buildHtmlTableModel2('#DetectionTable2')">
+<body onLoad="buildHtmlTableModel('#ModelTable');buildHtmlTableModel2('#DetectionTable2')">
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
     <h1>Detection List</h1>
     <h2>Table Detection</h2>
-    <table id="DetectionTable" border="1" class="table table-bordered shadow-3"> </table>
     <table id="DetectionTable2" border="1" class="table table-bordered shadow-3"> </table>
 
 <h2>Table Model [if commandline in new process] (final value)</h2>
