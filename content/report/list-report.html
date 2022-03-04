@@ -40,7 +40,7 @@
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
           var cellValue = myList[i][columns[colIndex]];
           if (cellValue == null) cellValue = "";
-          if (colIndex==0) cellValue = '<a href="/content/report/report.html?report='+cellValue+'" target="_blank">'+cellValue+'</a>';
+          if (colIndex==0) cellValue = '<a href="/content/report/report.html?report='+cellValue+'" target="_blank">'+"REP-"+cellValue+'</a>';
           if (colIndex==4) cellValue = '<a href="https://car.mitre.org/analytics/'+cellValue+'" target="_blank">'+cellValue+'</a>';
           row$.append($('<td>').html(cellValue));
 

@@ -105,7 +105,7 @@
           var cellValue = myListReport[i][columns[colIndex]];
           if (cellValue == null) cellValue = "";
           if (colIndex==0){
-             cellValue = '<a href="/content/detection/statistic.html?detection=DET-'+cellValue+'" target="_blank">'+"DET-"+cellValue+'</a>';
+             cellValue = '<a href="/content/detection/statistic.html?detection='+cellValue+'" target="_blank">'+"DET-"+cellValue+'</a>';
            }
           row$.append($('<td>').html(cellValue));
         }
