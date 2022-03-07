@@ -1,6 +1,5 @@
 [
-      { "Attack-ID": "ATT-1", "Detection-ID": "ATT-1-001", "Mitre Attack ID": "T1490", "Attack": "vssadmin.exe delete shadows /all /quiet" ,"Comment": "N/A" },
-      { "Attack-ID": "ATT-1", "Detection-ID": "ATT-1-002", "Mitre Attack ID": "T1490", "Attack": "wmic shadowcopy delete" ,"Comment": "N/A" },
-      { "Attack-ID": "ATT-1", "Detection-ID": "ATT-1-003", "Mitre Attack ID": "T1490", "Attack": "vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB" ,"Comment": "N/A" }
-
+      { "Attack-ID": "1", "Sub-Attack-ID": "001", "Privilege": "a", "Attack": "vssadmin.exe delete shadows /all /quiet" ,"Comment": "N/A" },
+      { "Attack-ID": "1", "Sub-Attack-ID": "003", "Privilege": "a", "Attack": "wmic shadowcopy delete" ,"Comment": "N/A" },
+      { "Attack-ID": "1", "Sub-Attack-ID": "005", "Privilege": "a", "Attack": "vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB" ,"Comment": "N/A" }
 ]

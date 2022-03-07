@@ -133,11 +133,20 @@
       for (var i = 0; i < jsonAttack.length; i++) {
 
         //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
-        if(myListAttack[i][columns[0]]==resultJsonListDetection["Attack-ID"]){
+        if(myListAttack[i][columns[0]]==htmlParameter){
           var row$ = $('<tr/>');
           for (var colIndex = 0; colIndex < columns.length; colIndex++) {
             var cellValue = myListAttack[i][columns[colIndex]];
             if (cellValue == null) cellValue = "";
+            if (colIndex==2){
+              if (cellValue=="a") {
+                cellValue = '<span class="badge rounded-pill bg-info">admin-right</span>';
+              }else if (cellValue=="u") {
+                cellValue = '<span class="badge rounded-pill bg-danger">user-right</span>';
+              }else if (cellValue=="d") {
+                cellValue = '<span class="badge rounded-pill bg-secondary">depends on the directory/file</span>';
+              }
+            }
             row$.append($('<td/>').html(cellValue));
           }
           $(selector).append(row$);
