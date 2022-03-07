@@ -76,7 +76,7 @@
       for (var i = 0; i < myList.length; i++) {
 
         //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
-        if(myList[i][columns[0]]==("DET-"+resultJsonListDetection["Detection-ID"])){
+        if(myList[i][columns[0]]==htmlParameter){
           var row$ = $('<tr/>');
           for (var colIndex = 0; colIndex < columns.length; colIndex++) {
             var cellValue = myList[i][columns[colIndex]];
