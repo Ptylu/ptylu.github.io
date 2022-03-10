@@ -23,6 +23,6 @@
       { "Report-ID": "22", "Mitre Attack ID": "T1140", "Technique": "Deobfuscate Decode Files or Information","Mitre CAR ID": "N/A", "Comment": "N/A" },
       { "Report-ID": "23", "Mitre Attack ID": "T1546.008", "Technique": "Event Triggered Execution: Accessibility Features", "Mitre CAR ID": "N/A", "Comment": "N/A"},
       { "Report-ID": "24", "Mitre Attack ID": "T1574.001", "Technique": "DLL Search Order Hijacking", "Mitre CAR ID": "CAR-2021-11-001", "Comment": "N/A"},
-      { "Report-ID": "25", "Mitre Attack ID": "T1562.002", "Technique": "Disable Windows Event Logging", "Mitre CAR ID": "To-Push-CAR-2022-03-01", "Comment": "N/A"},
+      { "Report-ID": "25", "Mitre Attack ID": "T1562.002", "Technique": "Disable Windows Event Logging", "Mitre CAR ID": "To-Push-CAR-2022-03-01", "Comment": "N/A", "Definition": "Because MiniNt key doen't need value (empty key), the 4667 and 13 EventLog will not log the creation of the key. Hovewer, if attacker use powershell for the key creation (ATT-25-002), EventLog 4663 will trigger during the creation (but will generate lot of noise when the registry will load every time). 25-1-minint-powershell-4663.png"},
       { "Report-ID": "X", "Mitre Attack ID": "N/A", "Technique": "Possible malicious pattern", "Mitre CAR ID": "N/A", "Comment": "Possible malicious pattern"}
 ]
