@@ -40,7 +40,8 @@
       { "Detection-ID": "16", "Sub-Detection-ID": "004", "Privilege": "d", "EventID": "11,4688,1", "Detection Pattern": ".vbs", "Comment": "Malicious .vbs Creation", "Updated": "13/01/2022", "Verif Log": "21/01/2022"},
       { "Detection-ID": "16", "Sub-Detection-ID": "005", "Privilege": "d", "EventID": "11,4688,1", "Detection Pattern": ".ps1", "Comment": "Malicious .ps1 Creation", "Updated": "20/02/2022", "Verif Log": "20/02/2022"},
       { "Detection-ID": "21", "Sub-Detection-ID": "001", "Privilege": "", "EventID": "4688,1", "Detection Pattern": "cscript vbs", "Comment": "", "Updated": "13/01/2022", "Verif Log": ""},
-      { "Detection-ID": "22", "Sub-Detection-ID": "001", "Privilege": "u", "EventID": "4688,1,400,403,600,800,", "Detection Pattern": "powershell (-e OR -ec OR -encodecommand OR -encoded OR -enc OR -en OR -encod OR -enco OR -encodedco OR -encodedc OR -en^c OR FromBase64String)", "Comment": "", "Updated": "20/02/2022", "Verif Log": ""},
+      { "Detection-ID": "22", "Sub-Detection-ID": "001", "Privilege": "u", "EventID": "4688,1,400,403,600,800", "Detection Pattern": "powershell (-e OR -ec OR -encodecommand OR -encoded OR -enc OR -en OR -encod OR -enco OR -encodedco OR -encodedc OR -en^c OR FromBase64String)", "Comment": "", "Updated": "20/02/2022", "Verif Log": ""},
+      { "Detection-ID": "25", "Sub-Detection-ID": "001", "Privilege": "a", "EventID": "4688,1,500,800,4103", "Detection Pattern": "MiniNt AND (New-Item OR (reg add))", "Comment": "", "Updated": "10/03/2022", "Verif Log": "10/03/2022"},
 
 
       { "Detection-ID": "X", "Sub-Detection-ID": "001", "Privilege": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022", "Verif Log": ""}

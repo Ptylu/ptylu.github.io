@@ -23,5 +23,6 @@
       { "Report-ID": "22", "Mitre Attack ID": "T1140", "Technique": "Deobfuscate Decode Files or Information","Mitre CAR ID": "N/A", "Comment": "N/A" },
       { "Report-ID": "23", "Mitre Attack ID": "T1546.008", "Technique": "Event Triggered Execution: Accessibility Features", "Mitre CAR ID": "N/A", "Comment": "N/A"},
       { "Report-ID": "24", "Mitre Attack ID": "T1574.001", "Technique": "DLL Search Order Hijacking", "Mitre CAR ID": "CAR-2021-11-001", "Comment": "N/A"},
+      { "Report-ID": "25", "Mitre Attack ID": "T1562.002", "Technique": "Disable Windows Event Logging", "Mitre CAR ID": "To-Push-CAR-2022-03-01", "Comment": "N/A"},
       { "Report-ID": "X", "Mitre Attack ID": "N/A", "Technique": "Possible malicious pattern", "Mitre CAR ID": "N/A", "Comment": "Possible malicious pattern"}
 ]

