@@ -48,7 +48,16 @@
         }
         $(selector).append(row$);
       }
+
+      // Deletion Definition Column
+      $("#ReportTable td:nth-child(7)").remove()
+      $("#ReportTable th:nth-child(7)").remove()
+      // Deletion Forensic Column
+      $("#ReportTable td:nth-child(6)").remove()
+      $("#ReportTable th:nth-child(6)").remove()
+
     }
+
 
 
     // Load Json
