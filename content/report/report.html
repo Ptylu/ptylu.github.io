@@ -152,6 +152,13 @@
                 cellValue = '<span class="badge rounded-pill bg-secondary">depends on the directory/file</span>';
               }
             }
+            else if (colIndex==3){
+              if (cellValue=="y") {
+                cellValue = '<span class="badge rounded-pill bg-info">reboot-required</span>';
+              }else if (cellValue=="n") {
+                cellValue = '<span class="badge rounded-pill bg-danger">reboot-not-required</span>';
+              }
+            }
             row$.append($('<td/>').html(cellValue));
           }
           $(selector).append(row$);
