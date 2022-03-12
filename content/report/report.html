@@ -96,6 +96,10 @@
               cellValue = '<span class="badge rounded-pill bg-danger">user-right</span>';
             }else if (cellValue=="d") {
               cellValue = '<span class="badge rounded-pill bg-secondary">depends on the directory/file</span>';
+            }else if (cellValue=="t") {
+              cellValue = '<span class="badge rounded-pill bg-success">top-detection</span>';
+            }else if (cellValue=="w") {
+              cellValue = '<span class="badge rounded-pill bg-warning">workaround-detection</span>';
             }
           }
           row$.append($('<td/>').html(cellValue));

