@@ -1,0 +1,16 @@
+###REP-25###
+- Modification chemin du log avec command line
+1) wevtutil.exe /sl Security /logfilename:"C:\Windows\System32\winevt\Logs\Security-Test.evtx"
+
+- Modification chemin du log avec command line + xml
+1) maconfig.xml ->
+<?xml version="1.0" encoding="UTF-8"?>
+<channel name="Security" isolation="Security"
+         xmlns="http://schemas.microsoft.com/win/2004/08/events">
+  <logging>
+    <logfilename>C:\Windows\System32\winevt\Logs\Security-Test.evtx</logfilename>
+  </logging>
+  <publishing>
+  </publishing>
+</channel>
+2) wevtutil sl /c:maconfig.xml
