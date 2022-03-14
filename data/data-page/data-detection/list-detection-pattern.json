@@ -45,7 +45,7 @@
       { "Detection-ID": "25", "Sub-Detection-ID": "002", "Privilege": "w", "EventID": "4663", "Detection Pattern": "MiniNt AND powershell", "Comment": "Activation of 4663 EventLog generates lot of Event. When Powershell is used to create the MiniNt key, it will generate a 4663 Event as Query key value by Powershell. Event not generated when cmd command is used.", "Updated": "11/03/2022", "Verif Log": "11/03/2022", "Sub-Attack-ID": "002"},
       { "Detection-ID": "25", "Sub-Detection-ID": "003", "Privilege": "t", "EventID": "4719", "Detection Pattern": "", "Comment": "SubcategoryId=%%13312 is for the process creation modification", "Updated": "12/03/2022", "Verif Log": "12/03/2022", "Sub-Attack-ID": "009,010"},
       { "Detection-ID": "25", "Sub-Detection-ID": "004", "Privilege": "t", "EventID": "4657,13", "Detection Pattern": "EventLog (ObjectValueName=Start OR ObjectValueName=File OR ObjectValueName=MaxSize)", "Comment": "", "Updated": "12/03/2022", "Verif Log": "ok", "Sub-Attack-ID": "B,E"},
-
+      { "Detection-ID": "25", "Sub-Detection-ID": "005", "Privilege": "w", "EventID": "1100", "Detection Pattern": "N/A", "Comment": "Will generate a log everytime the system shutdown", "Updated": "14/03/2022", "Verif Log": "14/03/2022", "Sub-Attack-ID": "C"},
 
       { "Detection-ID": "X", "Sub-Detection-ID": "001", "Privilege": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022", "Verif Log": ""}
     ]

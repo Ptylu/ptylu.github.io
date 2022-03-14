@@ -44,18 +44,22 @@
   $(document).ready(function(){
     $('#assetHead').load("/assets/header.html");
     $('#text-list-detection-title').text(htmlParameter+": "+resultJsonListDetection["Technique"]);
-    $('#text-list-detection-mitre').text("Mitre ID: "+resultJsonListDetection["Mitre Attack ID"]);
+    $('#text-list-detection-mitre').text("Mitre Att&ck ID: "+resultJsonListDetection["Mitre Attack ID"]);
     $('#text-list-report-detection-id').text("Detection ID: "+resultJsonListDetection["Detection-ID"]);
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
-    $('#text-list-report-mitre-car').text("Mitre CAR: " + resultJsonListDetection["Mitre CAR ID"]);
+    $('#text-list-report-mitre-car').text("Mitre CAR ID: " + resultJsonListDetection["Mitre CAR ID"]);
+
+    let regexDefinition = new RegExp("(- )", "g");
+    let definition = resultJsonListDetection["Definition"].replace(regexDefinition, l => "<br><br> " +l);
+    $('#text-list-report-definition').html(definition);
 
     //Add img balise in the text contening .jpg. The let regex allow us to put global g to replace all the word in the string
     let regex = new RegExp("[A-Za-z\-\_0-9]+\.png", "g"); // pour img avec .jpg
     let regexTypeAttack = new RegExp("\{[A-Z]\}", "g"); // pour bold avec type attacl {A-Z}
-    let res = resultJsonListDetection["Definition"].replace(regex, l => "<img src=\"/data/data-page/data-report/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\"> <br>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Type-Attack ").replace("}", ")")+"</b>");
+    let res = resultJsonListDetection["Example"].replace(regex, l => "<img src=\"/data/data-page/data-report/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\"> <br>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Type-Attack ").replace("}", ")")+"</b>");
 
 
-    $('#text-list-report-definition').html(res);
+    $('#text-list-report-example').html(res);
   });
 
 
@@ -218,10 +222,12 @@
 
   <div id="content" class="container-fluid">
     <h2 id="text-list-detection-title"></h2>
-    <p id="text-list-detection-mitre"></p>
-    <p id="text-list-report-detection-id"></p>
-    <p id="text-list-report-mitre-car"></p>
+    <span class="badge badge-info" id="text-list-detection-mitre"></span>
+    <span class="badge badge-info" id="text-list-report-mitre-car"></span>
+    <br><br>
+    <p id="text-list-report-definition"></p>
   </div>
+
   <div id="content" class="container-fluid">
 
     <h3>List of Detection Pattern</h3>
@@ -236,8 +242,8 @@
 
   <div id="content" class="container-fluid">
 
-    <h3>Explanation</h3>
-    <p id="text-list-report-definition"></p>
+    <h3>Example</h3>
+    <p id="text-list-report-example"></p>
   </div>
 
 
