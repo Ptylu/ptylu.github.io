@@ -49,10 +49,18 @@
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
     $('#text-list-report-mitre-car').text("Mitre CAR ID: " + resultJsonListDetection["Mitre CAR ID"]);
 
-    let regexDefinition = new RegExp("(- )", "g");
-    let definition = resultJsonListDetection["Definition"].replace(regexDefinition, l => "<br><br> " +l);
+    //#### Definition
+    //Mettre <br> pour liste -
+    let regexDefinitionGrandeListe = new RegExp("(-- )", "g");
+    let regexDefinitionPetiteListe = new RegExp("( - )", "g");
+    //Note Info IN (note note-info)
+    let regexDefinitionNoteInfo = new RegExp("\{IN\}.+\{IN\}", "g")
+    let regexDefinitionNoteInfoIN = new RegExp("{IN}", "g")
+
+    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>");
     $('#text-list-report-definition').html(definition);
 
+    //#### Example
     //Add img balise in the text contening .jpg. The let regex allow us to put global g to replace all the word in the string
     let regex = new RegExp("[A-Za-z\-\_0-9]+\.png", "g"); // pour img avec .jpg
     let regexTypeAttack = new RegExp("\{[A-Z]\}", "g"); // pour bold avec type attacl {A-Z}
