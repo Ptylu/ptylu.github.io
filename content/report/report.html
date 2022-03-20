@@ -54,10 +54,13 @@
     let regexDefinitionGrandeListe = new RegExp("(-- )", "g");
     let regexDefinitionPetiteListe = new RegExp("( - )", "g");
     //Note Info IN (note note-info)
-    let regexDefinitionNoteInfo = new RegExp("\{IN\}.+\{IN\}", "g")
+    let regexDefinitionNoteInfo = new RegExp("\{IN\}[^\{\}]+\{IN\}", "g")
     let regexDefinitionNoteInfoIN = new RegExp("{IN}", "g")
 
-    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>");
+    //"
+    let regexDefinitionQuote = new RegExp("\"[^\"]+\"", "g")
+
+    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>");
     $('#text-list-report-definition').html(definition);
 
     //#### Example
