@@ -42,9 +42,9 @@
           </ol>
         </nav>
          and check <code>success</code> and <code>failure</code>
-           <img src="/data/data-page/data-configuration/image/configuration-audit-process-1.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           <img src="/data/data-configuration/image/configuration-audit-process-1.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
            At this moment, Windows will log all new Process Creation but the most important information is still missing. To activate the CommandLine in the log, please refer to the part 2.
- <img src="/data/data-page/data-configuration/image/process-auditing-without-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+ <img src="/data/data-configuration/image/process-auditing-without-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
            </p>
           <h2>Part 2: Include Commandline</h2>
           <p> Afer activation of 4688 EventID, activate the Commandline auditing in the group policy (gpedit.msc)
@@ -61,9 +61,9 @@
               </ol>
             </nav>
             add check value <code>Enabled</code>
-           <img src="/data/data-page/data-configuration/image/configuration-audit-process-commandline-2.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           <img src="/data/data-configuration/image/configuration-audit-process-commandline-2.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
            After the modification you can see the Commandline present in the 4688 EventID
-           <img src="/data/data-page/data-configuration/image/process-auditing-with-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           <img src="/data/data-configuration/image/process-auditing-with-command.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
         </p>
         <h2>Link</h2>
         <ul>

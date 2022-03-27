@@ -25,7 +25,7 @@
     $.ajax({
       'async': false,
       'global': false,
-      'url': '/data/data-page/data-report/list-report.json',
+      'url': '/data/data-report/list-report.json',
       'dataType': "json",
       'success': function (data) {
         myListjsonListDetection = data;
@@ -67,7 +67,7 @@
     //Add img balise in the text contening .jpg. The let regex allow us to put global g to replace all the word in the string
     let regex = new RegExp("[A-Za-z\-\_0-9]+\.png", "g"); // pour img avec .jpg
     let regexTypeAttack = new RegExp("\{[A-Z]\}", "g"); // pour bold avec type attacl {A-Z}
-    let res = resultJsonListDetection["Example"].replace(regex, l => "<img src=\"/data/data-page/data-report/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\"> <br>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Type-Attack ").replace("}", ")")+"</b>");
+    let res = resultJsonListDetection["Example"].replace(regex, l => "<img src=\"/data/data-report/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\"> <br>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Type-Attack ").replace("}", ")")+"</b>");
 
 
     $('#text-list-report-example').html(res);
@@ -82,7 +82,7 @@
     $.ajax({
       'async': false,
       'global': false,
-      'url': '/data/data-page/data-detection/list-detection-pattern.json',
+      'url': '/data/data-detection/list-detection-pattern.json',
       'dataType': "json",
       'success': function (data) {
         myList = data;
@@ -143,7 +143,7 @@
     $.ajax({
       'async': false,
       'global': false,
-      'url': '/data/data-page/data-attack/list-attack.json',
+      'url': '/data/data-attack/list-attack.json',
       'dataType': "json",
       'success': function (data) {
         myListAttack = data;

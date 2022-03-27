@@ -20,7 +20,7 @@
     $.ajax({
       'async': false,
       'global': false,
-      'url': '/data/data-page/data-configuration/registry-key.json',
+      'url': '/data/data-configuration/registry-key.json',
       'dataType': "json",
       'success': function (data) {
         myList = data;
@@ -90,7 +90,7 @@
           </ol>
         </nav>
          and check <code>success</code> and <code>failure</code>.
-           <img src="/data/data-page/data-configuration/image/configuration-audit-registry.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           <img src="/data/data-configuration/image/configuration-audit-registry.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
            </p>
           <h2>Part 2: SACL</h2>
           <p> Afer the Audit configuration, open regedit, right click on the registry key you want a monitoring, go to
@@ -104,7 +104,7 @@
               </ol>
             </nav>
             add <code>Everyone</code> and check <code>Query value, Set value, Delete</code>
-           <img src="/data/data-page/data-configuration/image/configuration-audit-registry-SACL.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
+           <img src="/data/data-configuration/image/configuration-audit-registry-SACL.png" class="img-fluid img-thumbnail rounded mx-auto d-block" alt="Image not displayed">
            Below all important registry key to monitore
           <table id="RegistryKeyTable" border="1" class="table" > </table>
         </p>
