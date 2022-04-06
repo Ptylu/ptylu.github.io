@@ -21,7 +21,9 @@
 
       { "Attack-ID": "26", "Sub-Attack-ID": "001", "Type-Attack": "A <b>(EventLog Deletion)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "[wevtutil cl | Clear-EventLog -LogName] security" ,"Affect": "" ,"Comment": "" },
       { "Attack-ID": "26", "Sub-Attack-ID": "002", "Type-Attack": "A <b>(EventLog Deletion)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "[wevtutil cl | Clear-EventLog -LogName] [system | application]" ,"Affect": "" ,"Comment": "" },
-      { "Attack-ID": "26", "Sub-Attack-ID": "003", "Type-Attack": "B <b>(Modification EventLog Propertie)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "Limit-EventLog -LogName Security -OverflowAction DoNotOverwrite" ,"Affect": "" ,"Comment": "Completely unavailable" }
+      { "Attack-ID": "26", "Sub-Attack-ID": "003", "Type-Attack": "B <b>(Modification EventLog Propertie)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "Limit-EventLog -LogName Security -OverflowAction DoNotOverwrite" ,"Affect": "" ,"Comment": "Completely unavailable" },
+      { "Attack-ID": "26", "Sub-Attack-ID": "004", "Type-Attack": "C <b>(Delete File)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "del C:\\Windows\\System32\\winevt\\Security.evtx" ,"Affect": "" ,"Comment": "Need action 25-B and 25-C before to launch this command. No log is generated because EventLog service is already disabled" },
+      { "Attack-ID": "26", "Sub-Attack-ID": "005", "Type-Attack": "C <b>(Delete File)</b>", "Privilege": "a", "Need Reboot": "n", "Attack": "Remove-Item C:\\Windows\\System32\\winevt\\Security.evtx" ,"Affect": "" ,"Comment": "Need action 25-B and 25-C before to launch this command. No log is generated because EventLog service is already disabled" }
 
 
 ]

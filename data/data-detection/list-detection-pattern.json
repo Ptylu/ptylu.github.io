@@ -50,7 +50,7 @@
       { "Detection-ID": "25", "Sub-Detection-ID": "007", "Privilege (will be modified by Relevance)": "t", "EventID": "System 22", "Detection Pattern": "N/A", "Comment": "Log only with the use of 016", "Updated": "17/03/2022", "Sub-Attack-ID": "016"},
       { "Detection-ID": "26", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "t", "EventID": "1102", "Detection Pattern": "N/A", "Comment": "N/A", "Updated": "21/03/2022", "Sub-Attack-ID": "001"},
       { "Detection-ID": "26", "Sub-Detection-ID": "002", "Privilege (will be modified by Relevance)": "t", "EventID": "System 104", "Detection Pattern": "N/A", "Comment": "N/A", "Updated": "21/03/2022", "Sub-Attack-ID": "002"},
-      { "Detection-ID": "26", "Sub-Detection-ID": "008", "Privilege (will be modified by Relevance)": "t", "EventID": "1104", "Detection Pattern": "N/A", "Comment": "Log generated when evtx is full", "Updated": "27/03/2022", "Sub-Attack-ID": "003"},
+      { "Detection-ID": "26", "Sub-Detection-ID": "003", "Privilege (will be modified by Relevance)": "t", "EventID": "1104", "Detection Pattern": "N/A", "Comment": "Log generated when evtx is full", "Updated": "27/03/2022", "Sub-Attack-ID": "003"},
 
 
 
