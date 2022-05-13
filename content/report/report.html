@@ -62,16 +62,15 @@
     let regexDefinitionMark = new RegExp("\{M\}[^\{\}]+\{M\}", "g")
     let regexDefinitionMarkM = new RegExp("{M}", "g")
 
-    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>");
-    $('#text-list-report-definition').html(definition);
-
-    //#### Example
     //Add img balise in the text contening .jpg. The let regex allow us to put global g to replace all the word in the string
     let regex = new RegExp("[A-Za-z\-\_0-9]+\.png", "g"); // pour img avec .jpg
     let regexTypeAttack = new RegExp("\{[A-Z]\}", "g"); // pour bold avec type attacl {A-Z}
+
+    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Type-Attack ").replace("}", ")")+"</b>");
+    $('#text-list-report-definition').html(definition);
+
+    //#### Example
     let res = resultJsonListDetection["Example"].replace(regex, l => "<img src=\"/data/data-report/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\"> <br>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "<br>(Type-Attack ").replace("}", ")")+"</b>");
-
-
     $('#text-list-report-example').html(res);
   });
 
@@ -237,12 +236,10 @@
     <h2 id="text-list-detection-title"></h2>
     <span class="badge badge-info" id="text-list-detection-mitre"></span>
     <span class="badge badge-info" id="text-list-report-mitre-car"></span>
-    <br><br>
     <p id="text-list-report-definition"></p>
   </div>
 
   <div id="content" class="container-fluid">
-
     <h3>List of Detection Pattern</h3>
     <table id="DetectionTable" border="1" class="table table-bordered shadow-3" > </table>
   </div>
