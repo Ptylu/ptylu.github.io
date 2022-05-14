@@ -13,6 +13,27 @@
   $(document).ready(function(){
     $('#assetHead').load("/assets/header.html");
   });
+
+  //////////////////////////////////////////////////////////////////////////////////////////
+  // Load Json List Report
+  //////////////////////////////////////////////////////////////////////////////////////////
+  // Load Json list-detection
+  var jsonGithubInfo = (function () {
+    var jsonGithubInfo = null;
+    $.ajax({
+      'async': true,
+      'global': false,
+      'url': 'https://api.github.com/repos/ptylu/ptylu.github.io',
+      'dataType': "json",
+      'success': function (data) {
+        //result=data; //seulement si async: false;
+        $('#text-last-github-push').text(data["pushed_at"].replace("T", " ").replace("Z", " UTC+0"));
+      }
+    });
+
+    //return result; //seulement si async: false;
+  })();
+
 </script>
 
 
@@ -26,6 +47,7 @@
   <!-- Begin page content -->
   <main role="main" class="container">
     <h1 class="mt-5">/!\ Work in progress /!\</h1>
+    <p>Last update: <span id="text-last-github-push"></span></p>
     <a href="/content/report/report.html?report=25" target="_blank">Check my new report here</a>
     <h2 class="mt-5">I don't know Kung-Fu!</h2>
   </main>
