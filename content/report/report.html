@@ -43,11 +43,11 @@
 
   $(document).ready(function(){
     $('#assetHead').load("/assets/header.html");
-    $('#text-list-detection-title').text(htmlParameter+": "+resultJsonListDetection["Technique"]);
-    $('#text-list-detection-mitre').text("Mitre Att&ck ID: "+resultJsonListDetection["Mitre Attack ID"]);
+    $('#text-list-detection-title').text("REP-"+htmlParameter+": "+resultJsonListDetection["Technique"]);
+    $('#text-list-detection-mitre').html("Mitre Att&ck ID: <u>"+resultJsonListDetection["Mitre Attack ID"]+"</u>");
     $('#text-list-report-detection-id').text("Detection ID: "+resultJsonListDetection["Detection-ID"]);
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
-    $('#text-list-report-mitre-car').text("Mitre CAR ID: " + resultJsonListDetection["Mitre CAR ID"]);
+    $('#text-list-report-mitre-car').html("Mitre CAR ID: <u>" + resultJsonListDetection["Mitre CAR ID"]+"</u>");
 
     //#### Definition
     //Mettre <br> pour liste -
