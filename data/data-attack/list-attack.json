@@ -250,6 +250,16 @@
       "Comment":"Need action 25-B and 25-C before to launch this command. No log is generated because EventLog service is already disabled. Partially Unavailable"
    },
    {
+      "Attack-ID":"27",
+      "Sub-Attack-ID":"001",
+      "Type-Attack":"A <b>(Copy EventLog)</b>",
+      "Privilege":"a",
+      "Need Reboot":"n",
+      "Attack":"wevutil al config\\WindowsFirewallLog.evtx, wevutil epl config\\WindowsFirewallLog.evtx",
+      "Affect":"",
+      "Comment":"Command launched by netsh trace"
+   },
+   {
       "Attack-ID":"26",
       "Sub-Attack-ID":"006",
       "Type-Attack":"D <b>(Delete EventLog)</b>",

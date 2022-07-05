@@ -52,6 +52,7 @@
       { "Detection-ID": "26", "Sub-Detection-ID": "002", "Privilege (will be modified by Relevance)": "t", "EventID": "System 104", "Detection Pattern": "N/A", "Comment": "N/A", "Updated": "21/03/2022", "Sub-Attack-ID": "002"},
       { "Detection-ID": "26", "Sub-Detection-ID": "003", "Privilege (will be modified by Relevance)": "t", "EventID": "1104", "Detection Pattern": "N/A", "Comment": "Log generated when evtx is full", "Updated": "27/03/2022", "Sub-Attack-ID": "003"},
       { "Detection-ID": "26", "Sub-Detection-ID": "004", "Privilege (will be modified by Relevance)": "t", "EventID": "4688,1,500,800,4103", "Detection Pattern": "(wevtutil cl) OR Clear-EventLog OR Limit-EventLog OR (Remove-Item AND .evtx) OR Remove-EventLog", "Comment": "", "Updated": "18/05/2022", "Sub-Attack-ID": "A,B,005,D"},
+      { "Detection-ID": "27", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "t", "EventID": "4688,1", "Detection Pattern": "(wevtutil al) OR (wevtutil epl)", "Comment": "", "Updated": "05/07/2022", "Sub-Attack-ID": "001"},
 
 
 

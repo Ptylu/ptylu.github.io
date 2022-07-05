@@ -187,6 +187,15 @@
       "Example":"{B} After the powershell command, Security.evtx didn't delete old events and therefore didn't record new events (because the Security.evtx was already full with 40960KB of records). 26-B-security-log-full-1104.png #When Log is full, Security EventID 1104 is generated# {C} On the below screenshot, I tried to delete the .evtx file. The action was rejected by the system because the file was used by another process. The workaround to perform this action was to launch before 2 others commands REP-25-B (disable Eventlog service) and REP-25-C (stop Eventlog service) 26-C-deletion-evtx.png #After the 2 commands, I was be able to delete the Security.evtx# {D} Removing Security source with Remove-EventLog command: 25-G-Remove-EventLog.png #Command launched followed with ping to verify whether Eventlod are still recorded# After the command launched, Security EventLog has been cleared (EventId 1102 generated) but new EventLog are still logged en Security.evtx. 25-G-Remove-EventLog-log.png #Ping has been recorded# However, after the reboot, new EventLogs are not recorded anymore and the default access to Security Eventlog from EventViewer is not possible anymore 25-G-log-unavailable-eventviewer.png"
    },
    {
+      "Report-ID":"27",
+      "Mitre Attack ID":"N/A",
+      "Technique":"EventLog Access",
+      "Mitre CAR ID":"N/A",
+      "Comment":"Gather information with EventLog",
+      "Definition":"-- {A} In the process background, command/tools like \"netsh trace\" can copy EventLog with the command \"wevutil al\" and \"wevutil epl\"",
+      "Example":""
+   },
+   {
       "Report-ID":"X",
       "Mitre Attack ID":"N/A",
       "Technique":"Possible malicious pattern",
