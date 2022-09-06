@@ -132,9 +132,6 @@
 
 
 
-
-
-
       { "Detection-ID": "X", "Sub-Detection-ID": "001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\BOOTNXT\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
       { "Detection-ID": "X", "Sub-Detection-ID": "001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\Boot\\bootuwf.dll\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
       { "Detection-ID": "X", "Sub-Detection-ID": "001", "Name": "Ransomware Death", "Action": "{\"@Name\":\"FileNameBuffer\",\"#text\":\"\\Device\\HarddiskVolume1\\Boot\\bootvhd.dll\"}", "Sha256": "7C2DBAD516D18D2C1C21ECC5792BC232F7B34DADC1BC19E967190D79174131D1", "Comment": "N/A"},
