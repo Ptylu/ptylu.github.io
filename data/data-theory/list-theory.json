@@ -1,0 +1,21 @@
+[
+   {
+      "Theory-ID":"1",
+      "Title":"Prefetch",
+      "Type":"Forensic",
+      "OS":"Windows",
+      "Comment":"N/A",
+      "Location":"C:\\Windows\\Prefetch\\",
+      "Definition":"Prefetch is used by Windows to accelerate .exe by saving .dll paths. Preftech file name is the executable name + executable path hash \"PING.EXE-B29F6629.pf\". 1 Prefetch file by executable (Exeption for svchost.exe & dllhost.exe). {IN} - Prefetch is not enabled by default on Windows server. To enable Prefetch, \"Computer\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" set \"EnablePrefetcher\" to \"3\" - Even if executable crashs, a prefetch can be created - \"Creation Time\" can have 10s latency - Prefetch folder is limited to 128 Prefetch file for Windows 7 and 1024 Prefetch file for Windows 8-10. - Old Prefetch can be overwritten - Multiple svchost.exe & dllhost.exe Prefetch file because Prefetch uses the command for the Hash calculation{IN}",
+      "Example":"{A} 1 prefetch file by .exe. Here prefetch for C:\\Windows\\SysWOW64\\ping.exe and C:\\Windows\\System32\\ping.exe. 2022-09-07_22-28.png #C:\\Windows\\SysWOW64\\ping.exe and C:\\Windows\\System32\\ping.exe# {B} Special Prefect behavior for svchost.exe & dllhost.exe. Prefetch uses the path+command to calculate the hash. 2022-09-07_22-34.png #dllhost.exe# 2022-09-07_22-39.png #svchost.exe# {C} With MAcB time, we can detect if executable has been launched for the first time (3 same dates) for \"PING.EXE-6B29C0CD.pf\" or has already been executed more than once (Date Created is not the same) for execution for \"PING.EXE-B29F6629.pf\" 2022-09-07_22-51.png #Only 1 execution for PING.EXE-B29F6629.pf#"
+   },
+   {
+     "Theory-ID":"2",
+     "Title":"XXX",
+     "Type":"XXX",
+     "OS":"XXX",
+     "Comment":"XXX",
+     "Definition":"",
+     "Example":""
+   }
+]

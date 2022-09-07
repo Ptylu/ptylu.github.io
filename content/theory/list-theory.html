@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <title>Theory</title>
+
+  <script type='text/javascript'>
+
+
+
+    $(document).ready(function(){
+      $('#assetHead').load("/assets/header.html");
+    });
+
+    // Load Json
+    var json = (function () {
+      var json = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-theory/list-theory.json',
+        'dataType': "json",
+        'success': function (data) {
+          myList = data;
+        }
+      });
+      return myList;
+    })();
+
+    // Add Json loased in table
+    function buildHtmlTable(selector) {
+      var columns = addAllColumnHeaders(myList, selector);
+
+      for (var i = 0; i < myList.length; i++) {
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+          var cellValue = myList[i][columns[colIndex]];
+          if (cellValue == null) cellValue = "";
+          if (colIndex==0) cellValue = '<a href="/content/theory/theory.html?theory='+cellValue+'" target="_blank">'+"THR-"+cellValue+'</a>';
+          //if (colIndex==3 && cellValue.match(/^CAR-/)) cellValue = '<a href="https://car.mitre.org/analytics/'+cellValue+'" target="_blank">'+cellValue+'</a>';
+          row$.append($('<td>').html(cellValue));
+
+
+        }
+        $(selector).append(row$);
+      }
+
+      // Deletion Definition Column
+      //$("#TheoryTable td:nth-child(7)").remove()
+      //$("#TheoryTable th:nth-child(7)").remove()
+      // Deletion Forensic Column
+      //$("#TheoryTable td:nth-child(6)").remove()
+      //$("#TheoryTable th:nth-child(6)").remove()
+
+    }
+
+    // Adds a header row to the table and returns the set of columns.
+    // Need to do union of keys from all records as some records may not contain
+    // all records.
+    function addAllColumnHeaders(myList, selector) {
+      var columnSet = [];
+      var headerTr$ = $('<tr/>');
+
+      for (var i = 0; i < myList.length; i++) {
+        var rowHash = myList[i];
+        for (var key in rowHash) {
+          if ($.inArray(key, columnSet) == -1) {
+            columnSet.push(key);
+            headerTr$.append($('<th/>').html(key));
+          }
+        }
+      }
+      $(selector).append(headerTr$);
+
+      return columnSet;
+    }
+
+  </script>
+
+</head>
+
+<body onLoad="buildHtmlTable('#TheoryTable')">
+  <div id="assetHead"></div>
+
+  <div id="content" class="container-fluid">
+    <h1>Report List</h1>
+    <h2>Table Theory</h2>
+    <table id="TheoryTable" border="1" class="table table-bordered shadow-3"> </table>
+
+
+  </div>
+
+  <!-- Begin page content -->
+
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
