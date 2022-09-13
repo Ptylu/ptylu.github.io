@@ -1,4 +1,15 @@
 [
+  {
+     "Theory-ID":"0",
+     "Title":"Process",
+     "Type":"Forensic",
+     "OS":"Windows",
+     "Comment":"N/A",
+     "Location":"N/A",
+     "Definition":"",
+     "Forensic-Tool":"",
+     "Example":"THR-0-2022-09-13_13-53.png"
+  },
    {
       "Theory-ID":"1",
       "Title":"Prefetch",
@@ -12,10 +23,10 @@
    },
    {
      "Theory-ID":"2",
-     "Title":"XXX",
-     "Type":"XXX",
-     "OS":"XXX",
-     "Comment":"XXX",
+     "Title":"MACB Time",
+     "Type":"Forensic",
+     "OS":"Windows",
+     "Comment":"",
      "Definition":"",
      "Example":""
    }
