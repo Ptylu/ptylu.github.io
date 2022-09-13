@@ -55,6 +55,12 @@
     //Note Info IN (note note-info)
     let regexDefinitionNoteInfo = new RegExp("\{IN\}[^\{\}]+\{IN\}", "g")
     let regexDefinitionNoteInfoIN = new RegExp("{IN}", "g")
+
+    let regexDefinitionNoteDanger = new RegExp("\{ID\}[^\{\}]+\{ID\}", "g")
+    let regexDefinitionNoteDangerID = new RegExp("{ID}", "g")
+
+    let regexDefinitionNoteSuccess = new RegExp("\{IS\}[^\{\}]+\{IS\}", "g")
+    let regexDefinitionNoteSuccessIS = new RegExp("{IS}", "g")
     //"
     let regexDefinitionQuote = new RegExp("\"[^\"]+\"", "g")
     //Mark
@@ -68,13 +74,14 @@
     let regexCaption = new RegExp("\#[^\#]+\#", "g")
     let regexCaptionTag = new RegExp("#", "g")
 
-    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>");
+    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Note Antiforensic: </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>");
     $('#text-list-theory-definition').html(definition);
+
+    let forensic_tool = resultJsonListDetection["Forensic-Tool"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Note Antiforensic: </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>");
+    $('#text-list-theory-forensic-tool').html(forensic_tool);
 
     //#### Example
     let res = resultJsonListDetection["Example"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regex, l => "<img src=\"/data/data-theory/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\">").replace(regexTypeAttack, a => "<b>"+a.replace("{", "<br>(Example ").replace("}", ")")+"</b>").replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexCaption, a =>"<figcaption class=\"figure-caption text-center\">"+a.replace(regexCaptionTag ,"")+"</figcaption><br>");
-
-
     $('#text-list-theory-example').html(res);
   });
 
@@ -93,6 +100,11 @@
     <p id="text-list-theory-definition"></p>
   </div>
 
+  <div id="content" class="container-fluid">
+
+    <h3>Forensic Tool</h3>
+    <p id="text-list-theory-forensic-tool"></p>
+  </div>
 
   <div id="content" class="container-fluid">
 
