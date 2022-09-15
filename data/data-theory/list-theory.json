@@ -10,7 +10,7 @@
      "Forensic-Tool":"",
      "Example":"THR-0-2022-09-13_13-53.png",
      "Ref":"https://alparslanakyildiz.medium.com/fundamental-windows-processes-6341696cf4f0"
-  },
+   },
    {
       "Theory-ID":"1",
       "Title":"Prefetch",
@@ -24,11 +24,12 @@
    },
    {
      "Theory-ID":"2",
-     "Title":"MACB Time",
+     "Title":"Dynamic-Link Library Search Order",
      "Type":"Forensic",
      "OS":"Windows",
      "Comment":"",
-     "Definition":"",
-     "Example":""
+     "Definition":"Windows can contain several versions of a DLL. To use a DLL, an application must either set its full path or use its manifest. If neither of these methods is used, there are different ways to search for and load a DLL: - If the desired DLL is already loaded in the memory, then it will use it. - If the DLL is in the list of the KnownDLLs register, then the system uses the copy of this DLL. -- A malware can make a DLL hijacking by placing for example a malicious DLL in the directory of the original process or in the current directory. If \"HKLM\\System\\CurrentControlSet\\Control\\Session Manager\\SafeDllSearchMode\" is set to \"0\", Windows will search the DLL name in this folder order - The directory from which the application is loaded - {M} The Current Directory {M} - The system directory, usually \"C:\\Windows\\System32\\\" (The GetSystemDirectory function is called to obtain this directory.) - The 16-bit system directory - There is no dedicated function to retrieve the path of this directory, but it is searched as well. - The Windows directory. The GetWindowsDirector function is called to obtain this directory. - The directories that are listed in the PATH environment variable.",
+     "Example":"",
+     "Ref":"https://docs.microsoft.com/fr-fr/windows/win32/dlls/dynamic-link-library-search-order?redirectedfrom=MSDN,https://www.fortinet.com/blog/industry-trends/a-crash-course-in-dll-hijacking,https://blog.trendmicro.com/trendlabs-security-intelligence/zaccesssirefef-arrives-with-new-infection-technique/"
    }
 ]
