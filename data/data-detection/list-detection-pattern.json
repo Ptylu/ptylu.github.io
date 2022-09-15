@@ -55,6 +55,10 @@
       { "Detection-ID": "27", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "t", "EventID": "4688,1", "Detection Pattern": "(wevtutil al) OR (wevtutil epl)", "Comment": "", "Updated": "05/07/2022", "Sub-Attack-ID": "001"},
 
 
+      { "Detection-ID": "28", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "t", "EventID": "4688,1", "Detection Pattern": "($MOD-3-001$) (pass OR password OR pwd OR login OR secure OR credential)", "Comment": "", "Updated": "05/07/2022", "Sub-Attack-ID": "001"},
+
+
+
 
 
       { "Detection-ID": "X", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "", "EventID": "5000,5002,5004", "Detection Pattern": "BOOTNXT OR Boot\\bootuwf.dll OR Boot\\bootvhd.dll OR Boot\\memtest.exe OR bg-BG\\bootmgr.exe.mui OR cs-CZ\\bootmgr.exe.mui ...", "Comment": "Possible modification for the recovery mode", "Updated": "07/01/2022"}

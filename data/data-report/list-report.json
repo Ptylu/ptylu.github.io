@@ -196,6 +196,15 @@
       "Example":""
    },
    {
+      "Report-ID":"28",
+      "Mitre Attack ID":"T1552.001",
+      "Technique":"Unsecured Credentials: Credentials In Files",
+      "Mitre CAR ID":"N/A",
+      "Comment":"Adversaries may search local file systems and remote file shares for files containing insecurely stored credentials",
+      "Definition":"",
+      "Example":""
+   },
+   {
       "Report-ID":"X",
       "Mitre Attack ID":"N/A",
       "Technique":"Possible malicious pattern",

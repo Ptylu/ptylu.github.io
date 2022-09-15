@@ -81,6 +81,24 @@
 
 
   //////////////////////////////////////////////////////////////////////////////////////////
+  // Load Json List of Model Pattern
+  //////////////////////////////////////////////////////////////////////////////////////////
+  var jsonModel = (function () {
+    var jsonModel = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-detection/model.json',
+      'dataType': "json",
+      'success': function (data) {
+        myListModel = data;
+      }
+    });
+    return myListModel;
+  })();
+
+
+  //////////////////////////////////////////////////////////////////////////////////////////
   // Load Json List of Detection Pattern
   //////////////////////////////////////////////////////////////////////////////////////////
   var json = (function () {
@@ -121,6 +139,34 @@
               cellValue = '<span class="badge rounded-pill bg-success">top-detection</span>';
             }else if (cellValue=="w") {
               cellValue = '<span class="badge rounded-pill bg-warning">workaround-detection</span>';
+            }
+          } else if (colIndex==4) {
+            // Check if Detection Pattern column contains Model MOD-
+            if (cellValue.includes("MOD-")) {
+
+              const regex2 = new RegExp("\$.+\$", "gm");
+              var trimmedWords = cellValue.match(/MOD-[0-9]+\-/g);
+
+              var columnsModel = addAllColumnHeaders(myListModel);
+
+              let stringVariableModel="";
+              numberAvoidORFirstIteration=0;
+              for (var j = 0; j < myListModel.length; j++) {
+
+                //If Model list contains MOD-X, Get the Model Pattern
+                if(myListModel[j][columnsModel[0]].includes(trimmedWords[0])){
+                  // If First Model Patttern, don't add OR at the begining
+                  if(numberAvoidORFirstIteration==0){
+                    stringVariableModel =myListModel[j][columnsModel[2]];
+                  // Add OR between Model Pattern
+                  }else{
+                    stringVariableModel =stringVariableModel+ " OR "+myListModel[j][columnsModel[2]];
+                  }
+                  numberAvoidORFirstIteration=numberAvoidORFirstIteration+1;
+                }
+              }
+              // Replace $MOD-X-X by all the MOD-X Patterns
+              cellValue=cellValue.replace(/\$.+\$/g, l => stringVariableModel);
             }
           }
           row$.append($('<td/>').html(cellValue));
