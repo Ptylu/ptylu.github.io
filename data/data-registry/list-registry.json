@@ -1,0 +1,8 @@
+[
+  {
+     "Registry-ID":"0",
+     "Mitre-Attack-ID":"T1574.001",
+     "Registry":"HKLM\\System\\CurrentControlSet\\Control\\Session Manager\\SafeDllSearchMode",
+     "Compliant-Value":"1"
+   }
+]
