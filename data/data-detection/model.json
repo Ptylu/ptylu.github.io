@@ -1,9 +1,58 @@
 [
-  { "Model-ID": "MOD-1-001", "EventID": "4688,1,500,(4657,13)", "Pattern": "reg add /d", "Example": "reg add \"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\" /v SafeDllSearchMode /d 0", "Comment": "N/A"},
-  { "Model-ID": "MOD-1-002", "EventID": "500,800,4103,[4688,1],(4657,13)", "Pattern": "Set-ItemProperty -value", "Example": "Set-ItemProperty -Path \"HKLM:\\System\\CurrentControlSet\\Control\\Session Manager\" -Name SafeDllSearchMode -Value 0", "Comment": "N/A"},
-  { "Model-ID": "MOD-1-003", "EventID": "500,800,4103,[4688,1],(4657,13)", "Pattern": "New-ItemProperty -value", "Example": "New-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\" -Name \"SafeDllSearchMode\" -Value 1  -PropertyType \"DWORD\"", "Comment": "Need -Force parameter to update existing key"},
-  { "Model-ID": "MOD-2-001", "EventID": "4688,1,500,800,4103", "Pattern": "New-Item -Path", "Example": "New-Item -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\MiniNt\"", "Comment": "Will not be logged in 13 or 4657"},
-  { "Model-ID": "MOD-3-001", "EventID": "4688,1", "Pattern": "findstr", "Example": "findstr test_lucas_password *.*", "Comment": "Search string in file."},
-  { "Model-ID": "MOD-3-002", "EventID": "4688,1", "Pattern": "dir", "Example": "dir test_lucas_password_file_name.*", "Comment": "Search string in file name."},
-  { "Model-ID": "MOD-3-003", "EventID": "4688,1", "Pattern": "Select-String -Path -Pattern", "Example": "Select-String -Path .\\*.txt -Pattern 'password'", "Comment": "Search string in file."}
+  {
+    "Model-ID":"MOD-1-001",
+    "EventID":"4688,1,500,(4657,13)",
+    "Pattern":"reg add /d",
+    "Example":"reg add \"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\" /v SafeDllSearchMode /d 0",
+    "Comment":"N/A"
+  },
+  {
+    "Model-ID":"MOD-1-002",
+    "EventID":"500,800,4103,[4688,1],(4657,13)",
+    "Pattern":"Set-ItemProperty -value",
+    "Example":"Set-ItemProperty -Path \"HKLM:\\System\\CurrentControlSet\\Control\\Session Manager\" -Name SafeDllSearchMode -Value 0",
+    "Comment":"N/A"
+  },
+  {
+    "Model-ID":"MOD-1-003",
+    "EventID":"500,800,4103,[4688,1],(4657,13)",
+    "Pattern":"New-ItemProperty -value",
+    "Example":"New-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\" -Name \"SafeDllSearchMode\" -Value 1 -PropertyType \"DWORD\"",
+    "Comment":"Need -Force parameter to update existing key"
+  },
+  {
+    "Model-ID":"MOD-2-001",
+    "EventID":"4688,1,500,800,4103",
+    "Pattern":"New-Item -Path",
+    "Example":"New-Item -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\MiniNt\"",
+    "Comment":"Will not be logged in 13 or 4657"
+  },
+  {
+    "Model-ID":"MOD-3-001",
+    "EventID":"4688,1",
+    "Pattern":"findstr",
+    "Example":"findstr test_lucas_password *.*",
+    "Comment":"Search string in file."
+  },
+  {
+    "Model-ID":"MOD-3-002",
+    "EventID":"4688,1",
+    "Pattern":"dir",
+    "Example":"dir test_lucas_password_file_name.*",
+    "Comment":"Search string in file name."
+  },
+  {
+    "Model-ID":"MOD-3-003",
+    "EventID":"4688,1",
+    "Pattern":"Select-String -Path -Pattern",
+    "Example":"Select-String -Path .\\*.txt -Pattern 'password'",
+    "Comment":"Search string in file."
+  },
+  {
+    "Model-ID":"MOD-4-001",
+    "EventID":"4688,1,500,(4698)",
+    "Pattern":"schtasks /create",
+    "Example":"schtasks /create /sc ONLOGON /tn malicious_task /tr C:\\User\\Lucas\\malicious.exe",
+    "Comment":"Create scheduled task"
+  }
 ]
