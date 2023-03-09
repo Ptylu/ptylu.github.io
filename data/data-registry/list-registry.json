@@ -3,6 +3,40 @@
      "Registry-ID":"0",
      "Mitre-Attack-ID":"T1574.001",
      "Registry":"HKLM\\System\\CurrentControlSet\\Control\\Session Manager\\SafeDllSearchMode",
-     "Compliant-Value":"1"
-   }
+     "Key-name":"",
+     "Compliant-Value":"1",
+     "Comment":"N/A"
+   },
+   {
+      "Registry-ID":"1",
+      "Mitre-Attack-ID":"T1547.001",
+      "Registry":"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+      "Key-name":"Startup",
+      "Compliant-Value":"%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
+      "Comment":"N/A"
+    },
+    {
+       "Registry-ID":"2",
+       "Mitre-Attack-ID":"T1547.001",
+       "Registry":"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+       "Key-name":"Startup",
+       "Compliant-Value":"C:\\Users\\<User>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
+       "Comment":"N/A"
+     },
+     {
+        "Registry-ID":"3",
+        "Mitre-Attack-ID":"T1547.001",
+        "Registry":"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+        "Key-name":"Common Startup",
+        "Compliant-Value":"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
+        "Comment":"N/A"
+      },
+      {
+         "Registry-ID":"4",
+         "Mitre-Attack-ID":"T1547.001",
+         "Registry":"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders",
+         "Key-name":"Common Startup",
+         "Compliant-Value":"%ProgramData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
+         "Comment":"N/A"
+       },
 ]
