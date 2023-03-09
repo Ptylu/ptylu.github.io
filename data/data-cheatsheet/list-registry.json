@@ -38,5 +38,5 @@
          "Key-name":"Common Startup",
          "Compliant-Value":"%ProgramData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
          "Comment":"N/A"
-       },
+       }
 ]
