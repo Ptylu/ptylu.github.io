@@ -515,5 +515,27 @@
       "Comment":"",
       "OS":"Windows10",
       "Execution Order":""
-   }
+   },
+   {
+      "Registry-ID":"51",
+      "Type":"Boot Execution",
+      "Mitre-Attack-ID":"",
+      "Registry":"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
+      "SubKey-name":"Userinit",
+      "Compliant-Value":"",
+      "Comment":"Need SubKey creation",
+      "OS":"Windows10",
+      "Execution Order":""
+   },
+   {
+      "Registry-ID":"52",
+      "Type":"Boot Execution",
+      "Mitre-Attack-ID":"",
+      "Registry":"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
+      "SubKey-name":"Notify",
+      "Compliant-Value":"",
+      "Comment":"Need SubKey creation",
+      "OS":"Windows10",
+      "Execution Order":""
+   },
 ]
