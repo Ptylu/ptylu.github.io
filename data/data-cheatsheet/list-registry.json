@@ -7,7 +7,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"This key contains a list of programs that run automatically at startup",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -18,7 +18,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -29,7 +29,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"Not available by Default",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -40,7 +40,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"Not available by Default",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -51,7 +51,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"Not available by Default",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -62,7 +62,7 @@
       "SubKey-name":"Load",
       "Compliant-Value":"",
       "Comment":"Need SubKey creation",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":"20"
    },
    {
@@ -73,18 +73,18 @@
       "SubKey-name":"Run",
       "Compliant-Value":"",
       "Comment":"Need SubKey creation",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
       "Registry-ID":"8",
       "Type":"Boot Execution",
-      "Mitre-Attack-ID":"",
+      "Mitre-Attack-ID":"T1547.004",
       "Registry":"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
       "SubKey-name":"Shell",
       "Compliant-Value":"",
       "Comment":"Need SubKey creation",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -94,8 +94,8 @@
       "Registry":"HKCU\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Run",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -105,8 +105,8 @@
       "Registry":"HKCU\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\RunOnce",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -116,30 +116,30 @@
       "Registry":"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
       "Registry-ID":"12",
       "Type":"Boot Execution",
       "Mitre-Attack-ID":"",
-      "Registry":"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\Shell",
-      "SubKey-name":"",
+      "Registry":"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System",
+      "SubKey-name":"Shell",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
       "Registry-ID":"13",
       "Type":"Boot Execution",
       "Mitre-Attack-ID":"",
-      "Registry":"HKCU\\Software\\Policies\\Microsoft\\Windows\\System\\Scripts\\Logon",
-      "SubKey-name":"",
+      "Registry":"HKCU\\Software\\Policies\\Microsoft\\Windows\\System\\Scripts",
+      "SubKey-name":"Logon",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -149,8 +149,8 @@
       "Registry":"HKCU\\Software\\Policies\\Microsoft\\Windows\\System\\Scripts\\Logoff",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -160,8 +160,8 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"This key contains a list of programs that run automatically at startup",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -171,8 +171,8 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"This key contains a list of programs that run automatically at startup (only 1 time)",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -182,19 +182,19 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need Key creation",
+      "OS":"",
       "Execution Order":""
    },
    {
       "Registry-ID":"18",
       "Type":"Boot Execution",
-      "Mitre-Attack-ID":"",
-      "Registry":"HKLM\\Software\\Microsoft\\Active Setup\\Installed Components",
-      "SubKey-name":"",
+      "Mitre-Attack-ID":"T1547.014",
+      "Registry":"HKLM\\Software\\Microsoft\\Active Setup\\Installed Components\\{GUID}",
+      "SubKey-name":"StubPath",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Need SubKey creation",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -204,8 +204,8 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Terminal Server\\Install\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Not available by Default",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -215,8 +215,8 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Terminal Server\\Install\\Software\\Microsoft\\Windows\\CurrentVersion\\Runonce",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Not available by Default",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -226,8 +226,8 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Terminal Server\\Install\\Software\\Microsoft\\Windows\\CurrentVersion\\RunonceEx",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Not available by Default",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -237,8 +237,8 @@
       "Registry":"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\IconServiceLib",
       "SubKey-name":"",
       "Compliant-Value":"",
-      "Comment":"",
-      "OS":"Windows10",
+      "Comment":"Tested with .exe and ps1, doesn't work",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -249,7 +249,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -260,7 +260,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -271,7 +271,7 @@
       "SubKey-name":"Shell",
       "Compliant-Value":"explorer.exe",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -282,7 +282,7 @@
       "SubKey-name":"Taskman",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -293,7 +293,7 @@
       "SubKey-name":"Userinit",
       "Compliant-Value":"C:\\Windows\\system32\\userinit.exe,",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -304,7 +304,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -315,7 +315,7 @@
       "SubKey-name":"AlternateShell",
       "Compliant-Value":"cmd.exe",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -326,7 +326,7 @@
       "SubKey-name":"StartupPrograms",
       "Compliant-Value":"rdpclip",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -337,7 +337,7 @@
       "SubKey-name":"InitialProgram",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -348,7 +348,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -359,7 +359,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -370,7 +370,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -381,7 +381,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -392,7 +392,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -403,7 +403,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -414,7 +414,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -425,7 +425,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -436,7 +436,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -447,7 +447,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -458,7 +458,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -469,7 +469,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -480,7 +480,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -491,7 +491,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -502,7 +502,7 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
@@ -513,29 +513,29 @@
       "SubKey-name":"",
       "Compliant-Value":"",
       "Comment":"",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
       "Registry-ID":"51",
       "Type":"Boot Execution",
-      "Mitre-Attack-ID":"",
+      "Mitre-Attack-ID":"T1547.004",
       "Registry":"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
       "SubKey-name":"Userinit",
       "Compliant-Value":"",
       "Comment":"Need SubKey creation",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    },
    {
       "Registry-ID":"52",
       "Type":"Boot Execution",
-      "Mitre-Attack-ID":"",
+      "Mitre-Attack-ID":"T1547.004",
       "Registry":"HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
       "SubKey-name":"Notify",
       "Compliant-Value":"",
       "Comment":"Need SubKey creation",
-      "OS":"Windows10",
+      "OS":"",
       "Execution Order":""
    }
 ]
