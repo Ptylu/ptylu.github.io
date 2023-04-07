@@ -1,6 +1,7 @@
 [
    {
-      "Attack-ID":"1",
+      "Report-ID":"1",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"001",
       "Type-Attack":"",
       "Privilege":"a",
@@ -10,7 +11,8 @@
       "Comment":"N/A"
    },
    {
-      "Attack-ID":"1",
+      "Report-ID":"1",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"003",
       "Type-Attack":"",
       "Privilege":"a",
@@ -20,7 +22,8 @@
       "Comment":"N/A"
    },
    {
-      "Attack-ID":"1",
+      "Report-ID":"1",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"005",
       "Type-Attack":"",
       "Privilege":"a",
@@ -30,7 +33,8 @@
       "Comment":"N/A"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00A",
       "Sub-Attack-ID":"001",
       "Type-Attack":"A <b>(Add Registry Key)</b>",
       "Privilege":"a",
@@ -40,7 +44,8 @@
       "Comment":"Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00A",
       "Sub-Attack-ID":"002",
       "Type-Attack":"A <b>(Add Registry Key)</b>",
       "Privilege":"a",
@@ -50,7 +55,8 @@
       "Comment":"Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00B",
       "Sub-Attack-ID":"003",
       "Type-Attack":"B <b>(Disable Service)</b>",
       "Privilege":"a",
@@ -60,7 +66,8 @@
       "Comment":"Reboot not required if this attack is followed by {C}. Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00B",
       "Sub-Attack-ID":"004",
       "Type-Attack":"B <b>(Disable Service)</b>",
       "Privilege":"a",
@@ -70,7 +77,8 @@
       "Comment":"0x00000004=Disabled,0x00000003=Manual,0x00000002=Automatic. Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00B",
       "Sub-Attack-ID":"005",
       "Type-Attack":"B <b>(Disable Service)</b>",
       "Privilege":"a",
@@ -80,7 +88,8 @@
       "Comment":"4=Disabled,3=Manual,2=Automatic. Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00B",
       "Sub-Attack-ID":"006",
       "Type-Attack":"B <b>(Disable Service)</b>",
       "Privilege":"a",
@@ -90,7 +99,8 @@
       "Comment":"4=Disabled,3=Manual,2=Automatic. Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00B",
       "Sub-Attack-ID":"007",
       "Type-Attack":"B <b>(Disable Service)</b>",
       "Privilege":"a",
@@ -100,7 +110,8 @@
       "Comment":"Reboot not required if this attack is followed by {C}. Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00C",
       "Sub-Attack-ID":"008",
       "Type-Attack":"C <b>(Stop Service)</b>",
       "Privilege":"a",
@@ -110,7 +121,8 @@
       "Comment":"Cannot works if Service is enable. Need to launch command 003 or 007. Partially Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00D",
       "Sub-Attack-ID":"009",
       "Type-Attack":"D <b>(Modification EventLog Policy)</b>",
       "Privilege":"a",
@@ -120,7 +132,8 @@
       "Comment":"Completely Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00D",
       "Sub-Attack-ID":"010",
       "Type-Attack":"D <b>(Modification EventLog Policy)</b>",
       "Privilege":"a",
@@ -130,7 +143,8 @@
       "Comment":"Completely Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00D",
       "Sub-Attack-ID":"011",
       "Type-Attack":"D <b>(Modification EventLog Policy)</b>",
       "Privilege":"a",
@@ -140,7 +154,8 @@
       "Comment":"Completely Unavailable"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00E",
       "Sub-Attack-ID":"012",
       "Type-Attack":"E <b>(Modification EventLog Propertie)</b>",
       "Privilege":"a",
@@ -150,7 +165,8 @@
       "Comment":"Available in Other File. EventLog path modification. New log will be stored in the new file. With EventViewer, we always have access to the EventLog because will use the new path setup. Hoverwer, all tool or user that will interect with the old file without won't see new EventLog. Could also use /ms to modify the max file size"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00E",
       "Sub-Attack-ID":"013",
       "Type-Attack":"E <b>(Modification EventLog Propertie)</b>",
       "Privilege":"a",
@@ -160,7 +176,8 @@
       "Comment":"Available in Other File . Same than 012"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00E",
       "Sub-Attack-ID":"014",
       "Type-Attack":"E <b>(Modification EventLog Propertie)</b>",
       "Privilege":"a",
@@ -170,7 +187,8 @@
       "Comment":"Available in Other File . Same than 012"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00E",
       "Sub-Attack-ID":"015",
       "Type-Attack":"E <b>(Modification EventLog Propertie)</b>",
       "Privilege":"a",
@@ -180,7 +198,8 @@
       "Comment":"Available in Other File . Same than 012"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00F",
       "Sub-Attack-ID":"016",
       "Type-Attack":"F <b>(Disable EventLog)</b>",
       "Privilege":"u",
@@ -190,7 +209,8 @@
       "Comment":"Completely unavailable. it doesn't need admin right to perform this action, after reboot, Security Evelog log will not be logged on the system (Also cannot recover logs when we revert the configuration). required Admin right for the Autologger\\EventLog-System and Autologger\\EventLog-Application"
    },
    {
-      "Attack-ID":"25",
+      "Report-ID":"25",
+      "Attack-ID":"00G",
       "Sub-Attack-ID":"017",
       "Type-Attack":"G <b>(Disable EventLog Sources)</b>",
       "Privilege":"a",
@@ -200,7 +220,8 @@
       "Comment":"Completely unavailable after reboot. Between command launched and the reboot, EventLog are still logged and can be accessed from evtx file. This command also delete all Security EventLog and generates Security 1102 (See REP-26)"
    },
    {
-      "Attack-ID":"26",
+      "Report-ID":"26",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"001",
       "Type-Attack":"A <b>(EventLog Deletion)</b>",
       "Privilege":"a",
@@ -210,7 +231,8 @@
       "Comment":""
    },
    {
-      "Attack-ID":"26",
+      "Report-ID":"26",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"002",
       "Type-Attack":"A <b>(EventLog Deletion)</b>",
       "Privilege":"a",
@@ -220,7 +242,8 @@
       "Comment":""
    },
    {
-      "Attack-ID":"26",
+      "Report-ID":"26",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"003",
       "Type-Attack":"B <b>(Modification EventLog Propertie)</b>",
       "Privilege":"a",
@@ -230,7 +253,8 @@
       "Comment":"Completely unavailable"
    },
    {
-      "Attack-ID":"26",
+      "Report-ID":"26",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"004",
       "Type-Attack":"C <b>(Delete File)</b>",
       "Privilege":"a",
@@ -240,7 +264,8 @@
       "Comment":"Need action 25-B and 25-C before to launch this command. No log is generated because EventLog service is already disabled. Partially Unavailable"
    },
    {
-      "Attack-ID":"26",
+      "Report-ID":"26",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"005",
       "Type-Attack":"C <b>(Delete File)</b>",
       "Privilege":"a",
@@ -250,7 +275,8 @@
       "Comment":"Need action 25-B and 25-C before to launch this command. No log is generated because EventLog service is already disabled. Partially Unavailable"
    },
    {
-      "Attack-ID":"27",
+      "Report-ID":"27",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"001",
       "Type-Attack":"A <b>(Copy EventLog)</b>",
       "Privilege":"a",
@@ -260,7 +286,8 @@
       "Comment":"Command launched by netsh trace"
    },
    {
-      "Attack-ID":"26",
+      "Report-ID":"26",
+      "Attack-ID":"000",
       "Sub-Attack-ID":"006",
       "Type-Attack":"D <b>(Delete EventLog)</b>",
       "Privilege":"a",
@@ -270,7 +297,8 @@
       "Comment":"Completely unavailable after reboot. Between command launched and the reboot, EventLog are still logged and can be accessed from evtx file. Security EventLog 1102 is generated (log deletion). This command also disables Security EventLog (REP-25-G)"
    },
    {
-      "Attack-ID":"0",
+      "Report-ID":"0",
+      "Attack-ID":"1",
       "Sub-Attack-ID":"001",
       "Type-Attack":"A <b>(Add Registry Key)</b>",
       "Privilege":"",
@@ -278,5 +306,17 @@
       "Attack":"reg add \"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v IconServiceLib /t REG_SZ /d malware.exe /f",
       "Affect":"",
       "Comment":"Persistence didn't work with .exe or .ps1"
+   },
+   {
+      "Report-ID":"0",
+      "Attack-ID":"2",
+      "Sub-Attack-ID":"001",
+      "Type-Attack":"A <b>(Add Registry Key)</b>",
+      "Privilege":"",
+      "Need Reboot":"",
+      "Attack":"reg add \"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v userinit /t REG_SZ /d malware.exe /f",
+      "Affect":"",
+      "Comment":"Works only with .exe"
    }
+
 ]
