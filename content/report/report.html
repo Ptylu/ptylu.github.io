@@ -42,12 +42,28 @@
   })();
 
   $(document).ready(function(){
+
     $('#assetHead').load("/assets/header.html");
     $('#text-list-detection-title').text("REP-"+htmlParameter+": "+resultJsonListDetection["Technique"]);
     $('#text-list-detection-mitre').html("Mitre Att&ck ID: <u>"+resultJsonListDetection["Mitre Attack ID"]+"</u>");
     $('#text-list-report-detection-id').text("Detection ID: "+resultJsonListDetection["Detection-ID"]);
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
     $('#text-list-report-mitre-car').html("Mitre CAR ID: <u>" + resultJsonListDetection["Mitre CAR ID"]+"</u>");
+
+    //to search in table, need input
+    $("#myInputDetectionTable").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#DetectionTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+    //to search in table, need input
+    $("#myInputAttackTable").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#AttackTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
 
     //#### Definition
     //Mettre <br> pour liste -
@@ -309,12 +325,20 @@
 
   <div id="content" class="container-fluid">
     <h3>List of Detection Pattern</h3>
+    <div  class="form-outline">
+      <input id="myInputDetectionTable"  type="text" id="form12" class="form-control" />
+      <label class="form-label" for="form12">Search in table...</label>
+    </div>
     <table id="DetectionTable" border="1" class="table table-bordered shadow-3" > </table>
   </div>
 
   <div id="content" class="container-fluid">
 
     <h3>List of Attack</h3>
+    <div  class="form-outline">
+      <input id="myInputAttackTable"  type="text" id="form12" class="form-control" />
+      <label class="form-label" for="form12">Search in table...</label>
+    </div>
     <table id="AttackTable" border="1" class="table table-bordered shadow-3" > </table>
   </div>
 
