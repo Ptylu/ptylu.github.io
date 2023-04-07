@@ -1,4 +1,11 @@
 [
+  {
+     "Report-ID":"0",
+     "Mitre Attack ID":"T0000",
+     "Technique":"T0000",
+     "Mitre CAR ID":"N/A",
+     "Comment":"MITRE ATT&CK not available yet"
+  },
    {
       "Report-ID":"1",
       "Mitre Attack ID":"T1490",
