@@ -250,7 +250,7 @@
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
           var cellValue = myListAttack[i][columns[colIndex]];
           if (cellValue == null) cellValue = "";
-          if (colIndex==3){
+          if (colIndex==4){
             if (cellValue=="a") {
               cellValue = '<span class="badge rounded-pill bg-info">admin-right</span>';
             }else if (cellValue=="u") {
@@ -259,7 +259,7 @@
               cellValue = '<span class="badge rounded-pill bg-secondary">depends on the directory/file</span>';
             }
           }
-          else if (colIndex==4){
+          else if (colIndex==5){
             if (cellValue=="y") {
               cellValue = '<span class="badge rounded-pill bg-info">reboot-required</span>';
             }else if (cellValue=="n") {
@@ -284,6 +284,43 @@
   }
 
 
+  // Load Json Exemple Malware
+  var jsonMalwareExample = (function () {
+    var jsonMalwareExample = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-detection/list-detection-pattern-example.json',
+      'dataType': "json",
+      'success': function (data) {
+        myListMalwareExample = data ;
+      }
+    });
+    return myListMalwareExample;
+  })();
+  // Add Json loased in table
+  function buildHtmlTableMalwareExample(selector) {
+    var columnsMalwareExample = addAllColumnHeaders(myListMalwareExample, selector);
+    for (var i = 0; i < myListMalwareExample.length; i++) {
+
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+      if(myListMalwareExample[i][columnsMalwareExample[0]]==htmlParameter){
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columnsMalwareExample.length; colIndex++) {
+          var cellValue = myListMalwareExample[i][columnsMalwareExample[colIndex]];
+          if (cellValue == null) cellValue = "";
+          console.log(myListMalwareExample[i][columnsMalwareExample[1]])
+          //dataPoints.push({ x: myListMalwareExample[i][columnsMalwareExample[1]].y), y: Number(myListMalwareExample[i][columnsMalwareExample[1]].label) });
+          row$.append($('<td/>').html(cellValue));
+        }
+        $(selector).append(row$);
+      }
+    }
+    // Suppirmer la premiere colonne correspondante au path (header et valeurs)
+    $("#MalwareExampleTable th:first-child").remove()
+    $("#MalwareExampleTable td:first-child").remove()
+  }
+
 
   //////////////////////////////////////////////////////////////////////////////////////////
   // Collumn for all table
@@ -307,6 +344,45 @@
     $(selector).append(headerTr$);
 
     return columnSet;
+  }
+
+  // Creation camembert pour statistique des patternes attaques dans les labs
+  function buildChart(selector) {
+
+    const countsDetectionID = {};
+
+    //Recuperer toutes les attaques pour les regrouper en fonction de la detection ID (Va avoir un object simple qui va falloir transforner en Json Array)
+    myListMalwareExample.forEach(r => {
+      if(r["Detection-ID"]==htmlParameter){
+        countsDetectionID[r["Sub-Detection-ID"]] = (countsDetectionID[r["Sub-Detection-ID"]] || 0) + 1;
+      };
+    });
+
+    // Transfornation de l'object simple en json Array pour qu'il soit compris par le chart
+    jsonObjCountsDetectionID = [];
+    $.each(countsDetectionID, function(key, value) {
+      console.log(key+ ':' + value);
+      item = {}
+      item ["label"] = key;
+      item ["y"] = value;
+      jsonObjCountsDetectionID.push(item);
+    });
+
+    var options = {
+      title: {
+        text: "Number of patterns detected in lab according to the Detection-ID"
+      },
+      data: [{
+        type: "pie",
+        startAngle: 45,
+        showInLegend: "true",
+        legendText: "{label}",
+        indexLabel: "{label} ({y})",
+        yValueFormatString:"#,##0.#"%"",
+        dataPoints: jsonObjCountsDetectionID
+      }]
+    };
+    $("#chartDetection").CanvasJSChart(options);
   }
 
   </script>
@@ -348,11 +424,12 @@
     <p id="text-list-report-example"></p>
   </div>
 
-
-
-
-
-
+  <div id="chartDetection" style="height: 370px; width: 100%;"></div>
+  <br>
+  <div id="content" class="container-fluid">
+    <h3>Example of malicious patterns found during lab</h3>
+    <table id="MalwareExampleTable" border="1" class="table table-bordered shadow-3" > </table>
+  </div>
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
