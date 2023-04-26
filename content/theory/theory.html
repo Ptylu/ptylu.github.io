@@ -67,6 +67,10 @@
     let regexDefinitionMark = new RegExp("\{M\}[^\{\}]+\{M\}", "g")
     let regexDefinitionMarkM = new RegExp("{M}", "g")
 
+    let regexChapter1 = new RegExp("\{C1\}[^\{\}]+\{C1\}", "g")
+    let regexChapter1C1 = new RegExp("{C1}", "g")
+
+
     //Add img balise in the text contening .jpg. The let regex allow us to put global g to replace all the word in the string
     let regex = new RegExp("[A-Za-z\-\_0-9]+\.png", "g"); // pour img avec .jpg
     let regexTypeAttack = new RegExp("\{[A-Z]\}", "g"); // pour bold avec type attacl {A-Z}
@@ -74,10 +78,10 @@
     let regexCaption = new RegExp("\#[^\#]+\#", "g")
     let regexCaptionTag = new RegExp("#", "g")
 
-    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Important Note: </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>");
+    let definition = resultJsonListDetection["Definition"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Important Note: </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>").replace(regexChapter1, a =>"</br></br><strong>"+a.replace(regexChapter1C1 ,"")+"</strong>");
     $('#text-list-theory-definition').html(definition);
 
-    let forensic_tool = resultJsonListDetection["Forensic-Tool"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Important Note : </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>");
+    let forensic_tool = resultJsonListDetection["Forensic-Tool"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<br><br><p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Important Note : </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>").replace(regexChapter1, a =>"</br></br><strong>"+a.replace(regexChapter1C1 ,"")+"</strong>");
     $('#text-list-theory-forensic-tool').html(forensic_tool);
 
     //#### Example
