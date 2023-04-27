@@ -61,10 +61,21 @@
      "Title":"Encryption",
      "Type":"Encryption",
      "OS":"All",
-     "Comment":"Symmetric, Asymmetric, TLS (Transport Layer Security) ",
-     "Definition":"{C1} Symmetric {C1} {C1} Asymmetric {C1} ",
+     "Comment":"Symmetric (AES, Serpent, Blowfish, Twofish), Asymmetric (RSA), TLS (Transport Layer Security)",
+     "Definition":"{C1} Symmetric {C1} Works with Block Cipher or Stream Cipher -- Block Cipher (Slow) : Block encryption (fixed size bit blocks (usually 64 or 128 bits): Divide the raw text into blocks to encrypt them. The size of the raw block is always the same as the encrypted output block. Different modes to encrypt in Block Cypher: ECB, CBC, CFB, OFB, CTR, GCM, and XTS. {IN} List of Block Cipher - AES (128 bits block) - Serpent (128 bits block) - Blowfish (64 bits block) - Twofish (128 bits block) {IN} {ID} DES and 3DES are also Block Cypher but must not be utilized anymore because of their weakness {ID} -- Stream Cipher (Fast, 8 bits at a time) : Converts plaintext bit by bit. Often in the form of a pseudo-random number generator with an XOR operation between one bit at the input and one at the output of the generator. {IN} List of Stream Cipher - RC4 {IN} {C1} Asymmetric {C1} Works with public and private key {IN} List of Asymmetric - RSA {IN} {C1} TLS Transport Layer Security {C1} -- Uses Symetric and Asymetric Encryption (Often DHE+RSA or RSA+AES (Session key)) -- 2 Phases (JA3 and JA3S work on these 2 phases). - Client Hello : Client sends to the server the crytographic suites it knows - Server Hello : The server chooses from this list the cryptographic suite it wishes to use, and sends it back to the client {IN} TLS works on TCP. Can be implemented on UDP (we call it DTLS) {IN}",
      "Forensic-Tool":"N/A",
      "Example":"N/A",
-     "Ref":"https://medium.com/@antoine.ansel/les-suites-cryptographiques-tls-dd871079af8a, https://medium.com/asecuritysite-when-bob-met-alice/forward-secrecy-and-ephemeral-keys-guarding-against-data-breaches-in-the-future-b709295c6e5a, https://tls.mbed.org/kb/cryptography/ephemeral-diffie-hellman, https://crypto.stackexchange.com/questions/58283/why-is-a-diffie-hellman-key-exchange-required-when-rsa-is-already-being-used-for, https://security.stackexchange.com/questions/120140/what-is-the difference-between-dh-and-dhe"
+     "Ref":"https://medium.com/@antoine.ansel/les-suites-cryptographiques-tls-dd871079af8a, https://medium.com/asecuritysite-when-bob-met-alice/forward-secrecy-and-ephemeral-keys-guarding-against-data-breaches-in-the-future-b709295c6e5a, https://tls.mbed.org/kb/cryptography/ephemeral-diffie-hellman, https://crypto.stackexchange.com/questions/58283/why-is-a-diffie-hellman-key-exchange-required-when-rsa-is-already-being-used-for, https://security.stackexchange.com/questions/120140/what-is-the difference-between-dh-and-dhe, https://www.thesslstore.com/blog/block-cipher-vs-stream-cipher/#:~:text=A%20block%20cipher%20breaks%20down,into%20ciphertext%20using%20key%20bits."
+   },
+   {
+     "Theory-ID":"6",
+     "Title":"Hash",
+     "Type":"Hash",
+     "OS":"All",
+     "Comment":"SHA, MD5",
+     "Definition":"",
+     "Forensic-Tool":"N/A",
+     "Example":"N/A",
+     "Ref":""
    }
 ]
