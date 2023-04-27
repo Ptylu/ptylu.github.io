@@ -14,6 +14,13 @@
 
     $(document).ready(function(){
       $('#assetHead').load("/assets/header.html");
+      //to search in table, need input
+      $("#myInputTheoryTable").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#TheoryTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
     });
 
     // Load Json
@@ -89,8 +96,13 @@
   <div id="assetHead"></div>
 
   <div id="content" class="container-fluid">
+    <p>Sometimes I can forget, here the Basics from numerous sources, re-written by myself for my own knowledge </p>
     <h1>List</h1>
     <h2>Table Theory</h2>
+    <div  class="form-outline">
+      <input id="myInputTheoryTable"  type="text" id="form12" class="form-control" />
+      <label class="form-label" for="form12">Search in table...</label>
+    </div>
     <table id="TheoryTable" border="1" class="table table-bordered shadow-3"> </table>
 
 
