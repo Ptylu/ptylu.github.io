@@ -72,7 +72,7 @@
      "Title":"Hash",
      "Type":"Hash",
      "OS":"All",
-     "Comment":"SHA, MD5, other",
+     "Comment":"SHA, MD5, other, test",
      "Definition":"",
      "Forensic-Tool":"N/A",
      "Example":"N/A",
