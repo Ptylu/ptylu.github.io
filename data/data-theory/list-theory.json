@@ -84,9 +84,9 @@
      "Type":"Authentication",
      "OS":"Windows",
      "Comment":"TGT, TGS",
-     "Definition":"{C1} TGT (Ticket to Get Tickets ){C1} {C1} TGS (Ticket-Granting Service) {C1}",
+     "Definition":"{C1} TGT (Ticket to Get Tickets){C1} When user log on on his computer, his machine will send a TGT request (AS-REQ) to the KDC. The AS-REQ is sent with encrypted timestamp (with the user's NTlm hash), preventing against password-guessing attacks {ID} By default the KDC requires all accounts to use pre-authentication, but an option can be checked (in AD) to disable this pre-authentication (Do not require Kerberos preauthentication). {ID} {C1} TGS (Ticket-Granting Service) {C1}",
      "Forensic-Tool":"N/A",
      "Example":"THR-7_Kerberos_authentication.png #Kerberos TGT and TGS process#",
-     "Ref":"https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768, https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4769, https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)?redirectedfrom=MSDN"
+     "Ref":"https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768, https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4769, https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)?redirectedfrom=MSDN, https://rioasmara.com/2020/07/04/kerberoasting-as-req-pre-auth-vs-non-pre-auth/"
    }
 ]
