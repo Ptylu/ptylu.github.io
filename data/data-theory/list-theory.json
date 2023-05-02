@@ -88,5 +88,16 @@
      "Forensic-Tool":"N/A",
      "Example":"Full Kerberos authentication process THR-7_Kerberos_authentication.png #Kerberos TGT and TGS process# {C1} TGT (Tick an adversary must have obtained administrative privileges in Active Directory, such as replication privileges or administrator access to a domain controller. Then they can use various methods to compromise the password hash of the KRBTGT et to Get Tickets){C1} Use of Rubeus to perform AS-REP Roasting on KDC demanding pre-authentication. An error occured. To avoid this error, an attacker can request the KDC to have the list of all account that don't required the pre-authentication. {IN} Detection AS-REP Roasting without searching pre-authentication account - Network side:  KRB5KDC_ERR_PREAUTH_REQUIRED - AD Side: NEED_CHECK {IN}  THR-7_AS_REP_Roasting.png #Error AS-REP Roasting, needs pre-authentication# {IN} Detection search pre-authentication disabled for account : - AD Side: 4776{IN} THR-7_AD_Attack.png",
      "Ref":"https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768, https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4769, https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)?redirectedfrom=MSDN, https://rioasmara.com/2020/07/04/kerberoasting-as-req-pre-auth-vs-non-pre-auth/, https://blog.netwrix.com/2022/09/28/dcshadow_attack/, https://www.netwrix.com/how_golden_ticket_attack_works.html, https://www.netwrix.com/silver_ticket_attack_forged_service_tickets.html, https://www.netwrix.com/pass_the_hash_attack_explained.html, https://blog.netwrix.com/2022/10/04/overpass-the-hash-attacks/"
+   },
+   {
+     "Theory-ID":"8",
+     "Title":"Volume Shadow Copies",
+     "Type":"Forensic",
+     "OS":"Windows",
+     "Tag":"",
+     "Definition":"Used by Windows to backing up application data and system state information. Can be used on compromised system to retrieve back file attacker deleted. Can be deleted by Attacker (Ransomware) to prevent to restore the backup",
+     "Forensic-Tool":"N/A",
+     "Example":"",
+     "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service"
    }
 ]
