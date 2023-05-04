@@ -94,10 +94,21 @@
      "Title":"Volume Shadow Copies",
      "Type":"Forensic",
      "OS":"Windows",
+     "Tag":"vssadmin, mklink, VSCMount",
+     "Definition":"Very valuable for Forensics, No reason to be disabled because doesn't take much too ressources. Used by Windows to backing up application data and system state information. Can be used on compromised system to retrieve back file attacker deleted. Can be deleted by Attacker (Ransomware) to prevent to restore the backup. On Windows workstation, snapchot occur weekly, on Windows server, it is daily",
+     "Forensic-Tool":"Different way to get the volume Shadow Copies {C1} 1- With mklink{C1} Use of Windows internal tool: - Display the Volume Shadow Copies \"vssadmin list shadows\" - Browse Volume Shadow Copies \"mklink /d investigationShadow \\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\\" {C1}Use of VSCMount.exe{C1} Use of EZ tool: - \"VSCMount.exe --dl C --mp ivestigationShadowCopies\"",
+     "Example":"{C1}Creation Volume Shadow Copies{C1} Shadows Copy creation \"powershell.exe -Command (gwmi -list win32_shadowcopy).Create('C:\\','ClientAccessible')\". On Windows server, the following command is available \"Vssadmin create shadow\" THR-8_creation_shadow_copy.png #Volume Shadow Copies created with powershell for al C:\\ partition. ClientAccessible or DataVolumeRollback attributs# {C1}Display and Browse Volume Shadow Copies{C1} THR-8_browse_shadow_copy2.png - use of EZ tool THR-8_toolEZ.png",
+     "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service, https://techcommunity.microsoft.com/t5/storage-at-microsoft/identifying-how-much-disk-space-is-used-for-restore-points-in/ba-p/423336#:~:text=The%20ClientAccessibleWriters%20shadow%20copies%20(with,access%20previous%20versions%20of%20files, https://www.youtube.com/watch?v=7SAFszBJhpA, https://www.youtube.com/watch?v=qYTVRjb7KrI"
+   },
+   {
+     "Theory-ID":"9",
+     "Title":"Windows Application Compatibility",
+     "Type":"Forensic",
+     "OS":"Windows",
      "Tag":"",
-     "Definition":"Used by Windows to backing up application data and system state information. Can be used on compromised system to retrieve back file attacker deleted. Can be deleted by Attacker (Ransomware) to prevent to restore the backup.",
-     "Forensic-Tool":"{C1} 1- Display Volume Shadow Copies{C1} \"vssadmin list shadows\" {C1} 2- Browse Volume Shadow Copies{C1} \"mklink /d investigationShadow \\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\\"",
-     "Example":"{C1}Creation Volume Shadow Copies{C1} Shadows Copy creation \"powershell.exe -Command (gwmi -list win32_shadowcopy).Create('C:\\','ClientAccessible')\" THR-8_creation_shadow_copy.png #Volume Shadow Copies created with powershell for al C:\\ partition. ClientAccessible or DataVolumeRollback attributs# {C1}Display and Browse Volume Shadow Copies{C1} THR-8_browse_shadow_copy2.png",
-     "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service, https://techcommunity.microsoft.com/t5/storage-at-microsoft/identifying-how-much-disk-space-is-used-for-restore-points-in/ba-p/423336#:~:text=The%20ClientAccessibleWriters%20shadow%20copies%20(with,access%20previous%20versions%20of%20files."
+     "Definition":"",
+     "Forensic-Tool":"",
+     "Example":"",
+     "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service, https://techcommunity.microsoft.com/t5/storage-at-microsoft/identifying-how-much-disk-space-is-used-for-restore-points-in/ba-p/423336#:~:text=The%20ClientAccessibleWriters%20shadow%20copies%20(with,access%20previous%20versions%20of%20files, https://www.youtube.com/watch?v=7SAFszBJhpA, https://www.youtube.com/watch?v=qYTVRjb7KrI"
    }
 ]
