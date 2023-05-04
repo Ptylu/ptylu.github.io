@@ -95,9 +95,9 @@
      "Type":"Forensic",
      "OS":"Windows",
      "Tag":"",
-     "Definition":"Used by Windows to backing up application data and system state information. Can be used on compromised system to retrieve back file attacker deleted. Can be deleted by Attacker (Ransomware) to prevent to restore the backup",
-     "Forensic-Tool":"N/A",
-     "Example":"",
-     "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service"
+     "Definition":"Used by Windows to backing up application data and system state information. Can be used on compromised system to retrieve back file attacker deleted. Can be deleted by Attacker (Ransomware) to prevent to restore the backup.",
+     "Forensic-Tool":"{C1} 1- Display Volume Shadow Copies{C1} \"vssadmin list shadows\" {C1} 2- Browse Volume Shadow Copies{C1} \"mklink /d investigationShadow \\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\\"",
+     "Example":"{C1}Creation Volume Shadow Copies{C1} Shadows Copy creation \"powershell.exe -Command (gwmi -list win32_shadowcopy).Create('C:\\','ClientAccessible')\" THR-8_creation_shadow_copy.png #Volume Shadow Copies created with powershell for al C:\\ partition. ClientAccessible or DataVolumeRollback attributs# {C1}Display and Browse Volume Shadow Copies{C1} THR-8_browse_shadow_copy2.png",
+     "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service, https://techcommunity.microsoft.com/t5/storage-at-microsoft/identifying-how-much-disk-space-is-used-for-restore-points-in/ba-p/423336#:~:text=The%20ClientAccessibleWriters%20shadow%20copies%20(with,access%20previous%20versions%20of%20files."
    }
 ]
