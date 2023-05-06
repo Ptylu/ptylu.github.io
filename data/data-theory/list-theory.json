@@ -136,11 +136,11 @@
      "Title":"LNK Files",
      "Type":"Forensics",
      "OS":"Windows",
-     "Tag":"",
+     "Tag":"Proof of file execution with metadata, even if file is deleted",
      "Location":"C:\\Users\\%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Recent, C:\\Users\\%userprofile%\\AppData\\Roaming\\Microsoft\\Office\\Recent",
-     "Definition":"",
-     "Forensics-Tool":"",
-     "Example":"",
-     "Ref":"https://www.youtube.com/watch?v=wu4-nREmzGM&t=987s"
+     "Definition":"Are typically files that are created by the Windows OS automatically, whenever a user opens their files. These files are used by the operating system to secure quick access to a certain file. In addition, some of these files can be created by users themselves to make their activities easier. If attacker delete a file, the lnk will remain with all the metadata",
+     "Forensics-Tool":"\"LECmd.exe -d C:\\Users\\%username%\\AppData\\Roaming\\Microsoft\\Windows\\Recent -q --csv C:\\Users\\%username%\\Desktop\\dfir_out\\lnkfiles_out\"",
+     "Example":"THR-11_lnkfile.png",
+     "Ref":"https://www.youtube.com/watch?v=wu4-nREmzGM,https://belkasoft.com/forensic-analysis-of-lnk-files"
    }
 ]
