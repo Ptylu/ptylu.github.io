@@ -112,11 +112,23 @@
      "Title":"Shim Infratructure - AmCache and AppCompatCache",
      "Type":"Forensics",
      "OS":"Windows",
-     "Tag":".exe execution, .sys execution, .dll execution",
+     "Tag":".exe execution, .sys execution, .dll execution, AmcacheParser.exe, AppCompatCacheParser.exe",
      "Location":"C:\\Windows\\appcompat\\Programs\\Amcache.hve",
      "Definition":"Infrastructure Shim (contains information about the application execution and installed programs). Allows an application to run even if it is no longer fully compatible with the system it is running on, or if the version of a dependency has changed. In 2 parts, Amcache located in folder and AppCompatCache located in SYSTEM registry {C1}Amcache{C1} Execution evidence of PE file (.exe), drivers (.sys) or .dll {IN}Saved in the Amcache.hve after PE execution {IN} {C1}AppCompatCache{C1} Execution evidence of PE file (.exe){IN}Saved in the SYSTEM hive before the machine is shut down{IN}",
      "Forensics-Tool":"{C1}Amcache{C1} Use of EZ tool: \"AmcacheParser.exe -f C:\\Windows\\appcompat\\Programs\\Amcache.hve --csv C:\\Users\\%username%\\Desktop\\dfir_out\\amcache_out\" {C1}AppCompatCache{C1}Use of EZ tool: \"AppCompatCacheParser.exe -t --csv C:\\Users\\%username%\\Desktop\\dfir_out\\appcompatcache_out\"",
      "Example":"THR-9_toolEZ2.png {C1}File Amcache_DriveBinaries.csv{C1} {ID}If Product & Product Version not available, it's a suspicious driver{ID} THR-9_Driver_Name_Missing.png #Amcache_DriveBinaries.csv# {C1}AppCompatCache Sysmon EventID 13{C1} With Sysmon, we can detect the addition of the PE execubale in the appcompat registry key THR-9_AppCompactSysmon13.png{C1}Registry location AppCompatCache{C1} \"SYSTEM\\ControlSet001\\Control\\Session Manager\\AppCompatCache\" THR-9_SYSTEM_AppCompatCache.png  Located here \"Computer\\HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Compatibility Assistant\\Store\". Even after uninstall the application, that registry entry remains  THR-9_AppCompactSysmonRegistry.png" ,
      "Ref":"https://www.youtube.com/watch?v=ZKlyu-HOvxY, https://www.ssi.gouv.fr/uploads/2019/01/anssi-coriin_2019-analysis_amcache.pdf, https://www.ssi.gouv.fr/uploads/2019/01/anssi-coriin_2019-amcache_investigation.pdf"
+   },
+   {
+     "Theory-ID":"10",
+     "Title":"System Resource Utilization Monitor (SRUM)",
+     "Type":"Forensics",
+     "OS":"Windows",
+     "Tag":".exe execution, process network connection",
+     "Location":"C:\\Windows\\system32\\sru\\srudb.dat",
+     "Definition":"The data come from the Task Manager. Stocks the last 30 days of data usage. {IN}\"srudb.dat\" updated every hour or just before the machine reboot. Before saved in \"srudb.dat\", data are temporarly stocked in \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SRUM\\Extensions\"{IN}",
+     "Forensics-Tool":"- 1- Export the SOFTWARE hive: \"reg save HKLM\\SOFTWARE C:\\Users\\%username%\\Desktop\\dfir_out\\SOFTWARE.hiv\" - 2- Use of EZ tool: \"SrumECmd.exe -f C:\\Windows\\system32\\sru\\srudb.dat -r C:\\Users\\%username%\\Desktop\\dfir_out\\SOFTWARE.hiv --csv C:\\Users\\%username%\\Desktop\\dfir_out\\srum_out\"",
+     "Example":"THR-10_EZTool2.png {C1}SrumECmd_AppTimelineProvider_Output.csv{C1} How long an .exe has been executed {C1}SrumECmd_NetworkUsages_Output{C1} Evidence of application network usage  THR-10_SrumECmd_NetworkUsages_Output.png",
+     "Ref":"https://github.com/libyal/esedb-kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc, https://frsecure.com/blog/windows-forensics-execution/"
    }
 ]
