@@ -128,7 +128,7 @@
      "Location":"C:\\Windows\\system32\\sru\\srudb.dat",
      "Definition":"The data come from the Task Manager. Stocks the last 30 days of data usage. {IN}\"srudb.dat\" updated every hour or just before the machine reboot. Before saved in \"srudb.dat\", data are temporarly stocked in \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SRUM\\Extensions\"{IN}",
      "Forensics-Tool":"- 1- Export the SOFTWARE hive: \"reg save HKLM\\SOFTWARE C:\\Users\\%username%\\Desktop\\dfir_out\\SOFTWARE.hiv\" - 2- Use of EZ tool: \"SrumECmd.exe -f C:\\Windows\\system32\\sru\\srudb.dat -r C:\\Users\\%username%\\Desktop\\dfir_out\\SOFTWARE.hiv --csv C:\\Users\\%username%\\Desktop\\dfir_out\\srum_out\"",
-     "Example":"THR-10_EZTool2.png {C1}SrumECmd_AppTimelineProvider_Output.csv{C1} How long an .exe has been executed {C1}SrumECmd_NetworkUsages_Output{C1} Evidence of application network usage  THR-10_SrumECmd_NetworkUsages_Output.png",
+     "Example":"THR-10_EZTool2.png {C1}SrumECmd_AppTimelineProvider_Output.csv{C1} How long an .exe has been executed {C1}SrumECmd_NetworkUsages_Output{C1} Evidence of Executable network usage  THR-10_SrumECmd_NetworkUsages_Output.png #Evidence of Executable network communication#",
      "Ref":"https://github.com/libyal/esedb-kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc, https://frsecure.com/blog/windows-forensics-execution/"
    }
 ]
