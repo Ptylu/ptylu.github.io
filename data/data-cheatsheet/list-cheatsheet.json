@@ -1,0 +1,18 @@
+[
+   {
+      "Cheatsheet-ID":"0",
+      "Type":"Defaut Registry",
+      "Mitre-Attack-ID":"",
+      "Comment":"This key contains a list of programs that run automatically at startup",
+      "Link":"/content/cheatsheet/cheatsheet-registry.html",
+      "Ref":"N/A"
+   },
+   {
+     "Cheatsheet-ID":"1",
+     "Type":"PDF analysis",
+     "Mitre-Attack-ID":"",
+     "Comment":"How to analyse PDF",
+     "Link":"/data/data-cheatsheet/pdf/test.pdf",
+     "Ref":"https://blog.didierstevens.com/programs/pdf-tools/"
+   }
+]

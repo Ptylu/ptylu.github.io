@@ -4,67 +4,123 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-  <title>Configuration</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+  <script src="/assets/dist/js/ajax.googleapis.com_ajax_libs_jquery_1.9.1_jquery.min.js"></script>
+  <title>Cheatsheet</title>
 
   <script type='text/javascript'>
 
     $(document).ready(function(){
       $('#assetHead').load("/assets/header.html");
+      //to search in table, need input
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#CheatsheetTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
     });
+
+    // Load Json
+    var json = (function () {
+      var json = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': '/data/data-cheatsheet/list-cheatsheet.json',
+        'dataType': "json",
+        'success': function (data) {
+          myList = data;
+        }
+      });
+      return myList;
+    })();
+
+    // Add Json loased in table
+    function buildHtmlTable(selector) {
+      var columns = addAllColumnHeaders(myList, selector);
+
+      for (var i = 0; i < myList.length; i++) {
+        var row$ = $('<tr/>');
+        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+          var cellValue = myList[i][columns[colIndex]];
+          if (cellValue == null) cellValue = "";
+          if (colIndex==0) cellValue = '<a href="'+myList[i][columns[4]]+'" target="_blank">'+"CHT-"+myList[i][columns[0]]+'</a>';
+          if (colIndex==3 && cellValue.match(/^CAR-/)) cellValue = '<a href="https://car.mitre.org/analytics/'+cellValue+'" target="_blank">'+cellValue+'</a>';
+          row$.append($('<td>').html(cellValue));
+
+
+        }
+        $(selector).append(row$);
+      }
+      // Deletion Link Column
+      $("#CheatsheetTable td:nth-child(6)").remove()
+      $("#CheatsheetTable th:nth-child(6)").remove()
+      // Deletion Ref Column
+      $("#CheatsheetTable td:nth-child(5)").remove()
+      $("#CheatsheetTable th:nth-child(5)").remove()
+    }
+
+
+    // Adds a header row to the table and returns the set of columns.
+    // Need to do union of keys from all records as some records may not contain
+    // all records.
+    function addAllColumnHeaders(myList, selector) {
+      var columnSet = [];
+      var headerTr$ = $('<tr/>');
+
+      for (var i = 0; i < myList.length; i++) {
+        var rowHash = myList[i];
+        for (var key in rowHash) {
+          if ($.inArray(key, columnSet) == -1) {
+            columnSet.push(key);
+            headerTr$.append($('<th/>').html(key));
+          }
+        }
+      }
+      $(selector).append(headerTr$);
+
+      return columnSet;
+    }
 
   </script>
 
 </head>
 
-<body>
+<body onLoad="buildHtmlTable('#CheatsheetTable')">
   <div id="assetHead"></div>
 
-  <div id="contentWindows" class="container-fluid">
-    <h1>Windows</h1>
-<table id="DetectionTable" border="1" class="table table-bordered shadow-3"> </table>
-
-
-  <div class="row container-fluid">
-  <div class="col-sm-4 container-fluid">
-    <div class="card border" style="width: 30rem;">
-      <img src="/data/data-cheatsheet/image/image-cheatsheet-registry.png" class="card-img-top  rounded mx-auto d-block" alt="Image not displayed">
-      <div class="card-body">
-        <h5 class="card-title">Regitry Defaut values</h5>
-        <p class="card-text">Default values i Registry key to detect any persistence</p>
-        <a href="/content/cheatsheet/cheatsheet-registry.html" class="stretched-link">Cheat Sheet Registry</a>
-      </div>
+  <div id="content" class="container-fluid">
+    <h1>Cheat Sheet List</h1>
+    <h2>Table</h2>
+    <div  class="form-outline">
+      <input id="myInput"  type="text" id="form12" class="form-control" />
+      <label class="form-label" for="form12">Search in table...</label>
     </div>
-  </div>
-  <div class="col-sm-4 container-fluid">
-    <div class="card border" style="width: 30rem;">
-      <img src="/data/data-cheatsheet/image/pdf.png" class="card-img-top  rounded mx-auto d-block" alt="Image not displayed">
-      <div class="card-body">
-        <h5 class="card-title">PDF tool</h5>
-        <p class="card-text">PDF tool by Didier Stevens</p>
-        <a href="/data/data-cheatsheet/pdf/test.pdf" class="stretched-link">PDF tool</a>
-      </div>
-    </div>
-  </div>
+    <table id="CheatsheetTable" border="1" class="table table-bordered shadow-3"> </table>
 
-</div>
 
   </div>
 
-  <!-- <object type="text/html" data="header.html"></object> -->
+  <!-- Begin page content -->
+
+
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" >
   <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/> -->
+  <link href="/assets/dist/css/cdnjs.cloudflare.com_ajax_libs_font-awesome_5.15.1_css_all.min.css" rel="stylesheet"/>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <!-- <link href="assets/dist/css/fonts.googleapis.com_css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/> -->
+  <link href="/assets/dist/css/fonts.googleapis.com.css" rel="stylesheet"/>
   <!-- MDB -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/>
-  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet"/> -->
+  <link href="/assets/dist/css/cdnjs.cloudflare.com_ajax_libs_mdb-ui-kit_3.10.1_mdb.min.css" rel="stylesheet"/>
 
+  <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
