@@ -212,6 +212,15 @@
       "Example":""
    },
    {
+      "Report-ID":"29",
+      "Mitre Attack ID":"T1070.006",
+      "Technique":"Indicator Removal: Timestomp",
+      "Mitre CAR ID":"N/A",
+      "Comment":"Timestomp",
+      "Definition":"-- {A} Attacker may use \"Get-Item\" with \"CreationTime=\",\"LastWriteTime=\",\"LastAccessTime=\" to modify the file date",
+      "Example":"{A} Powershell Tinestomp  29-A-detection-timestomp-powershell-800.png #modification of creation date of a file#"
+   },
+   {
       "Report-ID":"X",
       "Mitre Attack ID":"N/A",
       "Technique":"Possible malicious pattern",

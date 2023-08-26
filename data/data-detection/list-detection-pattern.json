@@ -56,8 +56,7 @@
 
 
       { "Detection-ID": "28", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "t", "EventID": "4688,1", "Detection Pattern": "($MOD-3-$) (pass OR password OR pwd OR login OR secure OR credential)", "Comment": "", "Updated": "05/07/2022", "Sub-Attack-ID": "001"},
-
-
+      { "Detection-ID": "29", "Sub-Detection-ID": "001", "Privilege (will be modified by Relevance)": "t", "EventID": "800,500,501,", "Detection Pattern": "($MOD-5-$) (CreationTime= OR LastWriteTime= OR LastAccessTime=)", "Comment": "Powershell Timestomp", "Updated": "26/08/2023", "Sub-Attack-ID": "001"},
 
 
 

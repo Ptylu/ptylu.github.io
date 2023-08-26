@@ -317,6 +317,17 @@
       "Attack":"reg add \"HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v userinit /t REG_SZ /d malware.exe /f",
       "Affect":"",
       "Comment":"Works only with .exe"
+   },
+   {
+      "Report-ID":"29",
+      "Attack-ID":"1",
+      "Sub-Attack-ID":"001",
+      "Type-Attack":"A <b>(Powershell Timestomp)</b>",
+      "Privilege":"",
+      "Need Reboot":"n",
+      "Attack":"(Get-Item \"C:\\Users\\Lucas\\Documents\\test_timestomp.txt\").CreationTime=(\"27 August 2023 17:00:00\")",
+      "Affect":"",
+      "Comment":""
    }
 
 ]

@@ -54,5 +54,12 @@
     "Pattern":"schtasks /create",
     "Example":"schtasks /create /sc ONLOGON /tn malicious_task /tr C:\\User\\Lucas\\malicious.exe",
     "Comment":"Create scheduled task"
+  },
+  {
+    "Model-ID":"MOD-5-001",
+    "EventID":"4688,1,800,500,501",
+    "Pattern":"Get-Item",
+    "Example":"(Get-Item \"C:\\Users\\Lucas\\Documents\\test_timestomp.txt\").CreationTime=(\"27 August 2023 17:00:00\")",
+    "Comment":"Get file to launch an action, here a timestomp"
   }
 ]
