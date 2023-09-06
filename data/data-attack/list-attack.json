@@ -319,6 +319,7 @@
       "Comment":"Works only with .exe"
    },
    {
+      "Mitre-Attack-ID":"T1070.006",
       "Report-ID":"29",
       "Attack-ID":"1",
       "Sub-Attack-ID":"001",

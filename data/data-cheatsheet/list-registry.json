@@ -537,5 +537,16 @@
       "Comment":"Need SubKey creation",
       "OS":"",
       "Execution Order":""
+   },
+   {
+      "Registry-ID":"53",
+      "Type":"Boot Execution",
+      "Mitre-Attack-ID":"T1070.006",
+      "Registry":"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\\",
+      "SubKey-name":"NtfsDisableLastAccessUpdate",
+      "Compliant-Value":"0x80000002",
+      "Comment":"Can be modified to ask the system to modify/not modify the Access time when file is mofified (MACB Time). Windows 10 and Windows 11, the modification of this Key doesn’t affect the property. The Access time is always updated !",
+      "OS":"",
+      "Execution Order":""
    }
 ]

@@ -42,10 +42,10 @@
      "OS":"Windows",
      "Tag":"Not started",
      "Location":"N/A",
-     "Definition":"Not started",
-     "Forensics-Tool":"N/A",
+     "Definition":"-- Windows NTFS contains 4 times - {M}Modification{M} : Modification Time - {M}Access{M} : Access Time - MFT record {M}Change{M} : Metadata change - {M}Birth{M} : File Creation Time Windows Explorer can only show Modification, Access and Birth THR-3_01.png #Table action on file# {IS} If {M}Modification{M} is before the {M}Birth{M}, means the file was copied. {IS}  -- $MFT is Master File Table,  It keeps track of all files on the volume, their logical location in folders, their physical location on the hard, and metadata about the files. Located in \"C:\\$MFT\" and \"C:\\$MFTMirr\" for the backup",
+     "Forensics-Tool":"-- $MFT analyzing - Use of FTK Imager for the $MFT Dump THR-3_02.png #Use of FTK Imager# - After the dump done, the $MFT is invisibe. We need to change the $MFT attribut with \"attrib -s -h $MFT\" THR-3_03.png #Make $MFT visible# - Use of Eric Zimmerman’s tool MFTECmd.exe \"MFTECmd.exe -f C:\\Users\\Lucas\\Desktop\\$MFT --csv C:\\Users\\Lucas\\Desktop\\out_mft\"",
      "Example":"N/A",
-     "Ref":""
+     "Ref":"https://whereismydata.wordpress.com/2009/06/05/forensics-what-is-the-mft/, https://www.youtube.com/watch?v=OTea54BelTg"
    },
    {
      "Theory-ID":"4",
