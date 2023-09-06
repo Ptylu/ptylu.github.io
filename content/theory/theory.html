@@ -41,6 +41,30 @@
 
   })();
 
+  //GET Report ID linked to this Theory with the Mitre Attack ID
+  var getIDReport = (function () {
+    var getIDReport = null;
+    $.ajax({
+      'async': false,
+      'global': false,
+      'url': '/data/data-report/list-report.json',
+      'dataType': "json",
+      'success': function (data) {
+        report = data;
+      }
+    });
+
+    for (var i = 0; i < report.length; i++) {
+      //Comparer si la ligne dans list-detection-pattern.json est pour la page actuelle (Detection==htmlParameter)
+      if(report[i]["Mitre-Attack-ID"]==resultJsonListDetection["Mitre-Attack-ID"]){
+        console.log(report[i]["Report-ID"]);
+        return report[i]["Report-ID"];
+
+      }
+    }
+
+  })();
+
   $(document).ready(function(){
     $('#assetHead').load("/assets/header.html");
     $('#text-list-detection-title').text("THR-"+htmlParameter+": "+resultJsonListDetection["Title"]);
@@ -49,7 +73,9 @@
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
     $('#text-list-theory-ref').text(resultJsonListDetection["Ref"]);
     $('#text-list-theory-mitre-attack-id').html("Mitre Att&ck ID: <u>"+resultJsonListDetection["Mitre-Attack-ID"]+"</u>");
+    $('#text-report-id').html('<a href="/content/report/report.html?report='+getIDReport+'" target="_blank">'+"Go to Report linked to this Theory : REP-"+getIDReport+'</a>');
 
+    console.log(getIDReport)
     //#### Definition
     //Mettre <br> pour liste -
     let regexDefinitionGrandeListe = new RegExp("(-- )", "g");
@@ -109,8 +135,10 @@
     <span class="badge badge-info" id="text-list-theory-mitre-attack-id"></span>
     <span class="badge badge-info" id="text-list-theory-type"></span>
     <span class="badge badge-info" id="text-list-theory-os"></span>
+    <p id="text-report-id"></p>
     <p id="text-list-theory-definition"></p>
   </div>
+
 
   <div id="content" class="container-fluid">
 
