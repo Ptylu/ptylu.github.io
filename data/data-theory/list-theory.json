@@ -36,6 +36,7 @@
      "Ref":"https://docs.microsoft.com/fr-fr/windows/win32/dlls/dynamic-link-library-search-order?redirectedfrom=MSDN"
    },
    {
+     "Mitre-Attack-ID":"T1070.006",
      "Theory-ID":"3",
      "Title":"MACB Time",
      "Type":"Forensics",

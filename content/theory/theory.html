@@ -48,6 +48,7 @@
     $('#text-list-theory-os').text(resultJsonListDetection["OS"]);
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
     $('#text-list-theory-ref').text(resultJsonListDetection["Ref"]);
+    $('#text-list-theory-mitre-attack-id').html("Mitre Att&ck ID: <u>"+resultJsonListDetection["Mitre-Attack-ID"]+"</u>");
 
     //#### Definition
     //Mettre <br> pour liste -
@@ -89,6 +90,10 @@
     //#### Example
     let res = resultJsonListDetection["Example"].replace(regexDefinitionQuote, l => "<code>" +l+"</code>").replace(regexDefinitionGrandeListe, l => "<br><br> " +l).replace(regexDefinitionPetiteListe, l => "<br> " +l).replace(regexDefinitionNoteInfo, a =>"<p class=\"note note-info\"><strong>Note: </strong>"+a.replace(regexDefinitionNoteInfoIN ,"")+"</p>").replace(regexDefinitionNoteDanger, a =>"<p class=\"note note-danger\"><strong>Important Note : </strong>"+a.replace(regexDefinitionNoteDangerID ,"")+"</p>").replace(regexDefinitionMark, l => "<mark>" +l.replace(regexDefinitionMarkM,"")+"</mark>").replace(regexTypeAttack, a => "<b>"+a.replace("{", "(Example ").replace("}", ")")+"</b>").replace(regexDefinitionNoteSuccess, a =>"<p class=\"note note-success\"><strong>Note Forensic: </strong>"+a.replace(regexDefinitionNoteSuccessIS ,"")+"</p>").replace(regexChapter1, a =>"</br><strong><u>"+a.replace(regexChapter1C1 ,"")+"</u></strong></br>").replace(regex, l => "<img src=\"/data/data-theory/image/" +l+ "\" class=\"img-fluid img-thumbnail rounded mx-auto d-block\" alt=\"Image not displayed\">").replace(regexTypeAttack, a => "<b>"+a.replace("{", "<br>(Example ").replace("}", ")")+"</b>").replace(regexCaption, a =>"<figcaption class=\"figure-caption text-center\">"+a.replace(regexCaptionTag ,"")+"</figcaption><br>");
     $('#text-list-theory-example').html(res);
+
+
+
+
   });
 
 
@@ -101,6 +106,7 @@
 
   <div id="content" class="container-fluid">
     <h2 id="text-list-detection-title"></h2>
+    <span class="badge badge-info" id="text-list-theory-mitre-attack-id"></span>
     <span class="badge badge-info" id="text-list-theory-type"></span>
     <span class="badge badge-info" id="text-list-theory-os"></span>
     <p id="text-list-theory-definition"></p>
