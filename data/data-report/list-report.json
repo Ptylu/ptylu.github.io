@@ -1,112 +1,112 @@
 [
   {
      "Report-ID":"0",
-     "Mitre Attack ID":"T0000",
+     "Mitre-Attack-ID":"T0000",
      "Technique":"T0000",
      "Mitre CAR ID":"N/A",
      "Comment":"MITRE ATT&CK not available yet"
   },
    {
       "Report-ID":"1",
-      "Mitre Attack ID":"T1490",
+      "Mitre-Attack-ID":"T1490",
       "Technique":"Inhibit System Recovery",
       "Mitre CAR ID":"CAR-2021-01-009",
       "Comment":"N/A"
    },
    {
       "Report-ID":"2",
-      "Mitre Attack ID":"T1070.004",
+      "Mitre-Attack-ID":"T1070.004",
       "Technique":"Indicator Removal on Host: File Deletion",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"3",
-      "Mitre Attack ID":"T1518.001",
+      "Mitre-Attack-ID":"T1518.001",
       "Technique":"Software Discovery: Security Software Discovery",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"4",
-      "Mitre Attack ID":"T1562.001",
+      "Mitre-Attack-ID":"T1562.001",
       "Technique":"Impair Defenses: Disable or Modify Tools",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"5",
-      "Mitre Attack ID":"T1482",
+      "Mitre-Attack-ID":"T1482",
       "Technique":"Domain Trust Discovery",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"6",
-      "Mitre Attack ID":"T1069.002",
+      "Mitre-Attack-ID":"T1069.002",
       "Technique":"Permission Groups Discovery: Domain Groups",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"7",
-      "Mitre Attack ID":"T1426",
+      "Mitre-Attack-ID":"T1426",
       "Technique":"System Information Discovery",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"8",
-      "Mitre Attack ID":"T1124",
+      "Mitre-Attack-ID":"T1124",
       "Technique":"System Time Discovery",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"9",
-      "Mitre Attack ID":"T1564.001",
+      "Mitre-Attack-ID":"T1564.001",
       "Technique":"Hide Artifacts: Hidden Files and Directories",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"10",
-      "Mitre Attack ID":"T1201",
+      "Mitre-Attack-ID":"T1201",
       "Technique":"Password Policy Discovery",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"11",
-      "Mitre Attack ID":"N/A",
+      "Mitre-Attack-ID":"N/A",
       "Technique":"Network Share Creation",
       "Mitre CAR ID":"N/A",
       "Comment":"Share Creation"
    },
    {
       "Report-ID":"12",
-      "Mitre Attack ID":"T1098",
+      "Mitre-Attack-ID":"T1098",
       "Technique":"Account Manipulation",
       "Mitre CAR ID":"N/A",
       "Comment":"Password modification"
    },
    {
       "Report-ID":"13",
-      "Mitre Attack ID":"T1222.001",
+      "Mitre-Attack-ID":"T1222.001",
       "Technique":"File and Directory Permissions Modification: Windows File and Directory Permissions Modification",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"14",
-      "Mitre Attack ID":"T1036.005",
+      "Mitre-Attack-ID":"T1036.005",
       "Technique":"Masquerading: Match Legitimate Name or Location",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"15",
-      "Mitre Attack ID":"T1059",
+      "Mitre-Attack-ID":"T1059",
       "Technique":"Command and Scripting Interpreter",
       "Comment":"UsageLogs File Creation",
       "Mitre CAR ID":"N/A",
@@ -114,70 +114,70 @@
    },
    {
       "Report-ID":"16",
-      "Mitre Attack ID":"N/A",
+      "Mitre-Attack-ID":"N/A",
       "Technique":"Malicious Executable Creation",
       "Mitre CAR ID":"N/A",
       "Comment":"Malicious Executable Creation"
    },
    {
       "Report-ID":"17",
-      "Mitre Attack ID":"T1053.005",
+      "Mitre-Attack-ID":"T1053.005",
       "Technique":"Scheduled Task/Job: Scheduled Task",
       "Mitre CAR ID":"CAR-2021-12-001",
       "Comment":""
    },
    {
       "Report-ID":"18",
-      "Mitre Attack ID":"T1547.001",
+      "Mitre-Attack-ID":"T1547.001",
       "Technique":"Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
       "Mitre CAR ID":"CAR-2021-11-002, CAR-2021-12-002",
       "Comment":""
    },
    {
       "Report-ID":"19",
-      "Mitre Attack ID":"N/A",
+      "Mitre-Attack-ID":"N/A",
       "Technique":"Network query",
       "Mitre CAR ID":"N/A",
       "Comment":"Ping Query, DNS Query"
    },
    {
       "Report-ID":"20",
-      "Mitre Attack ID":"T1112",
+      "Mitre-Attack-ID":"T1112",
       "Technique":"Modify Registry",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"21",
-      "Mitre Attack ID":"T1059.005",
+      "Mitre-Attack-ID":"T1059.005",
       "Technique":"Command and Scripting Interpreter: Visual Basic",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"22",
-      "Mitre Attack ID":"T1140",
+      "Mitre-Attack-ID":"T1140",
       "Technique":"Deobfuscate Decode Files or Information",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"23",
-      "Mitre Attack ID":"T1546.008",
+      "Mitre-Attack-ID":"T1546.008",
       "Technique":"Event Triggered Execution: Accessibility Features",
       "Mitre CAR ID":"N/A",
       "Comment":"N/A"
    },
    {
       "Report-ID":"24",
-      "Mitre Attack ID":"T1574.001",
+      "Mitre-Attack-ID":"T1574.001",
       "Technique":"DLL Search Order Hijacking",
       "Mitre CAR ID":"CAR-2021-11-001",
       "Comment":"N/A"
    },
    {
       "Report-ID":"25",
-      "Mitre Attack ID":"T1562.002",
+      "Mitre-Attack-ID":"T1562.002",
       "Technique":"Disable Windows Event Logging",
       "Mitre CAR ID":"CAR-2022-03-001",
       "Comment":"Even if EventLog are disabled and re-enabled, actions launched during the log disabled will be logged when log are re-enabled (we do not lose the logs (even with a reboot), unless the time shift is exceeded).",
@@ -186,7 +186,7 @@
    },
    {
       "Report-ID":"26",
-      "Mitre Attack ID":"T1070.001",
+      "Mitre-Attack-ID":"T1070.001",
       "Technique":"Indicator Removal on Host: Clear Windows Event Logs",
       "Mitre CAR ID":"https://github.com/mitre-attack/car/pull/157",
       "Comment":"Possible malicious pattern",
@@ -195,7 +195,7 @@
    },
    {
       "Report-ID":"27",
-      "Mitre Attack ID":"N/A",
+      "Mitre-Attack-ID":"N/A",
       "Technique":"EventLog Access",
       "Mitre CAR ID":"N/A",
       "Comment":"Gather information with EventLog",
@@ -204,7 +204,7 @@
    },
    {
       "Report-ID":"28",
-      "Mitre Attack ID":"T1552.001",
+      "Mitre-Attack-ID":"T1552.001",
       "Technique":"Unsecured Credentials: Credentials In Files",
       "Mitre CAR ID":"N/A",
       "Comment":"Adversaries may search local file systems and remote file shares for files containing insecurely stored credentials",
@@ -213,7 +213,7 @@
    },
    {
       "Report-ID":"29",
-      "Mitre Attack ID":"T1070.006",
+      "Mitre-Attack-ID":"T1070.006",
       "Technique":"Indicator Removal: Timestomp",
       "Mitre CAR ID":"N/A",
       "Comment":"Timestomp",
@@ -222,7 +222,7 @@
    },
    {
       "Report-ID":"X",
-      "Mitre Attack ID":"N/A",
+      "Mitre-Attack-ID":"N/A",
       "Technique":"Possible malicious pattern",
       "Mitre CAR ID":"N/A",
       "Comment":"Possible malicious pattern",
