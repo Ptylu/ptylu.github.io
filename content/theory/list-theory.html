@@ -47,7 +47,8 @@
         for (var colIndex = 0; colIndex < columns.length; colIndex++) {
           var cellValue = myList[i][columns[colIndex]];
           if (cellValue == null) cellValue = "";
-          if (colIndex==0) cellValue = '<a href="/content/theory/theory.html?theory='+cellValue+'" target="_blank">'+"THR-"+cellValue+'</a>';
+          //Col 1 is the THR ID
+          if (colIndex==1) cellValue = '<a href="/content/theory/theory.html?theory='+cellValue+'" target="_blank">'+"THR-"+cellValue+'</a>';
           //if (colIndex==3 && cellValue.match(/^CAR-/)) cellValue = '<a href="https://car.mitre.org/analytics/'+cellValue+'" target="_blank">'+cellValue+'</a>';
           row$.append($('<td>').html(cellValue));
 
@@ -64,6 +65,9 @@
       $("#TheoryTable th:nth-child(8)").remove()
       $("#TheoryTable td:nth-child(7)").remove()
       $("#TheoryTable th:nth-child(7)").remove()
+      //REMOVE Mitre-Attack-ID
+      $("#TheoryTable td:nth-child(1)").remove()
+      $("#TheoryTable th:nth-child(1)").remove()
 
     }
 

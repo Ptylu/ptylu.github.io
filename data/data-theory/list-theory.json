@@ -1,5 +1,6 @@
 [
   {
+    "Mitre-Attack-ID":"N/A",
      "Theory-ID":"0",
      "Title":"Processes",
      "Type":"Forensics",
@@ -12,6 +13,7 @@
      "Ref":"https://alparslanakyildiz.medium.com/fundamental-windows-processes-6341696cf4f0"
    },
    {
+      "Mitre-Attack-ID":"N/A",
       "Theory-ID":"1",
       "Title":"Prefetch",
       "Type":"Forensics",
@@ -24,6 +26,7 @@
       "Ref":"N/A"
    },
    {
+     "Mitre-Attack-ID":"T1574.001",
      "Theory-ID":"2",
      "Title":"Dynamic-Link Library Search Order",
      "Type":"Forensics",
@@ -49,6 +52,7 @@
      "Ref":"https://whereismydata.wordpress.com/2009/06/05/forensics-what-is-the-mft/, https://www.youtube.com/watch?v=OTea54BelTg"
    },
    {
+     "Mitre-Attack-ID":"T1204.002",
      "Theory-ID":"4",
      "Title":"Malware",
      "Type":"Malware",
@@ -61,6 +65,7 @@
      "Ref":"https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/"
    },
    {
+     "Mitre-Attack-ID":"N/A",
      "Theory-ID":"5",
      "Title":"Encryption",
      "Type":"Encryption",
@@ -73,6 +78,7 @@
      "Ref":"https://medium.com/@antoine.ansel/les-suites-cryptographiques-tls-dd871079af8a, https://medium.com/asecuritysite-when-bob-met-alice/forward-secrecy-and-ephemeral-keys-guarding-against-data-breaches-in-the-future-b709295c6e5a, https://tls.mbed.org/kb/cryptography/ephemeral-diffie-hellman, https://crypto.stackexchange.com/questions/58283/why-is-a-diffie-hellman-key-exchange-required-when-rsa-is-already-being-used-for, https://security.stackexchange.com/questions/120140/what-is-the difference-between-dh-and-dhe, https://www.thesslstore.com/blog/block-cipher-vs-stream-cipher/#:~:text=A%20block%20cipher%20breaks%20down,into%20ciphertext%20using%20key%20bits."
    },
    {
+     "Mitre-Attack-ID":"N/A",
      "Theory-ID":"6",
      "Title":"Hash",
      "Type":"Hash",
@@ -85,6 +91,7 @@
      "Ref":""
    },
    {
+     "Mitre-Attack-ID":"T1558",
      "Theory-ID":"7",
      "Title":"Kerberos",
      "Type":"Authentication",
@@ -97,6 +104,7 @@
      "Ref":"https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4768, https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=4769, https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)?redirectedfrom=MSDN, https://rioasmara.com/2020/07/04/kerberoasting-as-req-pre-auth-vs-non-pre-auth/, https://blog.netwrix.com/2022/09/28/dcshadow_attack/, https://www.netwrix.com/how_golden_ticket_attack_works.html, https://www.netwrix.com/silver_ticket_attack_forged_service_tickets.html, https://www.netwrix.com/pass_the_hash_attack_explained.html, https://blog.netwrix.com/2022/10/04/overpass-the-hash-attacks/"
    },
    {
+     "Mitre-Attack-ID":"T1490",
      "Theory-ID":"8",
      "Title":"Volume Shadow Copies",
      "Type":"Forensics",
@@ -109,6 +117,7 @@
      "Ref":"https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service, https://techcommunity.microsoft.com/t5/storage-at-microsoft/identifying-how-much-disk-space-is-used-for-restore-points-in/ba-p/423336#:~:text=The%20ClientAccessibleWriters%20shadow%20copies%20(with,access%20previous%20versions%20of%20files, https://www.youtube.com/watch?v=7SAFszBJhpA, https://www.youtube.com/watch?v=qYTVRjb7KrI"
    },
    {
+     "Mitre-Attack-ID":"T1546.011",
      "Theory-ID":"9",
      "Title":"Shim Infratructure - AmCache and AppCompatCache",
      "Type":"Forensics",
@@ -121,6 +130,7 @@
      "Ref":"https://www.youtube.com/watch?v=ZKlyu-HOvxY, https://www.ssi.gouv.fr/uploads/2019/01/anssi-coriin_2019-analysis_amcache.pdf, https://www.ssi.gouv.fr/uploads/2019/01/anssi-coriin_2019-amcache_investigation.pdf"
    },
    {
+     "Mitre-Attack-ID":"N/A",
      "Theory-ID":"10",
      "Title":"System Resource Utilization Monitor (SRUM)",
      "Type":"Forensics",
@@ -133,6 +143,7 @@
      "Ref":"https://github.com/libyal/esedb-kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc, https://frsecure.com/blog/windows-forensics-execution/"
    },
    {
+     "Mitre-Attack-ID":"T1204.001",
      "Theory-ID":"11",
      "Title":"LNK Files",
      "Type":"Forensics",
