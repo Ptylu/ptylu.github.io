@@ -73,7 +73,11 @@
     $('#text-list-detection-comment').text(resultJsonListDetection["Comment"]);
     $('#text-list-theory-ref').text(resultJsonListDetection["Ref"]);
     $('#text-list-theory-mitre-attack-id').html("Mitre Att&ck ID: <u>"+resultJsonListDetection["Mitre-Attack-ID"]+"</u>");
-    $('#text-report-id').html('<a href="/content/report/report.html?report='+getIDReport+'" target="_blank">'+"Go to Report linked to this Theory : REP-"+getIDReport+'</a>');
+    if(getIDReport==undefined){
+      //No link between Theory and Report (with Mitre Attack ID)
+    }else{
+      $('#text-report-id').html('<a href="/content/report/report.html?report='+getIDReport+'" target="_blank">'+"Go to Report linked to this Theory : REP-"+getIDReport+'</a>');
+    }
 
     console.log(getIDReport)
     //#### Definition

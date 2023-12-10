@@ -1,6 +1,6 @@
 [
   {
-    "Mitre-Attack-ID":"N/A",
+    "Mitre-Attack-ID":"T1055",
      "Theory-ID":"0",
      "Title":"Processes",
      "Type":"Forensics",
@@ -13,7 +13,7 @@
      "Ref":"https://alparslanakyildiz.medium.com/fundamental-windows-processes-6341696cf4f0"
    },
    {
-      "Mitre-Attack-ID":"N/A",
+      "Mitre-Attack-ID":"T1070.004",
       "Theory-ID":"1",
       "Title":"Prefetch",
       "Type":"Forensics",
@@ -65,7 +65,7 @@
      "Ref":"https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/"
    },
    {
-     "Mitre-Attack-ID":"N/A",
+     "Mitre-Attack-ID":"T1573",
      "Theory-ID":"5",
      "Title":"Encryption",
      "Type":"Encryption",
@@ -78,7 +78,7 @@
      "Ref":"https://medium.com/@antoine.ansel/les-suites-cryptographiques-tls-dd871079af8a, https://medium.com/asecuritysite-when-bob-met-alice/forward-secrecy-and-ephemeral-keys-guarding-against-data-breaches-in-the-future-b709295c6e5a, https://tls.mbed.org/kb/cryptography/ephemeral-diffie-hellman, https://crypto.stackexchange.com/questions/58283/why-is-a-diffie-hellman-key-exchange-required-when-rsa-is-already-being-used-for, https://security.stackexchange.com/questions/120140/what-is-the difference-between-dh-and-dhe, https://www.thesslstore.com/blog/block-cipher-vs-stream-cipher/#:~:text=A%20block%20cipher%20breaks%20down,into%20ciphertext%20using%20key%20bits."
    },
    {
-     "Mitre-Attack-ID":"N/A",
+     "Mitre-Attack-ID":"TN/A",
      "Theory-ID":"6",
      "Title":"Hash",
      "Type":"Hash",
@@ -130,7 +130,7 @@
      "Ref":"https://www.youtube.com/watch?v=ZKlyu-HOvxY, https://www.ssi.gouv.fr/uploads/2019/01/anssi-coriin_2019-analysis_amcache.pdf, https://www.ssi.gouv.fr/uploads/2019/01/anssi-coriin_2019-amcache_investigation.pdf"
    },
    {
-     "Mitre-Attack-ID":"N/A",
+     "Mitre-Attack-ID":"TN/A",
      "Theory-ID":"10",
      "Title":"System Resource Utilization Monitor (SRUM)",
      "Type":"Forensics",
